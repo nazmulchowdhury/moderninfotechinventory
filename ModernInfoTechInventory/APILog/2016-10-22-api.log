@@ -1,0 +1,24 @@
+2016-10-22 10:12:27.1088|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb70
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-22 10:12:46.2946|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1477109541669
+Authorization: Bearer QCA5jd8aCc59SVkoXbz9ucMCtEUIM1stf5a_FiIQnJPlLguMQh30Vgn8DujQDuPtW9BxFHhvqwFoCqs4BxJOSxVIXzZZ042eCH_lmYsW_mEHXDbbmYiCqgNVfL4ZfJ9krd6fPnAkVTYKyaEBT2gRVGpvjiqoCnGz7JAN1Va1P16FALupRPkeaDq88PQoBd4pqeCcQtLSCrYjFFZBKonjqmsSxcl1QTmEomMdvtQMLiJQJjkyGtZPouaT3PRsGGiaW7sxJeya8hOpaAD3RiwcLmEjgLJjjdcDY_7E9IkO9MibiNFi88c8QAPP-xOzgtTCqTAZ2AeTMdoEz1WblcVJDpOWhaXP46J6gZ6xCOPJAszdx2RrImYlk5Z4_TkgZEga5ihZdE_l1-9Xdag76hL3EXvKWswIYqlYfh4aO_4yFuY
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-22 10:12:46.6901|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer QCA5jd8aCc59SVkoXbz9ucMCtEUIM1stf5a_FiIQnJPlLguMQh30Vgn8DujQDuPtW9BxFHhvqwFoCqs4BxJOSxVIXzZZ042eCH_lmYsW_mEHXDbbmYiCqgNVfL4ZfJ9krd6fPnAkVTYKyaEBT2gRVGpvjiqoCnGz7JAN1Va1P16FALupRPkeaDq88PQoBd4pqeCcQtLSCrYjFFZBKonjqmsSxcl1QTmEomMdvtQMLiJQJjkyGtZPouaT3PRsGGiaW7sxJeya8hOpaAD3RiwcLmEjgLJjjdcDY_7E9IkO9MibiNFi88c8QAPP-xOzgtTCqTAZ2AeTMdoEz1WblcVJDpOWhaXP46J6gZ6xCOPJAszdx2RrImYlk5Z4_TkgZEga5ihZdE_l1-9Xdag76hL3EXvKWswIYqlYfh4aO_4yFuY
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+

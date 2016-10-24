@@ -1,0 +1,344 @@
+2016-10-13 15:05:31.8425|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:09:58.0455|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476349786237
+Authorization: Bearer 0dT-694Veat0djks8UCYG-njnWEgmCwGJHhosEb0Gc7un4ArSZ6z4oyA9SYekHJmKqjowd0BKeqreTnOymo1Cot6x6nVWW6aR9veOxudpHgqlyXe50u40o0njG27Bywy73qRGCBAOHPn8W_61FBvQqCnWUxqImyvYYKN9x-CdT0jwLuYUOZNLCjqbncs-RQp8hsC0OHVDzjmE9WMwQsE2RVv2SOJJXgjCywjJOabFJB7YAzy-EJZMvZ-la7WMx4yOvi3LfYvHwWljXXwvWDhMKSXV0XkGA36W2-O3zrVKscKp7RaO8YgkuZpkgJGxCBVtzjijc2s5Tma0Tb2Kg2rvmMgo1mu5rkamLWqQstaLYCTDOkH78a3TL0LDueelSywfAKn39jriUFXLzS6vRHqUu5qJBSUsltWsGlYvBSI2-o
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:09:59.0230|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 0dT-694Veat0djks8UCYG-njnWEgmCwGJHhosEb0Gc7un4ArSZ6z4oyA9SYekHJmKqjowd0BKeqreTnOymo1Cot6x6nVWW6aR9veOxudpHgqlyXe50u40o0njG27Bywy73qRGCBAOHPn8W_61FBvQqCnWUxqImyvYYKN9x-CdT0jwLuYUOZNLCjqbncs-RQp8hsC0OHVDzjmE9WMwQsE2RVv2SOJJXgjCywjJOabFJB7YAzy-EJZMvZ-la7WMx4yOvi3LfYvHwWljXXwvWDhMKSXV0XkGA36W2-O3zrVKscKp7RaO8YgkuZpkgJGxCBVtzjijc2s5Tma0Tb2Kg2rvmMgo1mu5rkamLWqQstaLYCTDOkH78a3TL0LDueelSywfAKn39jriUFXLzS6vRHqUu5qJBSUsltWsGlYvBSI2-o
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:10:05.3334|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:10:27.1595|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:16:17.6934|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476350169000
+Authorization: Bearer bsiRYAySjEzctGPdjhj8SpGTVjfIT23qWG1VjX46FtI0olR_88Ib3JLww4huXOzgWqJ5NjgFLNdvnsGAHAfGWmCe32lOIgBZtAo_4q5PspediemxfKdr8mQF5qfdUFD02sGrQxwHX6vk0u5BgYn9Mr8U7GtlXEQuBZUzLuJ6WvrkDZ_IxA6CwzBSbXJ4p7gxQGMwGJ-JpV4e2UjQ0cJa2foFeLXV5Ms5ezJ7OV7tepvKNKKW__R_L1SP3_LmNS_YWOx6ueTuozpDe8A5Fso9yBbnPu6mSquLPBrli5xTbXu9Bthu29IFEPNRryhKP4rDYDh-Sx__SMUb986KfMCOBWNOX0Z7JIz7644ciW-ro0KMHmqZm4CUMygNHQqC-BGKCTfYB0N6Dwjb3shrojIbdjOAHRy7CPdGD4wraYC8Xxk
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:16:18.6397|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer bsiRYAySjEzctGPdjhj8SpGTVjfIT23qWG1VjX46FtI0olR_88Ib3JLww4huXOzgWqJ5NjgFLNdvnsGAHAfGWmCe32lOIgBZtAo_4q5PspediemxfKdr8mQF5qfdUFD02sGrQxwHX6vk0u5BgYn9Mr8U7GtlXEQuBZUzLuJ6WvrkDZ_IxA6CwzBSbXJ4p7gxQGMwGJ-JpV4e2UjQ0cJa2foFeLXV5Ms5ezJ7OV7tepvKNKKW__R_L1SP3_LmNS_YWOx6ueTuozpDe8A5Fso9yBbnPu6mSquLPBrli5xTbXu9Bthu29IFEPNRryhKP4rDYDh-Sx__SMUb986KfMCOBWNOX0Z7JIz7644ciW-ro0KMHmqZm4CUMygNHQqC-BGKCTfYB0N6Dwjb3shrojIbdjOAHRy7CPdGD4wraYC8Xxk
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:16:27.6711|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:16:33.6243|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:18:02.1926|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476350274250
+Authorization: Bearer YOaB6EcHNpJB5JUNUo_Wy1RrIB8FDepPsFwXyAbHPY823pM2VfjZ-vS6e7Nyuz57zqd7niZEASf0sm1uAw9_MWeneVmJlVcamM3MF2zeNGMemxJZBSV4P52SqAukG-2SOzca-C03XVZ_37StLk_6gze0mlkeynZ6i3cPbHBe4IpSA_iuQNzz-8gHTaaW-PJxfhnsvwt_MS8ckhqDPIaSpMt1Qlndq-iiAj_YGCHPLbGEK_8mvCSRDw-eTekd1EboAhGKlLVnqGrR0uo68A3vC_RTypVtO0UhydLEd2WhEKJDeWUjOgD3W90m3RQwvuUKJq7A6DTo1-PhWGT5-mA4syLF-mIe5zK76guqEBtFtwTQhFKe2Oocb9rc-t01Q9qEBEzf4fZmmdaImeJrr7ZMPF-V3rVN4_QWVewYJxefZM0
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:18:02.9640|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer YOaB6EcHNpJB5JUNUo_Wy1RrIB8FDepPsFwXyAbHPY823pM2VfjZ-vS6e7Nyuz57zqd7niZEASf0sm1uAw9_MWeneVmJlVcamM3MF2zeNGMemxJZBSV4P52SqAukG-2SOzca-C03XVZ_37StLk_6gze0mlkeynZ6i3cPbHBe4IpSA_iuQNzz-8gHTaaW-PJxfhnsvwt_MS8ckhqDPIaSpMt1Qlndq-iiAj_YGCHPLbGEK_8mvCSRDw-eTekd1EboAhGKlLVnqGrR0uo68A3vC_RTypVtO0UhydLEd2WhEKJDeWUjOgD3W90m3RQwvuUKJq7A6DTo1-PhWGT5-mA4syLF-mIe5zK76guqEBtFtwTQhFKe2Oocb9rc-t01Q9qEBEzf4fZmmdaImeJrr7ZMPF-V3rVN4_QWVewYJxefZM0
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:18:08.6626|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:25:36.3244|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476350727048
+Authorization: Bearer suITV3dK-iSBl4v5E12RLU9_NCOgvw7m9pkdl4S4xV56fbIe4OgvNnSEll5llh3JZXz3IoREHgyiMP0valryfnOAwrKWsdls5_B8QVv3hVSo8y3xyjgle2QWtYN2VYP5WwT31oURX2DT-3picJum8xKYibvRzsp3SDAB3grEC9PxrLku48FKkwUugRxu9vURG_6JNcrDDbZL7_8WN_IIPDTHG-6-mjMaPU9VL877nHRxpbxY3FWJPieLioeajrZ7lXgR_jFlN5XI7luLQo7UiSq-YJkxLG4CEmKB7O4AFA-XpCy0R-s66PFt9kW4fGK5gB4oJUmSrxakp6s_XE3lXn-fPn83iGapSgZCh_xSzjsHjGP-w5QiIuxyBDVftxaTOiS0j6Bw11v_60K6VZAPBE4Ro1lQN1ewsBcn_JSfuGM
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:25:37.3581|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer suITV3dK-iSBl4v5E12RLU9_NCOgvw7m9pkdl4S4xV56fbIe4OgvNnSEll5llh3JZXz3IoREHgyiMP0valryfnOAwrKWsdls5_B8QVv3hVSo8y3xyjgle2QWtYN2VYP5WwT31oURX2DT-3picJum8xKYibvRzsp3SDAB3grEC9PxrLku48FKkwUugRxu9vURG_6JNcrDDbZL7_8WN_IIPDTHG-6-mjMaPU9VL877nHRxpbxY3FWJPieLioeajrZ7lXgR_jFlN5XI7luLQo7UiSq-YJkxLG4CEmKB7O4AFA-XpCy0R-s66PFt9kW4fGK5gB4oJUmSrxakp6s_XE3lXn-fPn83iGapSgZCh_xSzjsHjGP-w5QiIuxyBDVftxaTOiS0j6Bw11v_60K6VZAPBE4Ro1lQN1ewsBcn_JSfuGM
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:25:47.4019|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:26:06.9673|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:26:23.5824|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:26:50.6005|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:27:02.1753|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:28:16.5752|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476350887700
+Authorization: Bearer 6W9YFY1ojXyIyCOAiCLjZX6pekfd1u-Yr_Skz5zh-uEw1iC_oSrSYjDmS4WiAn-QJrHIvT7ybGcu27CUm_4jNs4kWLCvTxmk9_5JgIlHeL_rBby5pL-ScpclXoZ8gEx_msQT7rnphfW4RfkkJ67geg84dIEOnWCjr0kU265bwKAD9AC4HfV03J7DjHhrC9OxIDYb-0y7lvg7aeXA4F_2VZxneL2sdR6IMjc2mR9wtryAR_BH2IMTudgFNsCODNZMhqaIU3ZFudT3BMyw0Yf5md--UuoXLZdJvMm01tq0vREOE5ymZNBwonBHqQb_2NFzhwIO8Xvq4KB0iU5YDH6FUBcu3ezWY69dzcGS72TMYHXQ_6Vnv4eAemfBF6N2OneVfw-pazWswXmgloEgGB-PdQdNt3jpZf-Y62HPFHltW4s
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:28:17.4155|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 6W9YFY1ojXyIyCOAiCLjZX6pekfd1u-Yr_Skz5zh-uEw1iC_oSrSYjDmS4WiAn-QJrHIvT7ybGcu27CUm_4jNs4kWLCvTxmk9_5JgIlHeL_rBby5pL-ScpclXoZ8gEx_msQT7rnphfW4RfkkJ67geg84dIEOnWCjr0kU265bwKAD9AC4HfV03J7DjHhrC9OxIDYb-0y7lvg7aeXA4F_2VZxneL2sdR6IMjc2mR9wtryAR_BH2IMTudgFNsCODNZMhqaIU3ZFudT3BMyw0Yf5md--UuoXLZdJvMm01tq0vREOE5ymZNBwonBHqQb_2NFzhwIO8Xvq4KB0iU5YDH6FUBcu3ezWY69dzcGS72TMYHXQ_6Vnv4eAemfBF6N2OneVfw-pazWswXmgloEgGB-PdQdNt3jpZf-Y62HPFHltW4s
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:28:25.8446|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:28:27.9058|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:28:46.7361|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:28:54.3164|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:28:57.7361|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:29:02.5488|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:42:34.6082|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476351745355
+Authorization: Bearer Y45oW9xmZY3al7DUyOdTlbCqsRBBSHkffCxQdurZ3qaUHvruGZyXKd_E_oXKOJEwrypPgADI76_C21hzxcLKaR-PcJha9-ENLbCf15PW8FTcTjG5wuGksFSw-4ELETDXg_3xcLZ3ESxEkKDyHLzu49rdsmY5-updr5GxJJEAKbE-zi1qoqkaojPvleXeBdRvUZPs88FkT1dtrjVSmWsvhPHEEOZb6cJoeo4cru9ueK-jbN49FzrQLg5Up69sNx_GEy9Wtpt2LfIqsebVZDXHvYJwklG56WHbWMUx2qjftqoxR4uxZ9YHj72ytXmO-3wYz1ppxnJqo5WiOgFGrjWsoN-VMbQ2qYWmJdVE36YDUDcznnPKBFGbDfln_8M4et_pqjlMPocmLuQr_iLttGurDGNZxdvh053pooQqFdruANE
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:42:35.4687|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer Y45oW9xmZY3al7DUyOdTlbCqsRBBSHkffCxQdurZ3qaUHvruGZyXKd_E_oXKOJEwrypPgADI76_C21hzxcLKaR-PcJha9-ENLbCf15PW8FTcTjG5wuGksFSw-4ELETDXg_3xcLZ3ESxEkKDyHLzu49rdsmY5-updr5GxJJEAKbE-zi1qoqkaojPvleXeBdRvUZPs88FkT1dtrjVSmWsvhPHEEOZb6cJoeo4cru9ueK-jbN49FzrQLg5Up69sNx_GEy9Wtpt2LfIqsebVZDXHvYJwklG56WHbWMUx2qjftqoxR4uxZ9YHj72ytXmO-3wYz1ppxnJqo5WiOgFGrjWsoN-VMbQ2qYWmJdVE36YDUDcznnPKBFGbDfln_8M4et_pqjlMPocmLuQr_iLttGurDGNZxdvh053pooQqFdruANE
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:42:42.0939|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:42:44.0318|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:42:48.9519|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:42:53.9554|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:43:58.3007|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1476351829152
+Authorization: Bearer QHmkIGcnWDzts5NRQZOy1fP_Mip_7r3dW1Tu4MvbrdsApXNUoLkRM-DxEv932a54-e87BefQEwyNwQfLhAYSxpZmsSdjlArWvyWpirrd32AyfN0StqvapMbR9rLoUJReeyaOurj2cWcaQWz8e3w6Zljybf4rNjp5fVB-VmRM1QJbMOUT6tgBMIHQTV-XLybe-m0OOa5xpTKVuauVIzcXui082w9g0y6d_X7GZssdv0iquQfeesfoWQ-tbRmryKRqrf6CG1n4gAdOZnl0MbNWUdUj4ZLNLZe5NT_GDqby3vuBTXRPCs6wuGYtsW7dhUW4WR9_56P0KV26oxNwnLoWKB9kCQkSe5YUJR7gNsfl0t78VDzyoZeKG8P6q0xT_o669NlLgUD4Hg8YvGB3t-j73qPbIzGI8NsSfHDR7gbft48
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-13 15:43:59.5399|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer QHmkIGcnWDzts5NRQZOy1fP_Mip_7r3dW1Tu4MvbrdsApXNUoLkRM-DxEv932a54-e87BefQEwyNwQfLhAYSxpZmsSdjlArWvyWpirrd32AyfN0StqvapMbR9rLoUJReeyaOurj2cWcaQWz8e3w6Zljybf4rNjp5fVB-VmRM1QJbMOUT6tgBMIHQTV-XLybe-m0OOa5xpTKVuauVIzcXui082w9g0y6d_X7GZssdv0iquQfeesfoWQ-tbRmryKRqrf6CG1n4gAdOZnl0MbNWUdUj4ZLNLZe5NT_GDqby3vuBTXRPCs6wuGYtsW7dhUW4WR9_56P0KV26oxNwnLoWKB9kCQkSe5YUJR7gNsfl0t78VDzyoZeKG8P6q0xT_o669NlLgUD4Hg8YvGB3t-j73qPbIzGI8NsSfHDR7gbft48
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:44:04.5687|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:44:06.0119|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:44:08.2883|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:44:44.3357|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-13 15:44:52.0735|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb28
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb28"}]}
+
+2016-10-13 15:44:55.9243|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335e145
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335e145"}]}
+
+2016-10-13 15:45:01.4659|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo/4b303673-fdf4-49d2-9f63-8ba92335eb70
+Authorization: Bearer 4X-cOLM-D7Xs6cdxuRA9yelSVlmPCaZqDH0Hve_VJ21B1iP-NEbJT46nBSwliEzotN4S_stxowlxMlkLjCSWZ0WfVRHtf0t1eJv53wqZtzUoMsIPwWq4LNiY1hKHKbzPxvNgzD6pJ8HnSIeCMiqiI8DTKek7bL1S2XQbLZGnRSiXYCV-csp_GyIzH3F2uicZuoZQNkj5NdSsK2v7jOC-QyOW_SysgDDfmciaWzkkGNB0mooyvARBARTrn5wLcnL7e4PGjxHB2cBzDIs5x5YRje2D-HpDVZkVRdA-P9W1SviXMH8XS-gOK4OaDpPZrYL6FJPv3fPBJ1FjI6ShwyjO0Hk5lZODAdURoiVDTCWqZ9Pmx5sj9nHpUcw94_1qJetDKIS0Gx-Q9YY-jZ2nu5pf2EYGkwSMo5VKGtmHquZx1kU
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"4b303673-fdf4-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-13 15:45:15.3691|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/Account/Logout
+Authorization: Bearer QHmkIGcnWDzts5NRQZOy1fP_Mip_7r3dW1Tu4MvbrdsApXNUoLkRM-DxEv932a54-e87BefQEwyNwQfLhAYSxpZmsSdjlArWvyWpirrd32AyfN0StqvapMbR9rLoUJReeyaOurj2cWcaQWz8e3w6Zljybf4rNjp5fVB-VmRM1QJbMOUT6tgBMIHQTV-XLybe-m0OOa5xpTKVuauVIzcXui082w9g0y6d_X7GZssdv0iquQfeesfoWQ-tbRmryKRqrf6CG1n4gAdOZnl0MbNWUdUj4ZLNLZe5NT_GDqby3vuBTXRPCs6wuGYtsW7dhUW4WR9_56P0KV26oxNwnLoWKB9kCQkSe5YUJR7gNsfl0t78VDzyoZeKG8P6q0xT_o669NlLgUD4Hg8YvGB3t-j73qPbIzGI8NsSfHDR7gbft48
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: Logout
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
