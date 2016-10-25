@@ -38,6 +38,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CompanyInfo\CompanyInfoRepository.cs" />
     <Compile Include="Repositories\CompanyInfo\ICompanyInfoRepositoy.cs" />
+    <Compile Include="Repositories\Investment\IInvestmentRepository.cs" />
+    <Compile Include="Repositories\Investment\InvestmentRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">

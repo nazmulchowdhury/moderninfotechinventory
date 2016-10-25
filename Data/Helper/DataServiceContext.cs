@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using Model.CompanyInfo;
+using Model.Investment;
 
 namespace Data.Helper
 {
@@ -10,6 +11,7 @@ namespace Data.Helper
         }
 
         public DbSet<CompanyInfoEntity> CompanyInfo { get; set; }
+        public DbSet<InvestmentEntity> Investment { get; set; }
 
         public virtual void Commit()
         {

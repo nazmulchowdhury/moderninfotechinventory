@@ -35,6 +35,8 @@
   <ItemGroup>
     <Compile Include="CompanyInfo\CompanyInfoServices.cs" />
     <Compile Include="CompanyInfo\ICompanyInfoServices.cs" />
+    <Compile Include="Investment\IInvestmentServices.cs" />
+    <Compile Include="Investment\InvestmentServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
