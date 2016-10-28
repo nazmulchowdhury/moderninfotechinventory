@@ -35,9 +35,19 @@
   <ItemGroup>
     <Compile Include="CompanyInfo\CompanyInfoServices.cs" />
     <Compile Include="CompanyInfo\ICompanyInfoServices.cs" />
+    <Compile Include="Customer\CustomerDueServices.cs" />
+    <Compile Include="Customer\CustomerServices.cs" />
+    <Compile Include="Customer\ICustomerDueServices.cs" />
+    <Compile Include="Customer\ICustomerServices.cs" />
     <Compile Include="Investment\IInvestmentServices.cs" />
     <Compile Include="Investment\InvestmentServices.cs" />
+    <Compile Include="Location\ILocationServices.cs" />
+    <Compile Include="Location\LocationServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Supplier\ISupplierPaymentServices.cs" />
+    <Compile Include="Supplier\ISupplierServices.cs" />
+    <Compile Include="Supplier\SupplierPaymentServices.cs" />
+    <Compile Include="Supplier\SupplierServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj">

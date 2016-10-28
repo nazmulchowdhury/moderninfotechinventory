@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using Model.Location;
 using Model.Logo;
 using Model.Client;
+using Model.Investment;
 
 namespace Model.CompanyInfo
 {
@@ -74,5 +75,6 @@ namespace Model.CompanyInfo
 
         // navigation properties
         //public virtual ICollection<CompanyInfoEntity> Companies { get; set; }
+        //public virtual InvestmentEntity Investment { get; set; }
     }
 }

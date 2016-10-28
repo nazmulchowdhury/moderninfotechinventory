@@ -1,0 +1,686 @@
+2016-10-27 14:50:49.5928|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1477558220449
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-27 14:50:54.0414|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 14:51:55.3634|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetAllSupplierPayments
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 14:52:01.8546|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetAllSupplierPayments
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: SupplierPayments are not found
+Error Code: 1000
+
+
+2016-10-27 14:52:49.2322|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PostSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"supplierPaymentEntity":{"SupplierPaymentId":"nah11632-ade3-484a-a203-b27763999yjj","PaymentDate":"\/Date(-62135596800000)\/","PaidAmount":10.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 14:58:54.4829|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PutSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj","supplierPaymentEntity":{"SupplierPaymentId":null,"PaymentDate":"\/Date(-62135596800000)\/","PaidAmount":15.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 14:59:23.3161|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjk
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PutSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjk","supplierPaymentEntity":{"SupplierPaymentId":null,"PaymentDate":"\/Date(-62135596800000)\/","PaidAmount":15.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 14:59:57.8863|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: DeleteSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj"}]}
+
+2016-10-27 15:00:03.3197|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: DeleteSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj"}]}
+
+2016-10-27 15:00:08.0322|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: DeleteSupplierPayment
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: SupplierPayment is already deleted or not exist in system.
+Error Code: 1002
+
+
+2016-10-27 15:00:54.7207|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PostSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"supplierPaymentEntity":{"SupplierPaymentId":"nah11632-ade3-484a-a203-b27763999yjj","PaymentDate":"\/Date(-62135596800000)\/","PaidAmount":10.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 15:01:10.2247|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetAllSupplierPayments
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 15:01:32.0775|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj"}]}
+
+2016-10-27 15:01:36.9036|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetAllSupplierPayments
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 15:10:38.6755|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: GetAllSupplierPayments
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 15:10:50.8747|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: DeleteSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj"}]}
+
+2016-10-27 15:12:13.6659|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PostSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"supplierPaymentEntity":{"SupplierPaymentId":"nah11632-ade3-484a-a203-b27763999yjj","PaymentDate":"\/Date(1477504800000)\/","PaidAmount":10.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 15:13:45.8929|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/supplierpayment
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PostSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"supplierPaymentEntity":{"SupplierPaymentId":"nah11632-ade3-484a-a203-b27763066yjj","PaymentDate":"\/Date(1477332000000)\/","PaidAmount":120000,"Description":"Motorcycle","Supplier":null}}]}
+
+2016-10-27 15:15:27.4074|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjk
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PutSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjk","supplierPaymentEntity":{"SupplierPaymentId":null,"PaymentDate":"\/Date(1477504800000)\/","PaidAmount":15.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 15:15:34.3687|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/supplierpayment/nah11632-ade3-484a-a203-b27763999yjj
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.SupplierPaymentController
+Action: PutSupplierPayment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"nah11632-ade3-484a-a203-b27763999yjj","supplierPaymentEntity":{"SupplierPaymentId":null,"PaymentDate":"\/Date(1477504800000)\/","PaidAmount":15.34,"Description":"Soup","Supplier":null}}]}
+
+2016-10-27 22:30:27.6394|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"4b303570-fdf4-49d2-9f63-8ba92335eb70","CustomerName":"Mr. Nazmul Chowdhury","PhoneNumber":"01715975204","LocationId":"67e11632-ade3-484a-a203-b27763066gtk","CurrentDue":4500.45,"DueLimit":10000.97,"Location":null}}]}
+
+2016-10-27 22:40:41.5110|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"67903570-fdf4-49d2-9f63-8ba92335eb70","CustomerName":"Mr. Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9500.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:41:36.5324|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"67903570-fdf4-49d2-9f63-8ba92335e666","CustomerName":"Mr. Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9500.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:41:51.8765|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"67903570-fdf4-49d2-9f63-8ba92335e666","CustomerName":"Mr. Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9500.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:42:00.3502|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: POST
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: OriginalValues cannot be used for entities in the Added state.
+   at System.Data.Entity.Internal.InternalEntityEntry.ValidateStateToGetValues(String method, EntityState invalidState)
+   at System.Data.Entity.Internal.InternalEntityEntry.get_OriginalValues()
+   at System.Data.Entity.Infrastructure.DbEntityEntry.get_OriginalValues()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Web.SecurityUtils.MethodInfoInvoke(MethodInfo method, Object target, Object[] args)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Violation of PRIMARY KEY constraint 'PK_Customer'. Cannot insert duplicate key in object 'dbo.Customer'. The duplicate key value is (67903570-fdf4-49d2-9f63-8ba92335e666).
+The statement has been terminated.
+
+
+2016-10-27 22:42:22.0398|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666"}]}
+
+2016-10-27 22:42:28.3972|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: The 'CurrentDue' property on 'CustomerEntity' could not be set to a 'System.Decimal' value. You must set this property to a non-null value of type 'System.Double'. 
+
+
+2016-10-27 22:43:01.2288|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 22:43:23.8216|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: The 'CurrentDue' property on 'CustomerEntity' could not be set to a 'System.Decimal' value. You must set this property to a non-null value of type 'System.Double'. 
+
+
+2016-10-27 22:43:54.5757|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 22:44:20.1243|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: The 'CurrentDue' property on 'CustomerEntity' could not be set to a 'System.Decimal' value. You must set this property to a non-null value of type 'System.Double'. 
+
+
+2016-10-27 22:44:53.4561|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e669"}]}
+
+2016-10-27 22:44:58.4161|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Customer is already deleted or not exist in system.
+Error Code: 1002
+
+
+2016-10-27 22:45:14.0837|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666"}]}
+
+2016-10-27 22:45:21.2251|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: The 'CurrentDue' property on 'CustomerEntity' could not be set to a 'System.Decimal' value. You must set this property to a non-null value of type 'System.Double'. 
+
+
+2016-10-27 22:46:28.4430|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-27 22:46:48.3941|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e669"}]}
+
+2016-10-27 22:47:02.7982|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: No Customer found for this 67903570-fdf4-49d2-9f63-8ba92335e669
+Error Code: 1001
+
+
+2016-10-27 22:47:13.9892|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666"}]}
+
+2016-10-27 22:47:48.7639|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666","customerEntity":{"CustomerId":null,"CustomerName":"Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9599.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:47:52.8650|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666","customerEntity":{"CustomerId":null,"CustomerName":"Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9599.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:48:01.2437|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e669","customerEntity":{"CustomerId":null,"CustomerName":"Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9599.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:48:04.8420|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e669","customerEntity":{"CustomerId":null,"CustomerName":"Sajjad Hossain","PhoneNumber":"01815975204","LocationId":"67e11632-ade3-484a-a203-b27763066fek","CurrentDue":9599.45,"DueLimit":5000000,"Location":null}}]}
+
+2016-10-27 22:49:02.7942|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e669"}]}
+
+2016-10-27 22:49:07.1359|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e669
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Customer is already deleted or not exist in system.
+Error Code: 1002
+
+
+2016-10-27 22:49:19.1780|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customer/67903570-fdf4-49d2-9f63-8ba92335e666
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335e666"}]}
+
+2016-10-27 22:49:27.7897|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+

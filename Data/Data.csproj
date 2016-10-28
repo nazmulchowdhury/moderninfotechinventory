@@ -38,8 +38,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CompanyInfo\CompanyInfoRepository.cs" />
     <Compile Include="Repositories\CompanyInfo\ICompanyInfoRepositoy.cs" />
+    <Compile Include="Repositories\Customer\CustomerDueRepository.cs" />
+    <Compile Include="Repositories\Customer\CustomerRepository.cs" />
+    <Compile Include="Repositories\Customer\ICustomerDueRepository.cs" />
+    <Compile Include="Repositories\Customer\ICustomerRepository.cs" />
     <Compile Include="Repositories\Investment\IInvestmentRepository.cs" />
     <Compile Include="Repositories\Investment\InvestmentRepository.cs" />
+    <Compile Include="Repositories\Location\ILocationRepository.cs" />
+    <Compile Include="Repositories\Location\LocationRepository.cs" />
+    <Compile Include="Repositories\Supplier\ISupplierPaymentRepository.cs" />
+    <Compile Include="Repositories\Supplier\ISupplierRepository.cs" />
+    <Compile Include="Repositories\Supplier\SupplierPaymentRepository.cs" />
+    <Compile Include="Repositories\Supplier\SupplierRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">

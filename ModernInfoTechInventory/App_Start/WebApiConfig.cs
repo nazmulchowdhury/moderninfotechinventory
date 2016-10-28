@@ -1,14 +1,7 @@
 ﻿using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
-using ModernInfoTechInventory.Resolver;
-using Data.Infrastructure;
-using Data.Repositories.CompanyInfo;
-using Data.Repositories.Investment;
-using Service.CompanyInfo;
-using Service.Investment;
 using ModernInfoTechInventory.ActionFilters;
-using Microsoft.Practices.Unity;
 
 namespace ModernInfoTechInventory
 {
@@ -17,13 +10,10 @@ namespace ModernInfoTechInventory
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var container = new UnityContainer();
-            container.RegisterType<IDbFactory, DbFactory>(new HierarchicalLifetimeManager());
-            container.RegisterType<ICompanyInfoRepositoy, CompanyInfoRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<ICompanyInfoServices, CompanyInfoServices>(new HierarchicalLifetimeManager());
-            container.RegisterType<IInvestmentRepository, InvestmentRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<IInvestmentServices, InvestmentServices>(new HierarchicalLifetimeManager());
-            config.DependencyResolver = new UnityResolver(container);
+            
+            // Manage Dependency
+            var dependencyConfig = new DependencyConfig();
+            dependencyConfig.ManageDependency(config);
 
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
