@@ -30,7 +30,7 @@ namespace Service.CompanyInfo
 
         public bool UpdateCompany(string companyId, CompanyInfoEntity companyInfoEntity)
         {
-            CompanyInfoEntity storedItem = companyInfoRepository.GetById(companyId);
+            var storedItem = companyInfoRepository.GetById(companyId);
             
             if (storedItem != null)
             {

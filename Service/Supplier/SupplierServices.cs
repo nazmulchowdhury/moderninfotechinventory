@@ -30,7 +30,7 @@ namespace Service.Supplier
 
         public bool UpdateSupplier(string supplierId, SupplierEntity supplierEntity)
         {
-            SupplierEntity storedItem = supplierRepository.GetById(supplierId);
+            var storedItem = supplierRepository.GetById(supplierId);
 
             if (storedItem != null)
             {

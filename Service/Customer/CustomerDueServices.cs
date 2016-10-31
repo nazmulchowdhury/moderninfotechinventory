@@ -30,12 +30,14 @@ namespace Service.Customer
 
         public bool UpdateCustomerDue(string customerDueId, CustomerDueEntity customerDueEntity)
         {
-            CustomerDueEntity storedItem = customerDueRepository.GetById(customerDueId);
+            var storedItem = customerDueRepository.GetById(customerDueId);
 
             if (storedItem != null)
             {
                 storedItem.ReceiveAmount = customerDueEntity.ReceiveAmount;
+
                 customerDueRepository.Update(storedItem);
+
                 return true;
             }
             else

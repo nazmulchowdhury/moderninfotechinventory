@@ -29,7 +29,7 @@ namespace Service.Customer
 
         public bool UpdateCustomer(string customerId, CustomerEntity customerEntity)
         {
-            CustomerEntity storedItem = customerRepository.GetById(customerId);
+            var storedItem = customerRepository.GetById(customerId);
 
             if (storedItem != null)
             {
@@ -38,7 +38,9 @@ namespace Service.Customer
                 storedItem.LocationId = customerEntity.LocationId;
                 storedItem.CurrentDue = customerEntity.CurrentDue;
                 storedItem.DueLimit = customerEntity.DueLimit;
+
                 customerRepository.Update(storedItem);
+
                 return true;
             }
             else

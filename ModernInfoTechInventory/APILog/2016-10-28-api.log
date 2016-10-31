@@ -318,3 +318,267 @@ Controller: ModernInfoTechInventory.Controllers.CustomerDueController
 Action: GetCustomerDue
 Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67903570-fdf4-49d2-9f63-8ba92335eb70"}]}
 
+2016-10-28 22:19:01.8471|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":{"CategoryId":"67893570-fdf4-49d2-9f63-8ba92335eb70","CategoryName":"Drinks"}}]}
+
+2016-10-28 22:19:53.2829|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":{"CategoryId":"67893570-tryu-49d2-9f63-8ba92335eb70","CategoryName":"Shirt"}}]}
+
+2016-10-28 22:21:10.9844|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":{"CategoryId":"poiu570-tryu-49d2-9f63-8ba92335eb70","CategoryName":"Pant"}}]}
+
+2016-10-28 22:22:19.4409|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":null}]}
+
+2016-10-28 22:22:42.4889|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-28 22:22:45.5865|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: POST
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Value cannot be null.
+Parameter name: entity
+
+
+2016-10-28 22:22:52.5049|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-28 22:23:02.2635|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-28 22:23:15.0821|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-28 22:23:31.1540|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb700
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb700"}]}
+
+2016-10-28 22:23:34.7065|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb700
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: No Category found for this poiu570-tryu-49d2-9f63-8ba92335eb700
+Error Code: 1001
+
+
+2016-10-28 22:24:36.5179|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-28 22:25:31.3688|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PutCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70","categoryEntity":{"CategoryId":null,"CategoryName":"Jeans Pant"}}]}
+
+2016-10-28 22:25:35.9578|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PutCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb70","categoryEntity":{"CategoryId":null,"CategoryName":"Jeans Pant"}}]}
+
+2016-10-28 22:25:45.3550|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/category/poiu570-tryu-49d2-9f63-8ba92335eb79
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PutCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"poiu570-tryu-49d2-9f63-8ba92335eb79","categoryEntity":{"CategoryId":null,"CategoryName":"Jeans Pant"}}]}
+
+2016-10-28 22:28:19.2949|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/category/67893570-fdf4-49d2-9f63-8ba92335eb79
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: DeleteCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67893570-fdf4-49d2-9f63-8ba92335eb79"}]}
+
+2016-10-28 22:28:23.9018|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/category/67893570-fdf4-49d2-9f63-8ba92335eb79
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: DeleteCategory
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Category is already deleted or not exist in system.
+Error Code: 1002
+
+
+2016-10-28 22:28:39.8250|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/category/67893570-fdf4-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: DeleteCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"67893570-fdf4-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-28 22:28:54.6743|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-28 22:28:57.5764|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-28 22:33:42.9971|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+

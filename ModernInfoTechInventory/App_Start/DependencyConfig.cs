@@ -5,11 +5,25 @@ using Data.Repositories.Investment;
 using Data.Repositories.Location;
 using Data.Repositories.Supplier;
 using Data.Repositories.Customer;
+using Data.Repositories.Product.Category;
+using Data.Repositories.Product.SubCategory;
+using Data.Repositories.Product.ProductInfo;
+using Data.Repositories.Product.StockAdjustment;
+using Data.Repositories.Product.DamageStockEntry;
+using Data.Repositories.Product.SaleReturn;
+using Data.Repositories.InvoiceInfo;
 using Service.CompanyInfo;
 using Service.Investment;
 using Service.Location;
 using Service.Supplier;
 using Service.Customer;
+using Service.Product.Category;
+using Service.Product.SubCategory;
+using Service.Product.ProductInfo;
+using Service.Product.StockAdjustment;
+using Service.Product.DamageStockEntry;
+using Service.Product.SaleReturn;
+using Service.InvoiceInfo;
 using ModernInfoTechInventory.Resolver;
 using Microsoft.Practices.Unity;
 
@@ -20,6 +34,7 @@ namespace ModernInfoTechInventory
         public void ManageDependency(HttpConfiguration config)
         {
             var container = new UnityContainer();
+
             container.RegisterType<IDbFactory, DbFactory>(new HierarchicalLifetimeManager());
             container.RegisterType<ICompanyInfoRepositoy, CompanyInfoRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ICompanyInfoServices, CompanyInfoServices>(new HierarchicalLifetimeManager());
@@ -35,6 +50,23 @@ namespace ModernInfoTechInventory
             container.RegisterType<ICustomerServices, CustomerServices>(new HierarchicalLifetimeManager());
             container.RegisterType<ICustomerDueRepository, CustomerDueRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ICustomerDueServices, CustomerDueServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICategoryRepository, CategoryRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICategoryServices, CategoryServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISubCategoryRepository, SubCategoryRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISubCategoryServices, SubCategoryServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductInfoRepository, ProductInfoRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductInfoServices, ProductInfoServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductQuantityRepository, ProductQuantityRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductQuantityServices, ProductQuantityServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IStockAdjustmentRepository, StockAdjustmentRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IStockAdjustmentServices, StockAdjustmentServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDamageStockEntryRepository, DamageStockEntryRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDamageStockEntryServices, DamageStockEntryServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleReturnQuantityRepository, SaleReturnQuantityRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleReturnQuantityServices, SaleReturnQuantityServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IInvoiceInfoRepository, InvoiceInfoRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IInvoiceInfoServices, InvoiceInfoServices>(new HierarchicalLifetimeManager());
+
             config.DependencyResolver = new UnityResolver(container);
         }
     }

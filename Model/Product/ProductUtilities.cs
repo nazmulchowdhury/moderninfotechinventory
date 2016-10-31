@@ -42,8 +42,8 @@ namespace Model.Product
         //public virtual ICollection<ProductEntity> Products { get; set; }
     }
 
-    [Table("Product")]
-    public class ProductEntity
+    [Table("ProductInfo")]
+    public class ProductInfoEntity
     {
         [Key]
         public string ProductId { get; set; }
@@ -95,7 +95,7 @@ namespace Model.Product
         public string CustomerId { get; set; }
 
         // navigation properties
-        public virtual ProductEntity Product { get; set; }
+        public virtual ProductInfoEntity Product { get; set; }
 
         [ForeignKey("CustomerId")]
         public virtual CustomerEntity Customer { get; set; }
@@ -113,7 +113,7 @@ namespace Model.Product
 
         [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Receive Date")]
         public DateTime ReceiveDate { get; set; }
 

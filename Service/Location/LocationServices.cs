@@ -30,12 +30,14 @@ namespace Service.Location
         
         public bool UpdateLocation(string locationId, LocationEntity locationEntity)
         {
-            LocationEntity storedItem = locationRepository.GetById(locationId);
+            var storedItem = locationRepository.GetById(locationId);
             
             if (storedItem != null)
             {
                 storedItem.LocationName = locationEntity.LocationName;
+
                 locationRepository.Update(storedItem);
+
                 return true;
             }
             else

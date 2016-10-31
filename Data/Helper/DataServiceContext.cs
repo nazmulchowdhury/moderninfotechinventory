@@ -4,6 +4,8 @@ using Model.Customer;
 using Model.Investment;
 using Model.Location;
 using Model.Supplier;
+using Model.Product;
+using Model.Invoice;
 
 namespace Data.Helper
 {
@@ -20,6 +22,14 @@ namespace Data.Helper
         public DbSet<SupplierPaymentEntity> SupplierPayment { get; set; }
         public DbSet<CustomerEntity> Customer { get; set; }
         public DbSet<CustomerDueEntity> CustomerDue { get; set; }
+        public DbSet<CategoryEntity> Category { get; set; }
+        public DbSet<SubCategoryEntity> SubCategory { get; set; }
+        public DbSet<ProductInfoEntity> ProductInfo { get; set; }
+        public DbSet<ProductQuantityEntity> ProductQuantity { get; set; }
+        public DbSet<StockAdjustmentEntity> StockAdjustment { get; set; }
+        public DbSet<DamageStockEntryEntity> DamageStockEntry { get; set; }
+        public DbSet<SaleReturnQuantityEntity> SaleReturnQuantity { get; set; }
+        public DbSet<InvoiceInfoEntity> InvoiceInfo { get; set; }
 
         public virtual void Commit()
         {

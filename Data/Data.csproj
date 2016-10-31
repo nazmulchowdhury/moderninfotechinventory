@@ -36,6 +36,10 @@
     <Compile Include="Infrastructure\IRepository.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\InvoiceInfo\IInvoiceInfoRepository.cs" />
+    <Compile Include="Repositories\InvoiceInfo\InvoiceInfoRepository.cs" />
+    <Compile Include="Repositories\Product\Category\CategoryRepository.cs" />
+    <Compile Include="Repositories\Product\Category\ICategoryRepository.cs" />
     <Compile Include="Repositories\CompanyInfo\CompanyInfoRepository.cs" />
     <Compile Include="Repositories\CompanyInfo\ICompanyInfoRepositoy.cs" />
     <Compile Include="Repositories\Customer\CustomerDueRepository.cs" />
@@ -46,6 +50,18 @@
     <Compile Include="Repositories\Investment\InvestmentRepository.cs" />
     <Compile Include="Repositories\Location\ILocationRepository.cs" />
     <Compile Include="Repositories\Location\LocationRepository.cs" />
+    <Compile Include="Repositories\Product\DamageStockEntry\DamageStockEntryRepository.cs" />
+    <Compile Include="Repositories\Product\DamageStockEntry\IDamageStockEntryRepository.cs" />
+    <Compile Include="Repositories\Product\ProductInfo\IProductInfoRepository.cs" />
+    <Compile Include="Repositories\Product\ProductInfo\IProductQuantityRepository.cs" />
+    <Compile Include="Repositories\Product\ProductInfo\ProductInfoRepository.cs" />
+    <Compile Include="Repositories\Product\ProductInfo\ProductQuantityRepository.cs" />
+    <Compile Include="Repositories\Product\SaleReturn\ISaleReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Product\SaleReturn\SaleReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Product\StockAdjustment\IStockAdjustmentRepository.cs" />
+    <Compile Include="Repositories\Product\StockAdjustment\StockAdjustmentRepository.cs" />
+    <Compile Include="Repositories\Product\SubCategory\ISubCategoryRepository.cs" />
+    <Compile Include="Repositories\Product\SubCategory\SubCategoryRepository.cs" />
     <Compile Include="Repositories\Supplier\ISupplierPaymentRepository.cs" />
     <Compile Include="Repositories\Supplier\ISupplierRepository.cs" />
     <Compile Include="Repositories\Supplier\SupplierPaymentRepository.cs" />
@@ -63,6 +79,7 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

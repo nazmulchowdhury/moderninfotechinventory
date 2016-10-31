@@ -1,0 +1,192 @@
+2016-10-30 10:56:12.1230|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1477803350589
+Authorization: Bearer M_N69uy63iw96vcCphj89koMcGvOKPaq5xeDSHbTTSbkdtxaH9tA3_ypI4HNDa1zqD49gQgNyCw6UJVvizmVkI3jSPrw1bN93ylZWQOKI1F1Ki1wm1fC--PLo6akWLHH8zt7P8YtJeLtP_ooEVtz1xhNfTD8I6bHHvxj9bJ-0XRk9yBD4NOkuVCRoUKkY1mR7wciF2psSq_N0pVI91zIH36HtX4bfkNyJNoeXz2xJU-rs3WcBhW9Cw8fnEJqJap1nqv2KPZcIhIamSrKXN2FPuVc0C8M2OFPiszcwrcf28xXGU8kW9VJiiMw2KI3kW3YS0MXn9wsKAhaJZmCpoKjwSJHT66N47SW8pcSgZbZDoOOCqfimOsaG42jN-SiK_ZOc8hVBY5HgpC6wCiu4YufdYJ84xmaqejtOVY8yxFTBQM
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-10-30 10:56:15.5542|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer M_N69uy63iw96vcCphj89koMcGvOKPaq5xeDSHbTTSbkdtxaH9tA3_ypI4HNDa1zqD49gQgNyCw6UJVvizmVkI3jSPrw1bN93ylZWQOKI1F1Ki1wm1fC--PLo6akWLHH8zt7P8YtJeLtP_ooEVtz1xhNfTD8I6bHHvxj9bJ-0XRk9yBD4NOkuVCRoUKkY1mR7wciF2psSq_N0pVI91zIH36HtX4bfkNyJNoeXz2xJU-rs3WcBhW9Cw8fnEJqJap1nqv2KPZcIhIamSrKXN2FPuVc0C8M2OFPiszcwrcf28xXGU8kW9VJiiMw2KI3kW3YS0MXn9wsKAhaJZmCpoKjwSJHT66N47SW8pcSgZbZDoOOCqfimOsaG42jN-SiK_ZOc8hVBY5HgpC6wCiu4YufdYJ84xmaqejtOVY8yxFTBQM
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-30 11:04:51.2632|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PostProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"productInfoEntity":{"ProductId":"11111111-tryu-49d2-9f63-8ba92335eb70","ProductName":"T-Shirt","Barcode":"67893570-tryu-9201-9f63-8ba92335eb70","CostPrice":1500.5,"SalePrice":1530.5,"ReorderLevel":124,"SubCategoryId":"22293570-tryu-49d2-9f63-8ba92335eb70","SubCategory":null}}]}
+
+2016-10-30 11:06:07.4575|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetAllProducts
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-30 11:06:20.9083|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo/11111111-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-30 11:06:47.9106|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo/11111111-tryu-49d2-9f63-8ba92335eb90
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-tryu-49d2-9f63-8ba92335eb90"}]}
+
+2016-10-30 11:06:53.7775|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/productinfo/11111111-tryu-49d2-9f63-8ba92335eb90
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetProduct
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: No Product found for this 11111111-tryu-49d2-9f63-8ba92335eb90
+Error Code: 1001
+
+
+2016-10-30 11:08:39.1334|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PostProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"productInfoEntity":{"ProductId":"22222222-tryu-49d2-9f63-8ba92335eb70","ProductName":"Full Shirt","Barcode":"00000000-1111-9201-9f63-8ba92335eb70","CostPrice":1525.5,"SalePrice":1565.5,"ReorderLevel":1160,"SubCategoryId":"22293570-tryu-49d2-9f63-8ba92335eb70","SubCategory":null}}]}
+
+2016-10-30 11:08:47.2395|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetAllProducts
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-10-30 11:13:34.1156|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/productinfo/22222222-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PutProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"22222222-tryu-49d2-9f63-8ba92335eb70","productInfoEntity":{"ProductId":null,"ProductName":"Casual Shirt","Barcode":"00000000-1111-9201-9f63-8ba92335eb70","CostPrice":1525.5,"SalePrice":1565.5,"ReorderLevel":500,"SubCategoryId":"22293570-tryu-49d2-9f63-8ba92335eb70","SubCategory":null}}]}
+
+2016-10-30 11:13:44.7271|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/productinfo/22222222-tryu-49d2-9f63-8ba92335eb80
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PutProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"22222222-tryu-49d2-9f63-8ba92335eb80","productInfoEntity":{"ProductId":null,"ProductName":"Casual Shirt","Barcode":"00000000-1111-9201-9f63-8ba92335eb70","CostPrice":1525.5,"SalePrice":1565.5,"ReorderLevel":500,"SubCategoryId":"22293570-tryu-49d2-9f63-8ba92335eb70","SubCategory":null}}]}
+
+2016-10-30 11:14:39.5428|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PostProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"productInfoEntity":{"ProductId":"llllllll-tryu-49d2-9f63-8ba92335eb70","ProductName":"Full Shirt","Barcode":"00000000-1111-9201-9f63-8ba92335eb70","CostPrice":1525.5,"SalePrice":1565.5,"ReorderLevel":1160,"SubCategoryId":"22293570-tryu-49d2-9f63-8ba92335eb70","SubCategory":null}}]}
+
+2016-10-30 11:15:18.4887|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/productinfo/llllllll-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: DeleteProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"llllllll-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-30 11:15:27.4374|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/productinfo/llllllll-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: DeleteProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"llllllll-tryu-49d2-9f63-8ba92335eb70"}]}
+
+2016-10-30 11:15:31.7641|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: DELETE
+URL: http://localhost:1036/api/productinfo/llllllll-tryu-49d2-9f63-8ba92335eb70
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: DeleteProduct
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Product is already deleted or not exist in system.
+Error Code: 1002
+
+
+2016-10-30 11:16:02.0500|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _GrMshGIAhSZrTtG7wVi9W2SO30Q6H7qlLz4Bh0lghaAVRRn-Lo9wHL1FKRwo0D-OyFthyvkbH57Dnjk5e--MyoP88h7ew4G_UO6UxyuaS7ihP4thEEoZ6DVXR2UESrGQ8p0wHosi0aB9REpepMpRPevLauvwFBQVHu4L7wUvznolU6G-PsRIi6y-3YMmT9uGMYt4Z8FvXOusEaciPJf7sA1dxFndQdlh86OuR5LcDpr4akf__UXQEH1CbJuOQukbbQk9PLS-Qa2r3DeIGveOwwSmNGPTp5e2Cy_S9d8piEg4cYfQ4ksTDDujjDBF2kVDpmgt_Sqr-Kjihz8GFNeBvcvjz2B6IwhSKCePfFr2R6CAYkc30qSmVBuqBZT2Af_UZZFvkTcHkXXP9HYiNSgyGCSBOns4ZZ_lr1mv5GLwvA
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetAllProducts
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
