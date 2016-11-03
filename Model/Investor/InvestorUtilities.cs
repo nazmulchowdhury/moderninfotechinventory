@@ -32,10 +32,8 @@ namespace Model.Investor
     public class InvestorTransactionEntity
     {
         [Key]
+        [ForeignKey("Investor")]
         public string InvestorTransactionId { get; set; }
-
-        [Required]
-        public string InvestorId { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -57,7 +55,6 @@ namespace Model.Investor
         public bool TransactionType { get; set; }
 
         // navigation properties
-        [ForeignKey("InvestorId")]
         public virtual InvestorEntity Investor { get; set; }
     }
 }

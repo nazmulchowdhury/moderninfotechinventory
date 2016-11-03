@@ -2,9 +2,12 @@
 using Model.CompanyInfo;
 using Model.Customer;
 using Model.Investment;
+using Model.Inventory;
+using Model.Investor;
 using Model.Location;
 using Model.Supplier;
 using Model.Product;
+using Model.Purchase;
 using Model.Invoice;
 using Model.Sale;
 
@@ -31,6 +34,15 @@ namespace Data.Helper
         public DbSet<DamageStockEntryEntity> DamageStockEntry { get; set; }
         public DbSet<SaleReturnQuantityEntity> SaleReturnQuantity { get; set; }
         public DbSet<InvoiceInfoEntity> InvoiceInfo { get; set; }
+        public DbSet<InventoryEntity> Inventory { get; set; }
+        public DbSet<BillEntryEntity> BillEntry { get; set; }
+        public DbSet<CashEntity> Cash { get; set; }
+        public DbSet<ExpenseEntity> Expense { get; set; }
+        public DbSet<VatEntity> Vat { get; set; }
+        public DbSet<InvestorEntity> Investor { get; set; }
+        public DbSet<InvestorTransactionEntity> InvestorTransaction { get; set; }
+        public DbSet<PurchaseEntryEntity> PurchaseEntry { get; set; }
+        public DbSet<PurchaseReturnEntity> PurchaseReturn { get; set; }
 
         public virtual void Commit()
         {
