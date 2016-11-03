@@ -30,13 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CompanyInfo\CompanyInfoBindingModel.cs" />
+    <Compile Include="CompanyInfo\CompanyInfoUtilities.cs" />
     <Compile Include="Customer\CustomerUtilities.cs" />
-    <Compile Include="Investment\InvestmentBindingModel.cs" />
-    <Compile Include="Invoice\InvoiceInfoBindingModel.cs" />
-    <Compile Include="Location\LocationBindingModel.cs" />
+    <Compile Include="Inventory\InventoryUtilities.cs" />
+    <Compile Include="Investment\InvestmentUtilities.cs" />
+    <Compile Include="Investor\InvestorUtilities.cs" />
+    <Compile Include="Invoice\InvoiceInfoUtilities.cs" />
+    <Compile Include="Location\LocationUtilities.cs" />
     <Compile Include="Product\ProductUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\PurchaseUtilities.cs" />
     <Compile Include="Sale\SaleUtilities.cs" />
     <Compile Include="Supplier\SupplierUtilities.cs" />
   </ItemGroup>
@@ -44,9 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Purchase\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
