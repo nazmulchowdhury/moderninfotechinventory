@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Model.Location;
-using Model.Product;
-using Model.Invoice;
 
 namespace Model.Customer
 {
@@ -37,12 +34,6 @@ namespace Model.Customer
         // navigation properties
         [ForeignKey("LocationId")]
         public virtual LocationEntity Location { get; set; }
-
-        //public virtual CustomerDueEntity CustomerDue { get; set; }
-
-        //public virtual ICollection<ProductQuantityEntity> ProductTypeQuantities { get; set; }
-
-        //public virtual ICollection<InvoiceInfoEntity> Invoices { get; set; }
     }
 
     [Table("CustomerDue")]

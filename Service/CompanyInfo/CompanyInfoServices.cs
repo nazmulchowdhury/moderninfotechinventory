@@ -36,10 +36,9 @@ namespace Service.CompanyInfo
             {
                 storedItem.CompanyName = companyInfoEntity.CompanyName;
                 storedItem.ShortName = companyInfoEntity.ShortName;
-                storedItem.Description = companyInfoEntity.Description;
                 storedItem.PhoneNumber = companyInfoEntity.PhoneNumber;
                 storedItem.LocationId = companyInfoEntity.LocationId;
-                storedItem.LogoId = companyInfoEntity.LogoId;
+                storedItem.Description = companyInfoEntity.Description;
                 storedItem.Note = companyInfoEntity.Note;
                 storedItem.Status = companyInfoEntity.Status;
 

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Model.Customer;
 
 namespace Model.Product
 {
@@ -16,9 +14,6 @@ namespace Model.Product
         [DataType(DataType.Text)]
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
-
-        // navigation properties
-        //public virtual ICollection<SubCategoryEntity> SubCategories { get; set; }
     }
 
     [Table("SubCategory")]
@@ -38,11 +33,9 @@ namespace Model.Product
         // navigation properties
         [ForeignKey("CategoryId")]
         public virtual CategoryEntity Category { get; set; }
-
-        //public virtual ICollection<ProductEntity> Products { get; set; }
     }
 
-    [Table("ProductInfo")]
+    [Table("Product")]
     public class ProductInfoEntity
     {
         [Key]
@@ -76,8 +69,6 @@ namespace Model.Product
         // navigation properties
         [ForeignKey("SubCategoryId")]
         public virtual SubCategoryEntity SubCategory { get; set; }
-
-        //public virtual ProductQuantityEntity ProductQuantity { get; set; }
     }
 
     [Table("ProductQuantity")]
@@ -91,18 +82,8 @@ namespace Model.Product
         [Display(Name = "Quantity")]
         public int Quantity { get; set; }
 
-        [Required]
-        public string CustomerId { get; set; }
-
         // navigation properties
         public virtual ProductInfoEntity Product { get; set; }
-
-        [ForeignKey("CustomerId")]
-        public virtual CustomerEntity Customer { get; set; }
-
-        //public virtual ICollection<StockAdjustmentEntity> Stocks { get; set; }
-
-        //public virtual SaleReturnQuantityEntity SaleProductReturnQuantity { get; set; }
     }
 
     [Table("StockAdjustment")]
@@ -128,20 +109,16 @@ namespace Model.Product
         // navigation properties
         [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
-
-        //public virtual DamageStockEntryEntity DamageStockQuantity { get; set; }
     }
 
     [Table("DamageStockEntry")]
     public class DamageStockEntryEntity
     {
         [Key]
-        [ForeignKey("StockAdjustment")]
         public string DamageStockEntryId { get; set; }
 
         [Required]
-        [Display(Name = "Damage Quantity")]
-        public int DamageQuantity { get; set; }
+        public string ProductQuantityId { get; set; }
 
         [Required]
         [DataType(DataType.Text)]
@@ -149,21 +126,7 @@ namespace Model.Product
         public string Remark { get; set; }
 
         // navigation properties
-        public virtual StockAdjustmentEntity StockAdjustment { get; set; }
-    }
-
-    [Table("SaleReturnQuantity")]
-    public class SaleReturnQuantityEntity
-    {
-        [Key]
-        [ForeignKey("ProductQuantity")]
-        public string SaleReturnQuantityId { get; set; }
-
-        [Required]
-        [Display(Name = "Return Quantity")]
-        public int ReturnQuantity { get; set; }
-
-        // navigation properties
+        [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
     }
 }

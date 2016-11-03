@@ -37,7 +37,9 @@ namespace Service.Supplier
                 storedItem.PaymentDate = suppliePaymentEntity.PaymentDate;
                 storedItem.PaidAmount = suppliePaymentEntity.PaidAmount;
                 storedItem.Description = suppliePaymentEntity.Description;
+
                 supplierPaymentRepository.Update(storedItem);
+
                 return true;
             }
             else

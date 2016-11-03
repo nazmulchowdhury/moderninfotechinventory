@@ -2,8 +2,8 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Product.SaleReturn;
-using Model.Product;
+using Service.Sale.SaleReturn;
+using Model.Sale;
 using ModernInfoTechInventory.ViewModels;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;

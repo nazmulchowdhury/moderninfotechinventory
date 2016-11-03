@@ -56,8 +56,8 @@
     <Compile Include="Repositories\Product\ProductInfo\IProductQuantityRepository.cs" />
     <Compile Include="Repositories\Product\ProductInfo\ProductInfoRepository.cs" />
     <Compile Include="Repositories\Product\ProductInfo\ProductQuantityRepository.cs" />
-    <Compile Include="Repositories\Product\SaleReturn\ISaleReturnQuantityRepository.cs" />
-    <Compile Include="Repositories\Product\SaleReturn\SaleReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Sale\SaleReturn\ISaleReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Sale\SaleReturn\SaleReturnQuantityRepository.cs" />
     <Compile Include="Repositories\Product\StockAdjustment\IStockAdjustmentRepository.cs" />
     <Compile Include="Repositories\Product\StockAdjustment\StockAdjustmentRepository.cs" />
     <Compile Include="Repositories\Product\SubCategory\ISubCategoryRepository.cs" />

@@ -1,7 +1,7 @@
 ﻿using Data.Infrastructure;
-using Model.Product;
+using Model.Sale;
 
-namespace Data.Repositories.Product.SaleReturn
+namespace Data.Repositories.Sale.SaleReturn
 {
     public interface ISaleReturnQuantityRepository : IRepository<SaleReturnQuantityEntity>
     { }

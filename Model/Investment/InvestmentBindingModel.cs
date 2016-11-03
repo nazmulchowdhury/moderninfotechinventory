@@ -8,7 +8,7 @@ namespace Model.Investment
     public class InvestmentEntity
     {
         [Key]
-        [ForeignKey("User")]
+        [ForeignKey("Company")]
         public string InvestmentId { get; set; }
 
         [Required]
@@ -16,6 +16,6 @@ namespace Model.Investment
         public double Amount { get; set; }
 
         // navigation properties
-        public virtual User User { get; set; }
+        public virtual CompanyInfoEntity Company { get; set; }
     }
 }

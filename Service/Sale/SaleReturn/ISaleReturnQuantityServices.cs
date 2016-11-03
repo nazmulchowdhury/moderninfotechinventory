@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Model.Product;
+using Model.Sale;
 
-namespace Service.Product.SaleReturn
+namespace Service.Sale.SaleReturn
 {
     public interface ISaleReturnQuantityServices
     {

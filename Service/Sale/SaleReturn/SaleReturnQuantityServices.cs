@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Data.Repositories.Product.SaleReturn;
-using Model.Product;
+using Data.Repositories.Sale.SaleReturn;
+using Model.Sale;
 
-namespace Service.Product.SaleReturn
+namespace Service.Sale.SaleReturn
 {
     public class SaleReturnQuantityServices : ISaleReturnQuantityServices
     {

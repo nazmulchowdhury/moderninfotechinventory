@@ -37,7 +37,9 @@ namespace Service.Supplier
                 storedItem.SupplierName = supplierEntity.SupplierName;
                 storedItem.LocationId = supplierEntity.LocationId;
                 storedItem.PhoneNumber = supplierEntity.PhoneNumber;
+
                 supplierRepository.Update(storedItem);
+
                 return true;
             }
             else

@@ -23,7 +23,6 @@ namespace ModernInfoTechInventory.Controllers
             this.companyInfoServices = companyInfoServices;
 
             companyInfoMapper = new MapperConfiguration(cfg => cfg.CreateMap<CompanyInfoEntity, CompanyInfoView>()
-                .ForMember(dest => dest.CompanyLogoId, opts => opts.MapFrom(src => src.Logo.LogoId))
                 .ForMember(dest => dest.Location, opts => opts.MapFrom(src => src.Location.LocationName))
                 .ForMember(dest => dest.CompanyOwnerName, opts => opts.MapFrom(src => src.User.UserName))
                 );

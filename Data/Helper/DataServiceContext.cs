@@ -6,6 +6,7 @@ using Model.Location;
 using Model.Supplier;
 using Model.Product;
 using Model.Invoice;
+using Model.Sale;
 
 namespace Data.Helper
 {

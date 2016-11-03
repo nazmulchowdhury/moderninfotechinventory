@@ -1,0 +1,837 @@
+2016-11-02 11:23:58.5355|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/Account/Register
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: Register
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"model":{"UserName":"nazmulchowdhury","Password":"123456","ConfirmPassword":"123456"}}]}
+
+2016-11-02 11:24:13.4362|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/Account/Logout
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: Logout
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 18:43:14.0964|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":"11111111-67f4-42d1-939f-73b30ae4bb23","LocationName":"New York"}}]}
+
+2016-11-02 18:44:04.6393|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":"22222222-67f4-42d1-939f-73b30ae4bb23","LocationName":"Los Angeles"}}]}
+
+2016-11-02 18:44:44.5944|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":"33333333-67f4-42d1-939f-73b30ae4bb23","LocationName":"Sydney"}}]}
+
+2016-11-02 18:45:25.8404|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","LocationName":"Kolkata"}}]}
+
+2016-11-02 18:45:59.7013|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":"55555555-67f4-42d1-939f-73b30ae4bb23","LocationName":"Dhaka"}}]}
+
+2016-11-02 18:46:28.2304|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetAllLocations
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 18:46:50.8331|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetAllLocations
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 18:50:41.8156|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-67f4-42d1-939f-73b30ae4bb23"}]}
+
+2016-11-02 18:50:59.8747|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-67f4-42d1-939f-73b30ae4bb23"}]}
+
+2016-11-02 18:52:04.5913|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"locationEntity":{"LocationId":null,"LocationName":"California"}}]}
+
+2016-11-02 18:52:19.7244|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: POST
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PostLocation
+Action Parameters: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: OriginalValues cannot be used for entities in the Added state.
+   at System.Data.Entity.Internal.InternalEntityEntry.ValidateStateToGetValues(String method, EntityState invalidState)
+   at System.Data.Entity.Internal.InternalEntityEntry.get_OriginalValues()
+   at System.Data.Entity.Infrastructure.DbEntityEntry.get_OriginalValues()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Web.SecurityUtils.MethodInfoInvoke(MethodInfo method, Object target, Object[] args)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+
+
+2016-11-02 18:52:28.4090|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PutLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-67f4-42d1-939f-73b30ae4bb23","locationEntity":{"LocationId":null,"LocationName":"California"}}]}
+
+2016-11-02 18:52:30.6458|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: PutLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-67f4-42d1-939f-73b30ae4bb23","locationEntity":{"LocationId":null,"LocationName":"California"}}]}
+
+2016-11-02 18:52:48.4911|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetAllLocations
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 18:55:57.1729|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb24
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetLocation
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11111111-67f4-42d1-939f-73b30ae4bb24"}]}
+
+2016-11-02 18:56:02.5605|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/location/11111111-67f4-42d1-939f-73b30ae4bb24
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.LocationController
+Action: GetLocation
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: No Location found for this 11111111-67f4-42d1-939f-73b30ae4bb24
+Error Code: 1001
+
+
+2016-11-02 19:10:42.1640|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: PostCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"companyInfoEntity":{"CompanyId":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23","CompanyName":"Dolce \u0026 Gabrana","ShortName":"D\u0026G","PhoneNumber":"01715975204","LocationId":"11111111-67f4-42d1-939f-73b30ae4bb23","Description":"Smart Jeans","Note":"Outback","Status":true,"Location":null,"User":null}}]}
+
+2016-11-02 19:13:12.5889|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/Account/ManageInfo?returnUrl=%2F&generateState=true&_=1478092350119
+Authorization: Bearer MeNlaP7rH_LceA31T0OQSA2CBIJB2QQj0f_SmS9Y0LqBpu4GtCncfbNjBSwnjvzCQUOicvO4Ln86UcGKhjq25-8gVuSrRwpIzt1Ki_wIn8oO01xsjAb6GUx0Pxt5tGGsrCJN_8RFWCnlsys8aOL6ubLIsk3WAjK3aG5K9gCPGGdr3caB_EKKOd-k9BmTAAJlsLaE06E0qup7npd3GjUS7RtaR9rlT58kFL9Q_DW80NVqdq-vlMCVqw1_R409OwSmfWuTrrvH8SuWIiY39RIszVU0mzfgt_fystUZa577Relj9B1eblsYelBvk97GsvjJQ5d5IqQRKbmUTAT87FfQclHlvIi3S0TLC3B7Kzt8ar_HIXdIAD1gzDZTQwrH_NzRhBzUuYMdHMpR5EgOpni0XefzOkZHeGDdRwpeEbA5Ro-h9mZGdJeiuyRBR01iFRAV
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: GetManageInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"returnUrl":"/","generateState":true}]}
+
+2016-11-02 19:13:16.8999|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer MeNlaP7rH_LceA31T0OQSA2CBIJB2QQj0f_SmS9Y0LqBpu4GtCncfbNjBSwnjvzCQUOicvO4Ln86UcGKhjq25-8gVuSrRwpIzt1Ki_wIn8oO01xsjAb6GUx0Pxt5tGGsrCJN_8RFWCnlsys8aOL6ubLIsk3WAjK3aG5K9gCPGGdr3caB_EKKOd-k9BmTAAJlsLaE06E0qup7npd3GjUS7RtaR9rlT58kFL9Q_DW80NVqdq-vlMCVqw1_R409OwSmfWuTrrvH8SuWIiY39RIszVU0mzfgt_fystUZa577Relj9B1eblsYelBvk97GsvjJQ5d5IqQRKbmUTAT87FfQclHlvIi3S0TLC3B7Kzt8ar_HIXdIAD1gzDZTQwrH_NzRhBzUuYMdHMpR5EgOpni0XefzOkZHeGDdRwpeEbA5Ro-h9mZGdJeiuyRBR01iFRAV
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 19:14:34.7287|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/companyinfo/8f7bfd28-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: PutCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23","companyInfoEntity":{"CompanyId":null,"CompanyName":"Dolce \u0026 Gabrana","ShortName":"D\u0026G","PhoneNumber":"+8801715975204","LocationId":"33333333-67f4-42d1-939f-73b30ae4bb23","Description":"Smart Jeans","Note":"Outback","Status":true,"Location":null,"User":null}}]}
+
+2016-11-02 19:15:05.4974|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 19:16:01.9649|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/companyinfo/8f7bfd28-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: DeleteCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23"}]}
+
+2016-11-02 19:16:10.6130|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 19:16:18.0931|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Companies are not found
+Error Code: 1000
+
+
+2016-11-02 19:16:36.0245|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: PostCompany
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"companyInfoEntity":{"CompanyId":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23","CompanyName":"Dolce \u0026 Gabrana","ShortName":"D\u0026G","PhoneNumber":"+8801715975204","LocationId":"11111111-67f4-42d1-939f-73b30ae4bb23","Description":"Smart Jeans","Note":"Outback","Status":true,"Location":null,"User":null}}]}
+
+2016-11-02 19:16:55.2089|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/Account/Logout
+Authorization: Bearer MeNlaP7rH_LceA31T0OQSA2CBIJB2QQj0f_SmS9Y0LqBpu4GtCncfbNjBSwnjvzCQUOicvO4Ln86UcGKhjq25-8gVuSrRwpIzt1Ki_wIn8oO01xsjAb6GUx0Pxt5tGGsrCJN_8RFWCnlsys8aOL6ubLIsk3WAjK3aG5K9gCPGGdr3caB_EKKOd-k9BmTAAJlsLaE06E0qup7npd3GjUS7RtaR9rlT58kFL9Q_DW80NVqdq-vlMCVqw1_R409OwSmfWuTrrvH8SuWIiY39RIszVU0mzfgt_fystUZa577Relj9B1eblsYelBvk97GsvjJQ5d5IqQRKbmUTAT87FfQclHlvIi3S0TLC3B7Kzt8ar_HIXdIAD1gzDZTQwrH_NzRhBzUuYMdHMpR5EgOpni0XefzOkZHeGDdRwpeEbA5Ro-h9mZGdJeiuyRBR01iFRAV
+Controller: ModernInfoTechInventory.Controllers.AccountController
+Action: Logout
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 22:03:33.4590|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/companyinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CompanyInfoController
+Action: GetAllCompanies
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 22:37:49.0206|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"44444444-4444-42d1-4444-73b30ae4bb23","CustomerName":"Shahrukh Khan","PhoneNumber":"+9198765432123","LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","CurrentDue":20000.5,"DueLimit":60000.79,"Location":null}}]}
+
+2016-11-02 22:46:04.1906|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23","customerEntity":{"CustomerId":null,"CustomerName":"Shahrukh Khan","PhoneNumber":"+9198765432444","LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","CurrentDue":20000.5,"DueLimit":60000.79,"Location":null}}]}
+
+2016-11-02 22:46:08.0982|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23","customerEntity":{"CustomerId":null,"CustomerName":"Shahrukh Khan","PhoneNumber":"+9198765432444","LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","CurrentDue":20000.5,"DueLimit":60000.79,"Location":null}}]}
+
+2016-11-02 22:47:01.2507|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetAllCustomers
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 22:48:07.8550|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customer/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: GetCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23"}]}
+
+2016-11-02 22:48:24.9977|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customer/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: DeleteCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23"}]}
+
+2016-11-02 22:48:42.4464|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customer
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PostCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerEntity":{"CustomerId":"44444444-4444-42d1-4444-73b30ae4bb23","CustomerName":"Shahrukh Khan","PhoneNumber":"+9198765432123","LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","CurrentDue":20000.5,"DueLimit":60000.79,"Location":null}}]}
+
+2016-11-02 22:49:06.1305|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customer/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerController
+Action: PutCustomer
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23","customerEntity":{"CustomerId":null,"CustomerName":"Shahrukh Khan","PhoneNumber":"+9198765432444","LocationId":"44444444-67f4-42d1-939f-73b30ae4bb23","CurrentDue":20000.5,"DueLimit":90000.79,"Location":null}}]}
+
+2016-11-02 22:57:18.5391|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customerdue
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: PostCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerDueEntity":{"CustomerDueId":"44444444-4444-42d1-4444-73b30ae4bb23","ReceiveAmount":65000,"Customer":null}}]}
+
+2016-11-02 23:01:44.7760|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customerdue/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: GetCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23"}]}
+
+2016-11-02 23:02:07.1574|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customerdue
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: GetAllCustomerDues
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:03:20.3067|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customerdue/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: PutCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23","customerDueEntity":{"CustomerDueId":null,"ReceiveAmount":65070.9,"Customer":null}}]}
+
+2016-11-02 23:03:57.2194|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/customerdue/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: DeleteCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23"}]}
+
+2016-11-02 23:04:07.1353|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/customerdue
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: PostCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"customerDueEntity":{"CustomerDueId":"44444444-4444-42d1-4444-73b30ae4bb23","ReceiveAmount":65000,"Customer":null}}]}
+
+2016-11-02 23:04:15.1757|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/customerdue/44444444-4444-42d1-4444-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: PutCustomerDue
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"44444444-4444-42d1-4444-73b30ae4bb23","customerDueEntity":{"CustomerDueId":null,"ReceiveAmount":65070.9,"Customer":null}}]}
+
+2016-11-02 23:04:20.2582|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/customerdue
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CustomerDueController
+Action: GetAllCustomerDues
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:12:07.1081|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/investment
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: PostInvestment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"investmentEntity":{"InvestmentId":"11112222-1122-42d1-4444-73b30ae4bb22","Amount":789000,"Company":null}}]}
+
+2016-11-02 23:12:28.0316|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: POST
+URL: http://localhost:1036/api/investment
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: PostInvestment
+Action Parameters: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: OriginalValues cannot be used for entities in the Added state.
+   at System.Data.Entity.Internal.InternalEntityEntry.ValidateStateToGetValues(String method, EntityState invalidState)
+   at System.Data.Entity.Internal.InternalEntityEntry.get_OriginalValues()
+   at System.Data.Entity.Infrastructure.DbEntityEntry.get_OriginalValues()
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Web.SecurityUtils.MethodInfoInvoke(MethodInfo method, Object target, Object[] args)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Investment_CompanyInfo". The conflict occurred in database "ModernInfoTechInventory", table "dbo.CompanyInfo", column 'CompanyId'.
+The statement has been terminated.
+
+
+2016-11-02 23:13:33.9817|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/investment
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: PostInvestment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"investmentEntity":{"InvestmentId":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23","Amount":789000,"Company":null}}]}
+
+2016-11-02 23:15:56.0961|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/investment/8f7bfd28-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: GetInvestmentAmount
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:17:21.8063|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/investment/8f7bfd28-67f4-42d1-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: DeleteInvestment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:17:40.8943|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/investment
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvestmentController
+Action: PostInvestment
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"investmentEntity":{"InvestmentId":"8f7bfd28-67f4-42d1-939f-73b30ae4bb23","Amount":789000,"Company":null}}]}
+
+2016-11-02 23:21:51.3071|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: PostInvoice
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"invoiceInfoEntity":{"InvoiceInfoId":"11112222-1122-3333-939f-73b30ae4bb23"}}]}
+
+2016-11-02 23:22:28.2533|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo/11112222-1122-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetInvoice
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11112222-1122-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:22:31.2213|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo/11112222-1122-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetInvoice
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11112222-1122-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:22:39.1407|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetAllInvoices
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:22:41.9519|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetAllInvoices
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:23:09.9757|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/invoiceinfo/11112222-1122-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: DeleteInvoiceInfo
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11112222-1122-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:23:43.4527|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: PostInvoice
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"invoiceInfoEntity":{"InvoiceInfoId":"11112222-1122-3333-939f-73b30ae4bb23"}}]}
+
+2016-11-02 23:23:50.9688|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetAllInvoices
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:24:00.4803|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo/11112222-1122-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetInvoice
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"11112222-1122-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:24:06.6394|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/invoiceinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.InvoiceInfoController
+Action: GetAllInvoices
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:34:14.2638|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":null}]}
+
+2016-11-02 23:34:27.9213|ERROR|ModernInfoTechInventory.Helpers.NLogger|Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: System.InvalidOperationException: A circular reference was detected while serializing an object of type 'System.Reflection.RuntimeModule'.
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeEnumerable(IEnumerable enumerable, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeCustomObject(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValueInternal(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.SerializeValue(Object o, StringBuilder sb, Int32 depth, Hashtable objectsInUse, SerializationFormat serializationFormat, MemberInfo currentMember)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, StringBuilder output, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj, SerializationFormat serializationFormat)
+   at System.Web.Script.Serialization.JavaScriptSerializer.Serialize(Object obj)
+   at ModernInfoTechInventory.Helpers.JSONHelper.ToJSON(Object obj) in c:\Users\Nazmul Chowdhury\Documents\Visual Studio 2013\Projects\ModernInfoTechInventory\ModernInfoTechInventory\Helpers\JSONHelper.cs:line 13
+Error: Value cannot be null.
+Parameter name: entity
+
+
+2016-11-02 23:36:46.9189|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":{"CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","CategoryName":"Shirt"}}]}
+
+2016-11-02 23:38:05.7553|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/category/SSSSSSSS-SSSS-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PutCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","categoryEntity":{"CategoryId":null,"CategoryName":"Men Shirt"}}]}
+
+2016-11-02 23:38:40.7783|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/SSSSSSSS-SSSS-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:38:44.3821|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category/SSSSSSSS-SSSS-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:38:56.3541|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:39:17.5803|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:39:20.3233|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: GetAllCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:40:10.0468|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/category/SSSSSSSS-SSSS-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: DeleteCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:40:27.6851|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/category
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.CategoryController
+Action: PostCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"categoryEntity":{"CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","CategoryName":"Shirt"}}]}
+
+2016-11-02 23:42:55.5087|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/subcategory
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: PostSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"subCategoryEntity":{"SubCategoryId":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","SubCategoryName":"T Shirt","CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","Category":null}}]}
+
+2016-11-02 23:44:07.4875|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/subcategory/bbbbbbbb-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: PutSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","subCategoryEntity":{"SubCategoryId":null,"SubCategoryName":"Men T Shirt","CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","Category":null}}]}
+
+2016-11-02 23:44:33.8331|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/subcategory/bbbbbbbb-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: GetSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:44:47.9704|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/subcategory
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: GetAllSubCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:45:03.6727|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/subcategory/bbbbbbbb-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: DeleteSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:45:18.1140|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/subcategory
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: PostSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"subCategoryEntity":{"SubCategoryId":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","SubCategoryName":"T Shirt","CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","Category":null}}]}
+
+2016-11-02 23:45:27.2180|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/subcategory/bbbbbbbb-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: PutSubCategory
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","subCategoryEntity":{"SubCategoryId":null,"SubCategoryName":"Men T Shirt","CategoryId":"SSSSSSSS-SSSS-3333-939f-73b30ae4bb23","Category":null}}]}
+
+2016-11-02 23:45:34.4767|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/subcategory
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.SubCategoryController
+Action: GetAllSubCategories
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:56:38.2675|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PostProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"productInfoEntity":{"ProductId":"llllllll-ssss-3333-939f-73b30ae4bb23","ProductName":"Levis","Barcode":"sfsdfsdfsdfdsfdsfdsfsf","CostPrice":6540.45,"SalePrice":7999.99,"ReorderLevel":199,"SubCategoryId":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","SubCategory":null}}]}
+
+2016-11-02 23:58:00.2520|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: PUT
+URL: http://localhost:1036/api/productinfo/llllllll-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PutProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"llllllll-ssss-3333-939f-73b30ae4bb23","productInfoEntity":{"ProductId":null,"ProductName":"Levis","Barcode":"pppdfsdfsdfdsfdsfdsfsf","CostPrice":6540.55,"SalePrice":7999.99,"ReorderLevel":199,"SubCategoryId":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","SubCategory":null}}]}
+
+2016-11-02 23:58:30.9320|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo/llllllll-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"llllllll-ssss-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:58:41.2085|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: GET
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: GetAllProducts
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{}]}
+
+2016-11-02 23:58:57.8844|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: DELETE
+URL: http://localhost:1036/api/productinfo/llllllll-ssss-3333-939f-73b30ae4bb23
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: DeleteProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"id":"llllllll-ssss-3333-939f-73b30ae4bb23"}]}
+
+2016-11-02 23:59:20.3347|INFO|ModernInfoTechInventory.Helpers.NLogger|JSON
+Method: POST
+URL: http://localhost:1036/api/productinfo
+Authorization: Bearer _lbvuzhMSqZhMyqq8D09Gpwq20pGk6vs9-aJ8sOzx6hKudV4ABG-8t4tyZGe4_J0hOQ_OyJyIgv0ChhTbBhn61Wx3DwvospEyyCQ0_kFlAYZiQkD59_YLitWxpk2c6UsyJAt5j0BOG-9JY-w6Z71qVxeN2FqIou-wiSmQ0-aBmmTZhPy6NsPbw_Eb3uV5OsYd77-4ynN6F50zFyiFEUNZ9XfMmC9DSnIPpawR_SHfhztPStrYXaOGEAUqBrCr227pxdrY8NThKiwdnNZ02Nfh29pCkBk0T85NN28Iwu-_XOskCc8SSGcDyMlhXTLqPNPwre5sLQswDk2tM8y_7e3uayo4Errf-NW4ulS-7f79tiVASvqrYZqpQMWLREPuvxsDwL7pTKnixnN20-0QH7CjSfoKkHlUR6pdZbzkrL4HybHGjxRNnlhJYgfnayE0hpv
+Controller: ModernInfoTechInventory.Controllers.ProductInfoController
+Action: PostProduct
+Action Parameters: {"messageFormat":"JSON","messageArguments":[{"productInfoEntity":{"ProductId":"llllllll-ssss-3333-939f-73b30ae4bb23","ProductName":"Levis","Barcode":"sfsdfsdfsdfdsfdsfdsfsf","CostPrice":6540.65,"SalePrice":7999.99,"ReorderLevel":199,"SubCategoryId":"bbbbbbbb-ssss-3333-939f-73b30ae4bb23","SubCategory":null}}]}
+

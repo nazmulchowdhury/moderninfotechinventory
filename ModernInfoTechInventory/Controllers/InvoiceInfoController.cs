@@ -46,11 +46,6 @@ namespace ModernInfoTechInventory.Controllers
             return GetInvoice(insertedEntity.InvoiceInfoId);
         }
 
-        public HttpResponseMessage PutInvoiceInfo(string id, InvoiceInfoEntity invoiceInfoEntity)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, invoiceInfoServices.UpdateInvoice(id, invoiceInfoEntity));
-        }
-
         public HttpResponseMessage DeleteInvoiceInfo(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

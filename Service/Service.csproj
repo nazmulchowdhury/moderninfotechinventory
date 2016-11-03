@@ -53,8 +53,8 @@
     <Compile Include="Product\ProductInfo\IProductQuantityServices.cs" />
     <Compile Include="Product\ProductInfo\ProductInfoServices.cs" />
     <Compile Include="Product\ProductInfo\ProductQuantityServices.cs" />
-    <Compile Include="Product\SaleReturn\ISaleReturnQuantityServices.cs" />
-    <Compile Include="Product\SaleReturn\SaleReturnQuantityServices.cs" />
+    <Compile Include="Sale\SaleReturn\ISaleReturnQuantityServices.cs" />
+    <Compile Include="Sale\SaleReturn\SaleReturnQuantityServices.cs" />
     <Compile Include="Product\StockAdjustment\IStockAdjustmentServices.cs" />
     <Compile Include="Product\StockAdjustment\StockAdjustmentServices.cs" />
     <Compile Include="Product\SubCategory\ISubCategoryServices.cs" />

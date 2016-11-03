@@ -27,8 +27,6 @@ namespace Model.Supplier
         // navigation properties
         [ForeignKey("LocationId")]
         public virtual LocationEntity Location { get; set; }
-
-        //public virtual SupplierPaymentEntity SupplierPayment { get; set; }
     }
 
     [Table("SupplierPayment")]

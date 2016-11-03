@@ -35,7 +35,6 @@ namespace Service.Product.ProductInfo
             if (storedItem != null)
             {
                 storedItem.Quantity = productQuantityEntity.Quantity;
-                storedItem.CustomerId = productQuantityEntity.CustomerId;
 
                 productQuantityRepository.Update(storedItem);
 

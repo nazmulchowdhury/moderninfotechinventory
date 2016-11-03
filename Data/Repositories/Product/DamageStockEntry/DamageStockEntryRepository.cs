@@ -12,7 +12,7 @@ namespace Data.Repositories.Product.DamageStockEntry
 
         public override DamageStockEntryEntity GetById(string damageStockEntryId)
         {
-            return DbContext.DamageStockEntry.Include("StockAdjustment").FirstOrDefault(dmgstk=> dmgstk.DamageStockEntryId == damageStockEntryId);
+            return DbContext.DamageStockEntry.Include("ProductQuantity").FirstOrDefault(dmgstk => dmgstk.DamageStockEntryId == damageStockEntryId);
         }
     }
 }

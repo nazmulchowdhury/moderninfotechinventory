@@ -34,7 +34,7 @@ namespace Service.Product.DamageStockEntry
 
             if (storedItem != null)
             {
-                storedItem.DamageQuantity = damageStockEntryEntity.DamageQuantity;
+                storedItem.ProductQuantityId = damageStockEntryEntity.ProductQuantityId;
                 storedItem.Remark = damageStockEntryEntity.Remark;
 
                 damageStockEntryRepository.Update(storedItem);
