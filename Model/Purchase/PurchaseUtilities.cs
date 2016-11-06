@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Model.Supplier;
 using Model.Product;
-using Model.Invoice;
+using Model.InvoiceInfo;
 using System;
 
 namespace Model.Purchase
@@ -18,9 +18,6 @@ namespace Model.Purchase
 
         [Required]
         public string ProductQuantityId { get; set; }
-
-        [Required]
-        public string InvoiceInfoId { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -39,9 +36,6 @@ namespace Model.Purchase
 
         [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
-
-        [ForeignKey("InvoiceInfoId")]
-        public virtual InvoiceInfoEntity InvoiceInfo { get; set; }
     }
 
     [Table("PurchaseReturn")]

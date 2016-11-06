@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Model.Product;
 using Model.Customer;
+using Model.InvoiceInfo;
 
 namespace Model.Sale
 {

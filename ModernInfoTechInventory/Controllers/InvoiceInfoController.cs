@@ -3,7 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Service.InvoiceInfo;
-using Model.Invoice;
+using Model.InvoiceInfo;
 using ModernInfoTechInventory.ViewModels;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;

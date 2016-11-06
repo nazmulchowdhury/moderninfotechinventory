@@ -12,7 +12,7 @@ namespace Data.Repositories.Purchase
 
         public override PurchaseEntryEntity GetById(string purchaseEntryId)
         {
-            return DbContext.PurchaseEntry.Include("Supplier").Include("ProductQuantity").Include("InvoiceInfo").FirstOrDefault(purent => purent.PurchaseEntryId == purchaseEntryId);
+            return DbContext.PurchaseEntry.Include("Supplier").Include("ProductQuantity").FirstOrDefault(purent => purent.PurchaseEntryId == purchaseEntryId);
         }
     }
 }

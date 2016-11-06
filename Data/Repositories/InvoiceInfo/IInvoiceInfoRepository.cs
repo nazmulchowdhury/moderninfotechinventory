@@ -1,8 +1,11 @@
 ﻿using Data.Infrastructure;
-using Model.Invoice;
+using Model.InvoiceInfo;
 
 namespace Data.Repositories.InvoiceInfo
 {
     public interface IInvoiceInfoRepository : IRepository<InvoiceInfoEntity>
-    { }
+    {
+        bool DeleteByBillEntryId(string billEntryId);
+        bool DeleteByPurchaseEntryId(string purchaseEntryId);
+    }
 }

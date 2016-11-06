@@ -5,5 +5,6 @@ C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\SinglePageAppWit
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\SinglePageAppWithOAuth\Model\obj\Debug\Model.pdb
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Model\bin\Debug\Model.dll
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Model\bin\Debug\Model.pdb
+C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Model\obj\Debug\Model.dll
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Model\obj\Debug\Model.pdb

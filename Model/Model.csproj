@@ -35,7 +35,7 @@
     <Compile Include="Inventory\InventoryUtilities.cs" />
     <Compile Include="Investment\InvestmentUtilities.cs" />
     <Compile Include="Investor\InvestorUtilities.cs" />
-    <Compile Include="Invoice\InvoiceInfoUtilities.cs" />
+    <Compile Include="InvoiceInfo\InvoiceInfoUtilities.cs" />
     <Compile Include="Location\LocationUtilities.cs" />
     <Compile Include="Product\ProductUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

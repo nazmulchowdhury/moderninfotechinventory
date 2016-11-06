@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Product.DamageStockEntry;
+using Service.Product;
 using Model.Product;
 using ModernInfoTechInventory.ViewModels;
 using ModernInfoTechInventory.ErrorHelper;

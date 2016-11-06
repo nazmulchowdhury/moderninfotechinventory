@@ -8,7 +8,7 @@ using Model.Location;
 using Model.Supplier;
 using Model.Product;
 using Model.Purchase;
-using Model.Invoice;
+using Model.InvoiceInfo;
 using Model.Sale;
 
 namespace Data.Helper
