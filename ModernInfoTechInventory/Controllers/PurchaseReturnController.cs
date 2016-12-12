@@ -1,16 +1,23 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Collections.Generic;
+using AutoMapper;
 using Service.Purchase;
 using Model.Purchase;
+using Model.Inventory;
 using ModernInfoTechInventory.ViewModels;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Purchase;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("purchasereturn")]
     public class PurchaseReturnController : ApiController
     {
         private readonly IPurchaseReturnServices purchaseReturnServices;
@@ -20,9 +27,10 @@ namespace ModernInfoTechInventory.Controllers
             this.purchaseReturnServices = purchaseReturnServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllPurchaseReturns()
         {
-            var purchaseReturnsEntities = purchaseReturnServices.GetAllPurchaseReturns().ToList();
+            var purchaseReturnsEntities = purchaseReturnServices.GetAllPurchaseReturns();
             if (purchaseReturnsEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, purchaseReturnsEntities);
@@ -30,6 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Purchase Returns are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetPurchaseReturn(string id)
         {
             var purchaseReturnEntity = purchaseReturnServices.GetPurchaseReturn(id);
@@ -40,17 +49,40 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Purchase Return found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostPurchaseReturn(PurchaseReturnEntity purchaseReturnEntity)
+        [Route("")]
+        public HttpResponseMessage PostPurchaseReturn(PurchaseReturnView purchaseReturnView)
         {
+            var purchaseReturnEntityMapper = new MapperConfiguration(
+                cfg => cfg.CreateMap<PurchaseReturnView, PurchaseReturnEntity>()
+                    .ConstructUsing((PurchaseReturnView prv) =>
+                    {
+                        var pre = new PurchaseReturnEntity();
+                        pre.PurchaseReturnId = Guid.NewGuid().ToString();
+
+                        foreach (ProductReturnQuantityView prqv in prv.PurchaseReturnedProducts)
+                        {
+                            pre.ProductReturnQuantities.Add(new ProductReturnQuantityEntity
+                            {
+                                ProductReturnQuantityId = Guid.NewGuid().ToString(),
+                                ProductQuantityId = prqv.ProductQuantityId,
+                                ReturnQuantity = prqv.ReturnQuantity
+                            });
+                        }
+                        return pre;
+                    }));
+
+            var purchaseReturnEntity = purchaseReturnEntityMapper.CreateMapper().Map<PurchaseReturnView, PurchaseReturnEntity>(purchaseReturnView);
             var insertedEntity = purchaseReturnServices.CreatePurchaseReturn(purchaseReturnEntity);
             return GetPurchaseReturn(insertedEntity.PurchaseReturnId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutPurchaseReturn(string id, PurchaseReturnEntity purchaseReturnEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, purchaseReturnServices.UpdatePurchaseReturn(id, purchaseReturnEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeletePurchaseReturn(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

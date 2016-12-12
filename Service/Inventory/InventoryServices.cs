@@ -13,7 +13,7 @@ namespace Service.Inventory
             this.inventoryRepository = inventoryRepository;
         }
 
-        public IEnumerable<InventoryEntity> GetAllInventories()
+        public ICollection<InventoryEntity> GetAllInventories()
         {
             return inventoryRepository.GetAll();
         }

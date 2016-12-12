@@ -12,7 +12,7 @@ namespace Service.Customer
         {
             this.customerRepository = customerRepository;
         }
-        public IEnumerable<CustomerEntity> GetAllCustomers()
+        public ICollection<CustomerEntity> GetAllCustomers()
         {
             return customerRepository.GetAll();
         }

@@ -9,6 +9,7 @@ namespace Model.Supplier
     public class SupplierEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string SupplierId { get; set; }
 
         [Required]
@@ -33,7 +34,7 @@ namespace Model.Supplier
     public class SupplierPaymentEntity
     {
         [Key]
-        [ForeignKey("Supplier")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string SupplierPaymentId { get; set; }
 
         [Required]
@@ -51,7 +52,11 @@ namespace Model.Supplier
         [Display(Name = "Supplier Description")]
         public string Description { get; set; }
 
+        [Required]
+        public string SupplierId { get; set; }
+
         // navigation properties
+        [ForeignKey("SupplierId")]
         public virtual SupplierEntity Supplier { get; set; }
     }
 }

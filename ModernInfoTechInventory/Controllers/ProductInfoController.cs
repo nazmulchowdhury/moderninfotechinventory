@@ -1,16 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Product;
-using Model.Product;
-using ModernInfoTechInventory.ViewModels;
+using Service.Inventory;
+using Model.Inventory;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("productinfo")]
     public class ProductInfoController : ApiController
     {
         private readonly IProductInfoServices productInfoServices;
@@ -20,9 +22,10 @@ namespace ModernInfoTechInventory.Controllers
             this.productInfoServices = productInfoServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllProducts()
         {
-            var productEntities = productInfoServices.GetAllProducts().ToList();
+            var productEntities = productInfoServices.GetAllProducts();
             if (productEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, productEntities);
@@ -30,6 +33,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Products are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetProduct(string id)
         {
             var productEntity = productInfoServices.GetProduct(id);
@@ -40,17 +44,41 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Product found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostProduct(ProductInfoEntity productInfoEntity)
+        [Route("bysubcategory/{id:length(36)}")]
+        public HttpResponseMessage GetAllProducts(string id)
         {
+            var productEntities = productInfoServices.GetAllProducts(id);
+            if (productEntities.Any())
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, productEntities);
+            }
+            throw new ApiDataException(1000, "Products are not found for this sub category id " + id, HttpStatusCode.NotFound);
+        }
+
+        [Route("")]
+        public HttpResponseMessage PostProduct(ProductInfoView productInfoView)
+        {
+            var productInfoEntity = new ProductInfoEntity
+            {
+                ProductId = Guid.NewGuid().ToString(),
+                ProductName = productInfoView.ProductName,
+                Barcode = productInfoView.Barcode,
+                CostPrice = productInfoView.CostPrice,
+                SalePrice = productInfoView.SalePrice,
+                ReorderLevel = productInfoView.ReorderLevel,
+                SubCategoryId = productInfoView.SubCategoryId
+            };
             var insertedEntity = productInfoServices.CreateProduct(productInfoEntity);
             return GetProduct(insertedEntity.ProductId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutProduct(string id, ProductInfoEntity productInfoEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, productInfoServices.UpdateProduct(id, productInfoEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteProduct(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

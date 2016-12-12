@@ -1,16 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Investment;
-using Model.Investment;
-using ModernInfoTechInventory.ViewModels;
+using Service.Vat;
+using Model.Accounts;
+using ModernInfoTechInventory.ViewModels.Accounts;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("expense")]
     public class ExpenseController : ApiController
     {
         private readonly IExpenseServices expenseServices;
@@ -20,9 +22,10 @@ namespace ModernInfoTechInventory.Controllers
             this.expenseServices = expenseServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllExpenses()
         {
-            var expenseEntities = expenseServices.GetAllExpenses().ToList();
+            var expenseEntities = expenseServices.GetAllExpenses();
             if (expenseEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, expenseEntities);
@@ -30,6 +33,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Expenses are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetExpense(string id)
         {
             var expenseEntity = expenseServices.GetExpense(id);
@@ -40,12 +44,22 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Expense found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostExpense(ExpenseEntity expenseEntity)
+        [Route("")]
+        public HttpResponseMessage PostExpense(ExpenseView expenseView)
         {
+            var expenseEntity = new ExpenseEntity
+            {
+                ExpenseId = Guid.NewGuid().ToString(),
+                ExpenseDate = expenseView.ExpenseDate,
+                Purpose = expenseView.Purpose,
+                Amount = expenseView.Amount,
+                ExpensedBy = expenseView.ExpensedBy
+            };
             var insertedEntity = expenseServices.CreateExpense(expenseEntity);
             return GetExpense(insertedEntity.ExpenseId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteExpense(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

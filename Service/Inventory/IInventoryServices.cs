@@ -5,7 +5,7 @@ namespace Service.Inventory
 {
     public interface IInventoryServices
     {
-        IEnumerable<InventoryEntity> GetAllInventories();
+        ICollection<InventoryEntity> GetAllInventories();
         InventoryEntity GetInventory(string inventoryId);
         InventoryEntity CreateInventory(InventoryEntity inventoryEntity);
         bool UpdateInventory(string inventoryId, InventoryEntity inventoryEntity);

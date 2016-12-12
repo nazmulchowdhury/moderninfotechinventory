@@ -1,27 +1,28 @@
 ﻿using System.Web.Http;
 using Data.Infrastructure;
 using Data.Repositories.CompanyInfo;
-using Data.Repositories.Investment;
+using Data.Repositories.Vat;
 using Data.Repositories.Location;
 using Data.Repositories.Supplier;
 using Data.Repositories.Customer;
 using Data.Repositories.InvoiceInfo;
-using Data.Repositories.Product;
-using Data.Repositories.Sale;
 using Data.Repositories.Inventory;
-using Data.Repositories.Investor;
+using Data.Repositories.Sale;
+using Data.Repositories.Account;
 using Data.Repositories.Purchase;
+using Data.Repositories.Requisition;
+using Data.Repositories.DeliveryOrder;
 using Service.CompanyInfo;
-using Service.Investment;
+using Service.Vat;
 using Service.Location;
 using Service.Supplier;
 using Service.Customer;
 using Service.InvoiceInfo;
-using Service.Product;
-using Service.Sale;
 using Service.Inventory;
-using Service.Investor;
+using Service.Sale;
 using Service.Purchase;
+using Service.Requisition;
+using Service.DeliveryOrder;
 using ModernInfoTechInventory.Resolver;
 using Microsoft.Practices.Unity;
 
@@ -56,12 +57,14 @@ namespace ModernInfoTechInventory
             container.RegisterType<IProductInfoServices, ProductInfoServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IProductQuantityRepository, ProductQuantityRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IProductQuantityServices, ProductQuantityServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductReturnQuantityRepository, ProductReturnQuantityRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IProductReturnQuantityServices, ProductReturnQuantityServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IStockAdjustmentRepository, StockAdjustmentRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IStockAdjustmentServices, StockAdjustmentServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IDamageStockEntryRepository, DamageStockEntryRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IDamageStockEntryServices, DamageStockEntryServices>(new HierarchicalLifetimeManager());
-            container.RegisterType<ISaleReturnQuantityRepository, SaleReturnQuantityRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<ISaleReturnQuantityServices, SaleReturnQuantityServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleReturnRepository, SaleReturnRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleReturnServices, SaleReturnServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IInvoiceInfoRepository, InvoiceInfoRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IInvoiceInfoServices, InvoiceInfoServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IInventoryRepository, InventoryRepository>(new HierarchicalLifetimeManager());
@@ -82,6 +85,10 @@ namespace ModernInfoTechInventory
             container.RegisterType<IPurchaseReturnServices, PurchaseReturnServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IBillEntryRepository, BillEntryRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IBillEntryServices, BillEntryServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IRequisitionRepository, RequisitionRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IRequisitionServices, RequisitionServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDeliveryOrderRepository, DeliveryOrderRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IDeliveryOrderServices, DeliveryOrderServices>(new HierarchicalLifetimeManager());
 
             config.DependencyResolver = new UnityResolver(container);
         }

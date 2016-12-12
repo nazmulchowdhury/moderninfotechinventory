@@ -79,12 +79,12 @@ namespace Data.Infrastructure
             return dbSet.Find(id);
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual ICollection<T> GetAll()
         {
             return dbSet.ToList();
         }
 
-        public virtual IEnumerable<T> GetMany(Expression<Func<T, bool>> where)
+        public virtual ICollection<T> GetMany(Expression<Func<T, bool>> where)
         {
             return dbSet.Where(where).ToList();
         }

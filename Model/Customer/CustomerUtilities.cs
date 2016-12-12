@@ -8,6 +8,7 @@ namespace Model.Customer
     public class CustomerEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string CustomerId { get; set; }
 
         [Required]
@@ -40,14 +41,18 @@ namespace Model.Customer
     public class CustomerDueEntity
     {
         [Key]
-        [ForeignKey("Customer")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string CustomerDueId { get; set; }
 
         [Required]
         [Display(Name = "Receive Amount")]
         public double ReceiveAmount { get; set; }
 
+        [Required]
+        public string CustomerId { get; set; }
+
         // navigation properties
+        [ForeignKey("CustomerId")]
         public virtual CustomerEntity Customer { get; set; }
     }
 }

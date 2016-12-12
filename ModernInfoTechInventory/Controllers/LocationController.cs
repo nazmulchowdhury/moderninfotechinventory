@@ -11,6 +11,7 @@ using ModernInfoTechInventory.ActionFilters;
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("location")]
     public class LocationController : ApiController
     {
         private readonly LocationServices locationServices;
@@ -20,9 +21,10 @@ namespace ModernInfoTechInventory.Controllers
             this.locationServices = locationServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllLocations()
         {
-            var locationEntities = locationServices.GetAllLocations().ToList();
+            var locationEntities = locationServices.GetAllLocations();
             if (locationEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, locationEntities);
@@ -30,6 +32,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Locations are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetLocation(string id)
         {
             var locationEntity = locationServices.GetLocation(id);
@@ -40,17 +43,20 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Location found for this " + id, HttpStatusCode.NotFound);
         }
 
+        [Route("")]
         public HttpResponseMessage PostLocation(LocationEntity locationEntity)
         {
             var insertedEntity = locationServices.CreateLocation(locationEntity);
             return GetLocation(insertedEntity.LocationId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutLocation(string id, LocationEntity locationEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, locationServices.UpdateLocation(id, locationEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteLocation(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

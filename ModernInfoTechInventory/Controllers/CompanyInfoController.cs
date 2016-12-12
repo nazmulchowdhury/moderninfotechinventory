@@ -4,63 +4,75 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
+using Microsoft.AspNet.Identity;
 using Service.CompanyInfo;
 using Model.CompanyInfo;
-using ModernInfoTechInventory.ViewModels;
+using ModernInfoTechInventory.ViewModels.CompanyInfo;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("companyinfo")]
     public class CompanyInfoController : ApiController
     {
-        private readonly CompanyInfoServices companyInfoServices;
-        private readonly MapperConfiguration companyInfoMapper;
+        private readonly ICompanyInfoServices companyInfoServices;
 
-        public CompanyInfoController(CompanyInfoServices companyInfoServices)
+        public CompanyInfoController(ICompanyInfoServices companyInfoServices)
         {
             this.companyInfoServices = companyInfoServices;
-
-            companyInfoMapper = new MapperConfiguration(cfg => cfg.CreateMap<CompanyInfoEntity, CompanyInfoView>()
-                .ForMember(dest => dest.Location, opts => opts.MapFrom(src => src.Location.LocationName))
-                .ForMember(dest => dest.CompanyOwnerName, opts => opts.MapFrom(src => src.User.UserName))
-                );
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllCompanies()
         {
-            var companyInfoEntities = companyInfoServices.GetAllCompanies().ToList();
-            var companiesForView = companyInfoMapper.CreateMapper().Map<List<CompanyInfoEntity>, List<CompanyInfoView>>(companyInfoEntities);
-            if (companiesForView.Any())
+            var companyInfoEntities = companyInfoServices.GetAllCompanies();
+            if (companyInfoEntities.Any())
             {
-                return Request.CreateResponse(HttpStatusCode.OK, companiesForView);
+                return Request.CreateResponse(HttpStatusCode.OK, companyInfoEntities);
             }
             throw new ApiDataException(1000, "Companies are not found", HttpStatusCode.NotFound);            
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetCompany(string id)
         {
             var companyInfoEntity = companyInfoServices.GetCompany(id);
             if (companyInfoEntity != null)
             {
-                var companyForView = companyInfoMapper.CreateMapper().Map<CompanyInfoEntity, CompanyInfoView>(companyInfoEntity);
-                return Request.CreateResponse(HttpStatusCode.OK, companyForView);
+                return Request.CreateResponse(HttpStatusCode.OK, companyInfoEntity);
             }
             throw new ApiDataException(1001, "No Company found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostCompany(CompanyInfoEntity companyInfoEntity)
+        [Route("")]
+        public HttpResponseMessage PostCompany(CompanyInfoView companyInfoView)
         {
+            var companyInfoEntity = new CompanyInfoEntity
+            {
+                CompanyId = RequestContext.Principal.Identity.GetUserId(),
+                CompanyName = companyInfoView.CompanyName,
+                ShortName = companyInfoView.ShortName,
+                PhoneNumber = companyInfoView.PhoneNumber,
+                LocationId = companyInfoView.LocationId,
+                Description = companyInfoView.Description,
+                Note = companyInfoView.Note,
+                Status = companyInfoView.Status
+            };
             var insertedEntity = companyInfoServices.CreateCompany(companyInfoEntity);
             return GetCompany(insertedEntity.CompanyId);
         }
 
-        public HttpResponseMessage PutCompany(string id, CompanyInfoEntity companyInfoEntity)
+        [Route("{id:length(36)}")]
+        public HttpResponseMessage PutCompany(string id, CompanyInfoView companyInfoView)
         {
+            var companyInfoEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<CompanyInfoView, CompanyInfoEntity>());
+            var companyInfoEntity = companyInfoEntityMapper.CreateMapper().Map<CompanyInfoView, CompanyInfoEntity>(companyInfoView);
             return Request.CreateResponse(HttpStatusCode.OK, companyInfoServices.UpdateCompany(id, companyInfoEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteCompany(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

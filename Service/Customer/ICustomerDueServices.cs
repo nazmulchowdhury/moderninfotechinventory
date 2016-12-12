@@ -5,7 +5,7 @@ namespace Service.Customer
 {
     public interface ICustomerDueServices
     {
-        IEnumerable<CustomerDueEntity> GetAllCustomerDues();
+        ICollection<CustomerDueEntity> GetAllCustomerDues();
         CustomerDueEntity GetCustomerDue(string customerDueId);
         CustomerDueEntity CreateCustomerDue(CustomerDueEntity customerDueEntity);
         bool UpdateCustomerDue(string customerDueId, CustomerDueEntity customerDueEntity);

@@ -13,7 +13,7 @@ namespace Service.Customer
             this.customerDueRepository = customerDueRepository;
         }
 
-        public IEnumerable<CustomerDueEntity> GetAllCustomerDues()
+        public ICollection<CustomerDueEntity> GetAllCustomerDues()
         {
             return customerDueRepository.GetAll();
         }
@@ -35,6 +35,7 @@ namespace Service.Customer
             if (storedItem != null)
             {
                 storedItem.ReceiveAmount = customerDueEntity.ReceiveAmount;
+                storedItem.CustomerId = customerDueEntity.CustomerId;
 
                 customerDueRepository.Update(storedItem);
 

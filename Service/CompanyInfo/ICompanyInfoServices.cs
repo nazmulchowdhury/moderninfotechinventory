@@ -5,7 +5,7 @@ namespace Service.CompanyInfo
 {
     public interface ICompanyInfoServices
     {
-        IEnumerable<CompanyInfoEntity> GetAllCompanies();
+        ICollection<CompanyInfoEntity> GetAllCompanies();
         CompanyInfoEntity GetCompany(string companyId);
         CompanyInfoEntity CreateCompany(CompanyInfoEntity companyInfoEntity);
         bool UpdateCompany(string companyId, CompanyInfoEntity companyInfoEntity);

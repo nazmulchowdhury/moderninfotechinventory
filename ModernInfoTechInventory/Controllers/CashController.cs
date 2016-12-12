@@ -1,16 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Investment;
-using Model.Investment;
-using ModernInfoTechInventory.ViewModels;
+using Service.Vat;
+using Model.Accounts;
+using ModernInfoTechInventory.ViewModels.Accounts;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("cash")]
     public class CashController : ApiController
     {
         private readonly ICashServices cashServices;
@@ -20,9 +22,10 @@ namespace ModernInfoTechInventory.Controllers
             this.cashServices = cashServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllCashes()
         {
-            var cashEntities = cashServices.GetAllCashes().ToList();
+            var cashEntities = cashServices.GetAllCashes();
             if (cashEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, cashEntities);
@@ -30,6 +33,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Cashes are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetCash(string id)
         {
             var cashEntity = cashServices.GetCash(id);
@@ -40,12 +44,19 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Cash found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostCash(CashEntity cashEntity)
+        [Route("")]
+        public HttpResponseMessage PostCash(CashView cashView)
         {
+            var cashEntity = new CashEntity
+            {
+                CashId = Guid.NewGuid().ToString(),
+                Amount = cashView.Amount
+            };
             var insertedEntity = cashServices.CreateCash(cashEntity);
             return GetCash(insertedEntity.CashId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteCash(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

@@ -1,16 +1,19 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Product;
-using Model.Product;
-using ModernInfoTechInventory.ViewModels;
+using Model.Inventory;
+using Service.Inventory;
+using System.Collections.Generic;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("stockadjustment")]
     public class StockAdjustmentController : ApiController
     {
         private readonly IStockAdjustmentServices stockAdjustmentServices;
@@ -20,9 +23,10 @@ namespace ModernInfoTechInventory.Controllers
             this.stockAdjustmentServices = stockAdjustmentServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllStockAdjustments()
         {
-            var stockAdjustmentEntities = stockAdjustmentServices.GetAllStockAdjustments().ToList();
+            var stockAdjustmentEntities = stockAdjustmentServices.GetAllStockAdjustments();
             if (stockAdjustmentEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, stockAdjustmentEntities);
@@ -30,6 +34,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Stock Adjustments are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetStockAdjustment(string id)
         {
             var stockAdjustmentEntity = stockAdjustmentServices.GetStockAdjustment(id);
@@ -40,17 +45,39 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Stock Adjustment found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostStockAdjustment(StockAdjustmentEntity stockAdjustmentEntity)
+        [Route("")]
+        public HttpResponseMessage PostStockAdjustment(StockAdjustmentView stockAdjustmentView)
         {
+            var productQuantities = new HashSet<ProductQuantityEntity>();
+            foreach (ProductQuantityView pqv in stockAdjustmentView.ProductQuantities)
+            {
+                productQuantities.Add(new ProductQuantityEntity
+                {
+                    ProductQuantityId = Guid.NewGuid().ToString(),
+                    ProductId = pqv.ProductId,
+                    Quantity = pqv.Quantity
+                });
+            }
+
+            var stockAdjustmentEntity = new StockAdjustmentEntity
+            {
+                StockAdjustmentId = Guid.NewGuid().ToString(),
+                ReceiveDate = stockAdjustmentView.ReceiveDate,
+                ReceiveNumber = stockAdjustmentView.ReceiveNumber,
+                ProductQuantities = productQuantities
+            };
+
             var insertedEntity = stockAdjustmentServices.CreateStockAdjustment(stockAdjustmentEntity);
             return GetStockAdjustment(insertedEntity.StockAdjustmentId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutStockAdjustment(string id, StockAdjustmentEntity stockAdjustmentEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, stockAdjustmentServices.UpdateStockAdjustment(id, stockAdjustmentEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeletestockAdjustment(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

@@ -5,7 +5,7 @@ namespace Service.Purchase
 {
     public interface IPurchaseEntryServices
     {
-        IEnumerable<PurchaseEntryEntity> GetAllPurchaseEntries();
+        ICollection<PurchaseEntryEntity> GetAllPurchaseEntries();
         PurchaseEntryEntity GetPurchaseEntry(string purchaseEntryId);
         PurchaseEntryEntity CreatePurchaseEntry(PurchaseEntryEntity purchaseEntryEntity);
         bool UpdatePurchaseEntry(string purchaseEntryId, PurchaseEntryEntity purchaseEntryEntity);

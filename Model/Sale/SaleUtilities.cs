@@ -1,43 +1,81 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Model.Product;
+using Model.Inventory;
 using Model.Customer;
-using Model.InvoiceInfo;
+using System.Collections.Generic;
+using System;
 
 namespace Model.Sale
 {
     [Table("BillEntry")]
-    public class BillEntryEntity
+    public class BillEntryEntity : IEquatable<BillEntryEntity>
     {
-        [Key]
-        public string BillEntryId { get; set; }
+        public BillEntryEntity()
+        {
+            this.ProductQuantities = new HashSet<ProductQuantityEntity>();
+        }
 
-        [Required]
-        public string ProductQuantityId { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string BillEntryId { get; set; }
 
         [Required]
         public string CustomerId { get; set; }
 
-        // navigation properties
-        [ForeignKey("ProductQuantityId")]
-        public virtual ProductQuantityEntity ProductQuantity { get; set; }
+        [Display(Name = "Discount")]
+        public double Discount { get; set; }
 
+        // navigation properties
         [ForeignKey("CustomerId")]
         public virtual CustomerEntity Customer { get; set; }
+
+        public virtual ICollection<ProductQuantityEntity> ProductQuantities { get; set; }
+
+        public override int GetHashCode()
+        {
+            return BillEntryId.GetHashCode();
+        }
+
+        public bool Equals(BillEntryEntity other)
+        {
+            return this.BillEntryId.Equals(other.BillEntryId);
+        }
     }
 
-    [Table("SaleReturnQuantity")]
-    public class SaleReturnQuantityEntity
+    [Table("SaleReturn")]
+    public class SaleReturnEntity : IEquatable<SaleReturnEntity>
     {
+        public SaleReturnEntity()
+        {
+            this.ProductReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
+        }
+
         [Key]
-        [ForeignKey("BillEntry")]
-        public string SaleReturnQuantityId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string SaleReturnId { get; set; }
 
         [Required]
-        [Display(Name = "Return Quantity")]
-        public int ReturnQuantity { get; set; }
+        [Display(Name = "Reference Invoice ID")]
+        public string RefInvoiceId { get; set; }
+
+        [Display(Name = "Penalty")]
+        public double Penalty { get; set; }
+
+        [Required]
+        [Display(Name = "Paid Amount")]
+        public double PaidAmount { get; set; }
 
         // navigation properties
-        public virtual BillEntryEntity BillEntry { get; set; }
+        public virtual ICollection<ProductReturnQuantityEntity> ProductReturnQuantities { get; set; }
+
+        public override int GetHashCode()
+        {
+            return SaleReturnId.GetHashCode();
+        }
+
+        public bool Equals(SaleReturnEntity other)
+        {
+            return this.SaleReturnId.Equals(other.SaleReturnId);
+        }
     }
 }

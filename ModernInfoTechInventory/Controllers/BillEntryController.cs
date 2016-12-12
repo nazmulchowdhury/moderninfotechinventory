@@ -1,16 +1,21 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
+using Model.Sale;
+using System.Linq;
+using Service.Sale;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Sale;
-using Model.Sale;
-using ModernInfoTechInventory.ViewModels;
+using Model.Inventory;
+using System.Collections.Generic;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Sale;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("billentry")]
     public class BillEntryController : ApiController
     {
         private readonly IBillEntryServices billEntryServices;
@@ -20,9 +25,10 @@ namespace ModernInfoTechInventory.Controllers
             this.billEntryServices = billEntryServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllBillEntries()
         {
-            var billEntryEntities = billEntryServices.GetAllBillEntries().ToList();
+            var billEntryEntities = billEntryServices.GetAllBillEntries();
             if (billEntryEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, billEntryEntities);
@@ -30,6 +36,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Bill Entries are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetBillEntry(string id)
         {
             var billEntryEntity = billEntryServices.GetBillEntry(id);
@@ -40,17 +47,40 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Bill Entry found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostBillEntry(BillEntryEntity billEntryEntity)
+        [Route("")]
+        public HttpResponseMessage PostBillEntry(BillEntryView billEntryView)
         {
+            var productQuantities = new HashSet<ProductQuantityEntity>();
+
+            foreach (ProductQuantityView pqv in billEntryView.SaledProducts)
+            {
+                productQuantities.Add(new ProductQuantityEntity
+                {
+                    ProductQuantityId = Guid.NewGuid().ToString(),
+                    ProductId = pqv.ProductId,
+                    Quantity = pqv.Quantity
+                });
+            }
+
+            var billEntryEntity = new BillEntryEntity
+            {
+                BillEntryId = Guid.NewGuid().ToString(),
+                CustomerId = billEntryView.CustomerId,
+                Discount = billEntryView.Discount,
+                ProductQuantities = productQuantities
+            };
+            
             var insertedEntity = billEntryServices.CreateBillEntry(billEntryEntity);
             return GetBillEntry(insertedEntity.BillEntryId);
         }
 
-        public HttpResponseMessage PutBillEntry(string id, BillEntryEntity billEntry)
+        [Route("{id:length(36)}")]
+        public HttpResponseMessage PutBillEntry(string id, BillEntryEntity billEntryEntity)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, billEntryServices.UpdateBillEntry(id, billEntry));
+            return Request.CreateResponse(HttpStatusCode.OK, billEntryServices.UpdateBillEntry(id, billEntryEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteBillEntry(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

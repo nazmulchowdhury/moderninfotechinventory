@@ -10,35 +10,9 @@ namespace Data.Repositories.InvoiceInfo
         public InvoiceInfoRepository(IDbFactory dbFactory) : base(dbFactory)
         { }
 
-        public override InvoiceInfoEntity GetById(string InvoiceInfoId)
+        public override InvoiceInfoEntity GetById(string invoiceInfoId)
         {
-            return DbContext.InvoiceInfo.Include("BillEntry").Include("PurchaseEntry").FirstOrDefault(invinf => invinf.InvoiceInfoId == InvoiceInfoId);
-        }
-
-        public bool DeleteByBillEntryId(string billEntryId)
-        {
-            var invoiceInfoEntity = DbContext.InvoiceInfo.FirstOrDefault(invinf => invinf.BillEntryId == billEntryId);
-            if (invoiceInfoEntity != null)
-            {
-                return this.Delete(invoiceInfoEntity.InvoiceInfoId);
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool DeleteByPurchaseEntryId(string purchaseEntryId)
-        {
-            var invoiceInfoEntity = DbContext.InvoiceInfo.FirstOrDefault(invinf => invinf.PurchaseEntryId == purchaseEntryId);
-            if (invoiceInfoEntity != null)
-            {
-                return this.Delete(invoiceInfoEntity.InvoiceInfoId);
-            }
-            else
-            {
-                return false;
-            }
+            return DbContext.InvoiceInfo.Include("BillEntry").Include("PurchaseEntry").Include("SaleReturn").Include("PurchaseReturn").FirstOrDefault(invinf => invinf.InvoiceInfoId == invoiceInfoId);
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Model.CompanyInfo
     {
         [Key]
         [ForeignKey("User")]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string CompanyId { get; set; }
 
         [Required]

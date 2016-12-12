@@ -13,7 +13,7 @@ namespace Service.InvoiceInfo
             this.invoiceInfoRepository = invoiceInfoRepository;
         }
 
-        public IEnumerable<InvoiceInfoEntity> GetAllInvoices()
+        public ICollection<InvoiceInfoEntity> GetAllInvoices()
         {
             return invoiceInfoRepository.GetAll();
         }
@@ -36,6 +36,9 @@ namespace Service.InvoiceInfo
             {
                 storedItem.BillEntryId = invoiceInfoEntity.BillEntryId;
                 storedItem.PurchaseEntryId = invoiceInfoEntity.PurchaseEntryId;
+                storedItem.SaleReturnId = invoiceInfoEntity.SaleReturnId;
+                storedItem.PurchaseReturnId = invoiceInfoEntity.PurchaseReturnId;
+                storedItem.Status = invoiceInfoEntity.Status;
 
                 invoiceInfoRepository.Update(storedItem);
 

@@ -1,16 +1,19 @@
-﻿using System.Linq;
+﻿using System;
+using AutoMapper;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Investor;
-using Model.Investor;
-using ModernInfoTechInventory.ViewModels;
+using Service.Vat;
+using Model.Accounts;
+using ModernInfoTechInventory.ViewModels.Accounts;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("investortransaction")]
     public class InvestorTransactionController : ApiController
     {
         private readonly IInvestorTransactionServices investorTransactionServices;
@@ -20,9 +23,10 @@ namespace ModernInfoTechInventory.Controllers
             this.investorTransactionServices = investorTransactionServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllInvestorTransactions()
         {
-            var investorTransactionEntities = investorTransactionServices.GetAllInvestorTransactions().ToList();
+            var investorTransactionEntities = investorTransactionServices.GetAllInvestorTransactions();
             if (investorTransactionEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, investorTransactionEntities);
@@ -30,6 +34,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Investor Transactions are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetInvestorTransaction(string id)
         {
             var investorTransactionEntity = investorTransactionServices.GetInvestorTransaction(id);
@@ -40,17 +45,31 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Investor Transaction found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostInvestorTransaction(InvestorTransactionEntity investorTransactionEntity)
+        [Route("")]
+        public HttpResponseMessage PostInvestorTransaction(InvestorTransactionView investorTransactionView)
         {
+            var investorTransactionEntity = new InvestorTransactionEntity
+            {
+                InvestorTransactionId = Guid.NewGuid().ToString(),
+                TransactionDate = investorTransactionView.TransactionDate,
+                Amount = investorTransactionView.Amount,
+                Description = investorTransactionView.Description,
+                TransactionType = investorTransactionView.TransactionType,
+                InvestorId = investorTransactionView.InvestorId
+            };
             var insertedEntity = investorTransactionServices.CreateInvestorTransaction(investorTransactionEntity);
             return GetInvestorTransaction(insertedEntity.InvestorTransactionId);
         }
 
-        public HttpResponseMessage PutInvestorTransaction(string id, InvestorTransactionEntity investorTransactionEntity)
+        [Route("{id:length(36)}")]
+        public HttpResponseMessage PutInvestorTransaction(string id, InvestorTransactionView investorTransactionView)
         {
+            var investorTransactionEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<InvestorTransactionView, InvestorTransactionEntity>());
+            var investorTransactionEntity = investorTransactionEntityMapper.CreateMapper().Map<InvestorTransactionView, InvestorTransactionEntity>(investorTransactionView);
             return Request.CreateResponse(HttpStatusCode.OK, investorTransactionServices.UpdateInvestorTransaction(id, investorTransactionEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteInvestorTransaction(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

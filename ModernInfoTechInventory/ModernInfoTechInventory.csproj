@@ -209,6 +209,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerDueController.cs" />
     <Compile Include="Controllers\DamageStockEntryController.cs" />
+    <Compile Include="Controllers\DeliveryOrderController.cs" />
     <Compile Include="Controllers\ExpenseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoryController.cs" />
@@ -219,9 +220,11 @@
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\ProductInfoController.cs" />
     <Compile Include="Controllers\ProductQuantityController.cs" />
+    <Compile Include="Controllers\ProductReturnQuantityController.cs" />
     <Compile Include="Controllers\PurchaseEntryController.cs" />
     <Compile Include="Controllers\PurchaseReturnController.cs" />
-    <Compile Include="Controllers\SaleReturnQuantityController.cs" />
+    <Compile Include="Controllers\RequisitionController.cs" />
+    <Compile Include="Controllers\SaleReturnController.cs" />
     <Compile Include="Controllers\StockAdjustmentController.cs" />
     <Compile Include="Controllers\SubCategoryController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
@@ -243,7 +246,16 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Resolver\UnityResolver.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
-    <Compile Include="ViewModels\CompanyInfoViewModels.cs" />
+    <Compile Include="ViewModels\CompanyInfo\CompanyInfoViewUtilities.cs" />
+    <Compile Include="ViewModels\Customer\CustomerViewUtilities.cs" />
+    <Compile Include="ViewModels\DeliveryOrder\DeliveryOrderViewUtilities.cs" />
+    <Compile Include="ViewModels\Accounts\AccountsViewUtilities.cs" />
+    <Compile Include="ViewModels\Inventory\InventoryViewUtilities.cs" />
+    <Compile Include="ViewModels\Purchase\PurchaseViewUtilities.cs" />
+    <Compile Include="ViewModels\Requisition\RequisitionViewUtilities.cs" />
+    <Compile Include="ViewModels\Sale\SaleViewUtilities.cs" />
+    <Compile Include="ViewModels\Supplier\SupplierViewUtilities.cs" />
+    <Compile Include="ViewModels\Vat\VatViewUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

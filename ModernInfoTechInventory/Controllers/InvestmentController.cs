@@ -1,15 +1,17 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Investment;
-using Model.Investment;
-using ModernInfoTechInventory.ViewModels;
+using Service.Vat;
+using Model.Accounts;
+using ModernInfoTechInventory.ViewModels.Accounts;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("investment")]
     public class InvestmentController : ApiController
     {
         private readonly InvestmentServices investmentServices;
@@ -19,6 +21,7 @@ namespace ModernInfoTechInventory.Controllers
             this.investmentServices = investmentServices;
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetInvestmentAmount(string id)
         {
             var investmentEntity = investmentServices.InvestmentAmount(id);
@@ -29,12 +32,19 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Investment found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostInvestment(InvestmentEntity investmentEntity)
+        [Route("")]
+        public HttpResponseMessage PostInvestment(InvestmentView investmentView)
         {
+            var investmentEntity = new InvestmentEntity
+            {
+                InvestmentId = Guid.NewGuid().ToString(),
+                Amount = investmentView.Amount
+            };
             var insertedEntity = investmentServices.CreateInvestment(investmentEntity);
             return Request.CreateResponse(HttpStatusCode.OK, investmentServices.InvestmentAmount(insertedEntity.InvestmentId));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteInvestment(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

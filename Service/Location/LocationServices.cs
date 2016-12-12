@@ -13,7 +13,7 @@ namespace Service.Location
             this.locationRepository = locationRepository;
         }
 
-        public IEnumerable<LocationEntity> GetAllLocations()
+        public ICollection<LocationEntity> GetAllLocations()
         {
             return locationRepository.GetAll();
         }

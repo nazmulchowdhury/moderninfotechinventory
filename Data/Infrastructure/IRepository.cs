@@ -19,8 +19,8 @@ namespace Data.Infrastructure
         // Get an entity using delegate
         T Get(Expression<Func<T, bool>> where);
         // Gets all entities of type T
-        IEnumerable<T> GetAll();
+        ICollection<T> GetAll();
         // Gets entities using delegate
-        IEnumerable<T> GetMany(Expression<Func<T, bool>> where);
+        ICollection<T> GetMany(Expression<Func<T, bool>> where);
     }
 }

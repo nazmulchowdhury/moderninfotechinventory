@@ -5,7 +5,7 @@ namespace Service.Customer
 {
     public interface ICustomerServices
     {
-        IEnumerable<CustomerEntity> GetAllCustomers();
+        ICollection<CustomerEntity> GetAllCustomers();
         CustomerEntity GetCustomer(string customerId);
         CustomerEntity CreateCustomer(CustomerEntity customerEntity);
         bool UpdateCustomer(string customerId, CustomerEntity customerEntity);

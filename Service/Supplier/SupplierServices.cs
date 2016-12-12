@@ -13,7 +13,7 @@ namespace Service.Supplier
             this.supplierRepository = supplierRepository;
         }
 
-        public IEnumerable<SupplierEntity> GetAllSuppliers()
+        public ICollection<SupplierEntity> GetAllSuppliers()
         {
             return supplierRepository.GetAll();
         }

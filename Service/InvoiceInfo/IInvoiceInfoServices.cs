@@ -5,7 +5,7 @@ namespace Service.InvoiceInfo
 {
     public interface IInvoiceInfoServices
     {
-        IEnumerable<InvoiceInfoEntity> GetAllInvoices();
+        ICollection<InvoiceInfoEntity> GetAllInvoices();
         InvoiceInfoEntity GetInvoice(string invoiceInfoId);
         InvoiceInfoEntity CreateInvoice(InvoiceInfoEntity invoiceInfoEntity);
         bool UpdateInvoice(string invoiceInfoId, InvoiceInfoEntity invoiceInfoEntity);

@@ -11,6 +11,7 @@ using ModernInfoTechInventory.ActionFilters;
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("invoiceinfo")]
     public class InvoiceInfoController : ApiController
     {
         private readonly IInvoiceInfoServices invoiceInfoServices;
@@ -20,9 +21,10 @@ namespace ModernInfoTechInventory.Controllers
             this.invoiceInfoServices = invoiceInfoServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllInvoices()
         {
-            var invoiceInfoEntities = invoiceInfoServices.GetAllInvoices().ToList();
+            var invoiceInfoEntities = invoiceInfoServices.GetAllInvoices();
             if (invoiceInfoEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, invoiceInfoEntities);
@@ -30,6 +32,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Invoices are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetInvoice(string id)
         {
             var productEntity = invoiceInfoServices.GetInvoice(id);
@@ -40,12 +43,14 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Invoice found for this " + id, HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PostInvoice(InvoiceInfoEntity invoiceInfoEntity)
         {
             var insertedEntity = invoiceInfoServices.CreateInvoice(invoiceInfoEntity);
             return GetInvoice(insertedEntity.InvoiceInfoId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteInvoiceInfo(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

@@ -1,24 +1,19 @@
 ﻿using System.Collections.Generic;
 using Data.Repositories.Purchase;
-using Data.Repositories.InvoiceInfo;
 using Model.Purchase;
-using Model.InvoiceInfo;
-using System;
 
 namespace Service.Purchase
 {
     public class PurchaseEntryServices : IPurchaseEntryServices
     {
         private readonly IPurchaseEntryRepository purchaseEntryRepository;
-        private readonly IInvoiceInfoRepository invoiceInfoRepository;
 
-        public PurchaseEntryServices(IPurchaseEntryRepository purchaseEntryRepository, IInvoiceInfoRepository invoiceInfoRepository)
+        public PurchaseEntryServices(IPurchaseEntryRepository purchaseEntryRepository)
         {
             this.purchaseEntryRepository = purchaseEntryRepository;
-            this.invoiceInfoRepository = invoiceInfoRepository;
         }
 
-        public IEnumerable<PurchaseEntryEntity> GetAllPurchaseEntries()
+        public ICollection<PurchaseEntryEntity> GetAllPurchaseEntries()
         {
             return purchaseEntryRepository.GetAll();
         }
@@ -30,14 +25,7 @@ namespace Service.Purchase
 
         public PurchaseEntryEntity CreatePurchaseEntry(PurchaseEntryEntity purchaseEntryEntity)
         {
-            var insertedEntity = purchaseEntryRepository.Add(purchaseEntryEntity);
-            invoiceInfoRepository.Add(
-                new InvoiceInfoEntity
-                {
-                    InvoiceInfoId = Guid.NewGuid().ToString(),
-                    PurchaseEntryId = insertedEntity.PurchaseEntryId
-                });
-            return insertedEntity;
+            return purchaseEntryRepository.Add(purchaseEntryEntity);
         }
 
         public bool UpdatePurchaseEntry(string purchaseEntryId, PurchaseEntryEntity purchaseEntryEntity)
@@ -47,9 +35,9 @@ namespace Service.Purchase
             if (storedItem != null)
             {
                 storedItem.SupplierId = purchaseEntryEntity.SupplierId;
-                storedItem.ProductQuantityId = purchaseEntryEntity.ProductQuantityId;
                 storedItem.ReceiveDate = purchaseEntryEntity.ReceiveDate;
                 storedItem.ReceiveNumber = purchaseEntryEntity.ReceiveNumber;
+                storedItem.PaidAmount = purchaseEntryEntity.PaidAmount;
 
                 purchaseEntryRepository.Update(storedItem);
 
@@ -63,15 +51,7 @@ namespace Service.Purchase
 
         public bool DeletePurchaseEntry(string purchaseEntryId)
         {
-            var isDeletedInvoiceInfo = invoiceInfoRepository.DeleteByPurchaseEntryId(purchaseEntryId);
-            if (isDeletedInvoiceInfo)
-            {
-                return purchaseEntryRepository.Delete(purchaseEntryId);
-            }
-            else
-            {
-                return false;
-            }
+            return purchaseEntryRepository.Delete(purchaseEntryId);
         }
     }
 }

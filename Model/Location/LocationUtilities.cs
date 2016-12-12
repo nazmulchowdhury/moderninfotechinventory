@@ -9,6 +9,7 @@ namespace Model.Location
     public class LocationEntity
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string LocationId { get; set; }
 
         [Required]

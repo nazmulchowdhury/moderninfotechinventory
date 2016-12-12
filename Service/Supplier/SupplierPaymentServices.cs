@@ -13,7 +13,7 @@ namespace Service.Supplier
             this.supplierPaymentRepository = supplierPaymentRepository;
         }
 
-        public IEnumerable<SupplierPaymentEntity> GetAllSupplierPayments()
+        public ICollection<SupplierPaymentEntity> GetAllSupplierPayments()
         {
             return supplierPaymentRepository.GetAll();
         }
@@ -37,6 +37,7 @@ namespace Service.Supplier
                 storedItem.PaymentDate = suppliePaymentEntity.PaymentDate;
                 storedItem.PaidAmount = suppliePaymentEntity.PaidAmount;
                 storedItem.Description = suppliePaymentEntity.Description;
+                storedItem.SupplierId = suppliePaymentEntity.SupplierId;
 
                 supplierPaymentRepository.Update(storedItem);
 

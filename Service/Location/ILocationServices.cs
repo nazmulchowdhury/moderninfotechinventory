@@ -5,7 +5,7 @@ namespace Service.Location
 {
     public interface ILocationServices
     {
-        IEnumerable<LocationEntity> GetAllLocations();
+        ICollection<LocationEntity> GetAllLocations();
         LocationEntity GetLocation(string locationId);
         LocationEntity CreateLocation(LocationEntity locationEntity);
         bool UpdateLocation(string locationId, LocationEntity locationEntity);

@@ -11,6 +11,7 @@ using ModernInfoTechInventory.ActionFilters;
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("inventory")]
     public class InventoryController : ApiController
     {
         private readonly IInventoryServices inventoryServices;
@@ -20,9 +21,10 @@ namespace ModernInfoTechInventory.Controllers
             this.inventoryServices = inventoryServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllInventories()
         {
-            var inventoryEntities = inventoryServices.GetAllInventories().ToList();
+            var inventoryEntities = inventoryServices.GetAllInventories();
             if (inventoryEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, inventoryEntities);
@@ -30,6 +32,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Inventories are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetInventory(string id)
         {
             var inventoryEntity = inventoryServices.GetInventory(id);
@@ -40,17 +43,20 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Inventory found for this " + id, HttpStatusCode.NotFound);
         }
 
+        [Route("")]
         public HttpResponseMessage PostInventory(InventoryEntity inventoryEntity)
         {
             var insertedEntity = inventoryServices.CreateInventory(inventoryEntity);
             return GetInventory(insertedEntity.InventoryId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutInventory(string id, InventoryEntity inventoryEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, inventoryServices.UpdateInventory(id, inventoryEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteInventory(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

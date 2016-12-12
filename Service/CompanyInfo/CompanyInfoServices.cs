@@ -13,7 +13,7 @@ namespace Service.CompanyInfo
             this.companyInfoRepository = companyInfoRepository;
         }
 
-        public IEnumerable<CompanyInfoEntity> GetAllCompanies()
+        public ICollection<CompanyInfoEntity> GetAllCompanies()
         {
             return companyInfoRepository.GetAll();
         }

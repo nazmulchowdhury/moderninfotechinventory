@@ -1,24 +1,19 @@
 ﻿using System.Collections.Generic;
 using Data.Repositories.Sale;
-using Data.Repositories.InvoiceInfo;
 using Model.Sale;
-using Model.InvoiceInfo;
-using System;
 
 namespace Service.Sale
 {
     public class BillEntryServices : IBillEntryServices
     {
         private readonly IBillEntryRepository billEntryRepository;
-        private readonly IInvoiceInfoRepository invoiceInfoRepository;
 
-        public BillEntryServices(IBillEntryRepository billEntryRepository, IInvoiceInfoRepository invoiceInfoRepository)
+        public BillEntryServices(IBillEntryRepository billEntryRepository)
         {
             this.billEntryRepository = billEntryRepository;
-            this.invoiceInfoRepository = invoiceInfoRepository;
         }
 
-        public IEnumerable<BillEntryEntity> GetAllBillEntries()
+        public ICollection<BillEntryEntity> GetAllBillEntries()
         {
             return billEntryRepository.GetAll();
         }
@@ -30,13 +25,7 @@ namespace Service.Sale
 
         public BillEntryEntity CreateBillEntry(BillEntryEntity billEntryEntity)
         {
-            var insertedEntity = billEntryRepository.Add(billEntryEntity);
-            invoiceInfoRepository.Add(
-                new InvoiceInfoEntity {
-                    InvoiceInfoId = Guid.NewGuid().ToString(),
-                    BillEntryId = insertedEntity.BillEntryId
-                });
-            return insertedEntity;
+            return billEntryRepository.Add(billEntryEntity);
         }
 
         public bool UpdateBillEntry(string billEntryId, BillEntryEntity billEntryEntity)
@@ -45,8 +34,8 @@ namespace Service.Sale
 
             if (storedItem != null)
             {
-                storedItem.ProductQuantityId = billEntryEntity.ProductQuantityId;
                 storedItem.CustomerId = billEntryEntity.CustomerId;
+                storedItem.Discount = billEntryEntity.Discount;
 
                 billEntryRepository.Update(storedItem);
 
@@ -60,15 +49,7 @@ namespace Service.Sale
 
         public bool DeleteBillEntry(string billEntryId)
         {
-            var isDeletedInvoiceInfo = invoiceInfoRepository.DeleteByBillEntryId(billEntryId);
-            if (isDeletedInvoiceInfo)
-            {
-                return billEntryRepository.Delete(billEntryId);
-            }
-            else
-            {
-                return false;
-            }
+            return billEntryRepository.Delete(billEntryId);
         }
     }
 }

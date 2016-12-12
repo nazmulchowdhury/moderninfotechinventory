@@ -5,7 +5,7 @@ namespace Service.Sale
 {
     public interface IBillEntryServices
     {
-        IEnumerable<BillEntryEntity> GetAllBillEntries();
+        ICollection<BillEntryEntity> GetAllBillEntries();
         BillEntryEntity GetBillEntry(string billEntryId);
         BillEntryEntity CreateBillEntry(BillEntryEntity billEntryEntity);
         bool UpdateBillEntry(string billEntryId, BillEntryEntity billEntryEntity);

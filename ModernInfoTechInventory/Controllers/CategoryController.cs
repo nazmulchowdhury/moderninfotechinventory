@@ -1,16 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
+using Model.Inventory;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Product;
-using Model.Product;
-using ModernInfoTechInventory.ViewModels;
+using Service.Inventory;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
     [Authorize]
+    [RoutePrefix("category")]
     public class CategoryController : ApiController
     {
         private readonly ICategoryServices categoryServices;
@@ -20,9 +22,10 @@ namespace ModernInfoTechInventory.Controllers
             this.categoryServices = categoryServices;
         }
 
+        [Route("")]
         public HttpResponseMessage GetAllCategories()
         {
-            var categoryEntities = categoryServices.GetAllCategories().ToList();
+            var categoryEntities = categoryServices.GetAllCategories();
             if (categoryEntities.Any())
             {
                 return Request.CreateResponse(HttpStatusCode.OK, categoryEntities);
@@ -30,6 +33,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Categories are not found", HttpStatusCode.NotFound);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage GetCategory(string id)
         {
             var categoryEntity = categoryServices.GetCategory(id);
@@ -40,17 +44,25 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Category found for this " + id, HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage PostCategory(CategoryEntity categoryEntity)
+        [Route("")]
+        public HttpResponseMessage PostCategory(CategoryView categoryView)
         {
+            var categoryEntity = new CategoryEntity
+            {
+                CategoryId = Guid.NewGuid().ToString(),
+                CategoryName = categoryView.CategoryName
+            };
             var insertedEntity = categoryServices.CreateCategory(categoryEntity);
             return GetCategory(insertedEntity.CategoryId);
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage PutCategory(string id, CategoryEntity categoryEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, categoryServices.UpdateCategory(id, categoryEntity));
         }
 
+        [Route("{id:length(36)}")]
         public HttpResponseMessage DeleteCategory(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

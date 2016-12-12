@@ -13,7 +13,7 @@ namespace Service.Purchase
             this.purchaseReturnRepository = purchaseReturnRepository;
         }
 
-        public IEnumerable<PurchaseReturnEntity> GetAllPurchaseReturns()
+        public ICollection<PurchaseReturnEntity> GetAllPurchaseReturns()
         {
             return purchaseReturnRepository.GetAll();
         }
@@ -34,8 +34,10 @@ namespace Service.Purchase
 
             if (storedItem != null)
             {
+                storedItem.RefInvoiceId = purchaseReturnEntity.RefInvoiceId;
                 storedItem.ReturnDate = purchaseReturnEntity.ReturnDate;
-                storedItem.ReturnNumber = purchaseReturnEntity.ReturnNumber;
+                storedItem.Penalty = purchaseReturnEntity.Penalty;
+                storedItem.PaidAmount = purchaseReturnEntity.PaidAmount;
 
                 purchaseReturnRepository.Update(storedItem);
 

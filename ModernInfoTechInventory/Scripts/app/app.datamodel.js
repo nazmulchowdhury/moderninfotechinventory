@@ -142,7 +142,7 @@
 
     // my code
     self.getAllCompanies = function () {
-        return $.ajax("/api/companyinfo", {
+        return $.ajax("/companyinfo", {
             type: "GET",
             headers: getSecurityHeaders()
         });
