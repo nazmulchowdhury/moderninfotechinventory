@@ -12,7 +12,7 @@ namespace Data.Repositories.Inventory
 
         public override InventoryEntity GetById(string inventoryId)
         {
-            return DbContext.Inventory.Include("ProductQuantity").FirstOrDefault(inv => inv.InventoryId == inventoryId);
+            return Context.Inventory.Include("ProductQuantity").FirstOrDefault(inv => inv.InventoryId == inventoryId);
         }
     }
 }

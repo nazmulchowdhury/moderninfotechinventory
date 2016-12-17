@@ -12,7 +12,7 @@ namespace Data.Repositories.Vat
 
         public override VatEntity GetById(string vatId)
         {
-            return DbContext.Vat.Include("Location").FirstOrDefault(vat => vat.VatId == vatId);
+            return Context.Vat.Include("Location").FirstOrDefault(vat => vat.VatId == vatId);
         }
     }
 }

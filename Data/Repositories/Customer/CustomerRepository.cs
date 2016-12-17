@@ -12,7 +12,7 @@ namespace Data.Repositories.Customer
 
         public override CustomerEntity GetById(string customerId)
         {
-            return DbContext.Customer.Include("Location").FirstOrDefault(cus => cus.CustomerId == customerId);
+            return Context.Customer.Include("Location").FirstOrDefault(cus => cus.CustomerId == customerId);
         }
     }
 }

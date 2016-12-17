@@ -12,7 +12,7 @@ namespace Data.Repositories.Supplier
 
         public override SupplierPaymentEntity GetById(string supplierPaymentId)
         {
-            return DbContext.SupplierPayment.Include("Supplier").FirstOrDefault(suppay => suppay.SupplierPaymentId == supplierPaymentId);
+            return Context.SupplierPayment.Include("Supplier").FirstOrDefault(suppay => suppay.SupplierPaymentId == supplierPaymentId);
         }
     }
 }

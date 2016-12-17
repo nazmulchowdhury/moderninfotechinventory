@@ -14,21 +14,21 @@ namespace Data.Repositories.Requisition
 
         public override bool Delete(string requisitionId)
         {
-            var requisitionEntity = DbContext.Requisition.Find(requisitionId);
+            var requisitionEntity = Context.Requisition.Find(requisitionId);
 
             if (requisitionEntity != null)
             {
-                DbContext.Entry(requisitionEntity).Collection("ProductQuantities").Load();
+                Context.Entry(requisitionEntity).Collection("ProductQuantities").Load();
                 var productQuantities = requisitionEntity.ProductQuantities.ToList();
 
                 foreach (ProductQuantityEntity productQuantity in productQuantities)
                 {
                     requisitionEntity.ProductQuantities.Remove(productQuantity);
-                    DbContext.ProductQuantity.Remove(productQuantity);
+                    Context.ProductQuantity.Remove(productQuantity);
                 }
 
-                DbContext.Requisition.Remove(requisitionEntity);
-                DbContext.Commit();
+                Context.Requisition.Remove(requisitionEntity);
+                Context.Commit();
                 return true;
             }
             else

@@ -6,6 +6,7 @@ using Model.Location;
 using Model.Supplier;
 using Model.Purchase;
 using Model.Inventory;
+using Model.Utilities;
 using Model.CompanyInfo;
 using Model.InvoiceInfo;
 using Model.Requisition;
@@ -13,10 +14,10 @@ using System.Data.Entity;
 using Model.DeliveryOrder;
 
 namespace Data.Helper
-{   
-    public class DataServiceContext : DbContext
+{
+    public class ModernInfoTechInventoryContext : DbContext
     {
-        public DataServiceContext()
+        public ModernInfoTechInventoryContext()
             : base("name=ModernInfoTechInventoryContext")
         { }
 
@@ -47,6 +48,9 @@ namespace Data.Helper
         public DbSet<PurchaseReturnEntity> PurchaseReturn { get; set; }
         public DbSet<RequisitionEntity> Requisition { get; set; }
         public DbSet<DeliveryOrderEntity> DeliveryOrder { get; set; }
+        public DbSet<StockedProductQuantity> StockedProductQuantity { get; set; }
+        public DbSet<StockedProductReturnQuantity> StockedProductReturnQuantity { get; set; }
+        public DbSet<UnitEntity> Unit { get; set; }
 
         public virtual void Commit()
         {

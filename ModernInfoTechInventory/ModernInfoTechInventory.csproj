@@ -206,6 +206,7 @@
     <Compile Include="Controllers\CashController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CompanyInfoController.cs" />
+    <Compile Include="Controllers\CurrentStockController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerDueController.cs" />
     <Compile Include="Controllers\DamageStockEntryController.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Controllers\SubCategoryController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Controllers\SupplierPaymentController.cs" />
+    <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\VatController.cs" />
     <Compile Include="ErrorHelper\ApiBusinessException.cs" />
     <Compile Include="ErrorHelper\ApiDataException.cs" />

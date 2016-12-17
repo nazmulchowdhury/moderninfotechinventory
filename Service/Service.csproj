@@ -42,7 +42,11 @@
     <Compile Include="Accounts\ICashServices.cs" />
     <Compile Include="Accounts\IExpenseServices.cs" />
     <Compile Include="Inventory\IProductReturnQuantityServices.cs" />
+    <Compile Include="Inventory\IUnitServices.cs" />
     <Compile Include="Inventory\ProductReturnQuantityServices.cs" />
+    <Compile Include="Inventory\UnitServices.cs" />
+    <Compile Include="Utilities\CurrentStockServices.cs" />
+    <Compile Include="Utilities\ICurrentStockServices.cs" />
     <Compile Include="Vat\IVatServices.cs" />
     <Compile Include="Vat\VatServices.cs" />
     <Compile Include="Accounts\IInvestorServices.cs" />
@@ -99,7 +103,6 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

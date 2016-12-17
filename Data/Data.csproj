@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Helper\DataServiceContext.cs" />
+    <Compile Include="Helper\ModernInfoTechInventoryContext.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
     <Compile Include="Infrastructure\IRepository.cs" />
@@ -45,7 +45,11 @@
     <Compile Include="Repositories\Accounts\ICashRepository.cs" />
     <Compile Include="Repositories\Accounts\IExpenseRepository.cs" />
     <Compile Include="Repositories\Inventory\IProductReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Inventory\IUnitRepository.cs" />
     <Compile Include="Repositories\Inventory\ProductReturnQuantityRepository.cs" />
+    <Compile Include="Repositories\Inventory\UnitRepository.cs" />
+    <Compile Include="Repositories\Utilities\CurrentStockRepository.cs" />
+    <Compile Include="Repositories\Utilities\ICurrentStockRepository.cs" />
     <Compile Include="Repositories\Vat\IVatRepository.cs" />
     <Compile Include="Repositories\Vat\VatRepository.cs" />
     <Compile Include="Repositories\Accounts\IInvestorRepository.cs" />

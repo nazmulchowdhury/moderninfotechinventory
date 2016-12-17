@@ -36,6 +36,7 @@ namespace Service.Inventory
             {
                 storedItem.ProductId = productQuantityEntity.ProductId;
                 storedItem.Quantity = productQuantityEntity.Quantity;
+                storedItem.Price = productQuantityEntity.Price;
 
                 productQuantityRepository.Update(storedItem);
 

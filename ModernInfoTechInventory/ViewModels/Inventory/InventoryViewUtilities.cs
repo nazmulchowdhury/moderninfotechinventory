@@ -8,11 +8,18 @@ namespace ModernInfoTechInventory.ViewModels.Inventory
         public string CategoryName { get; set; }
     }
 
+    public class UnitView
+    {
+        public string UnitName { get; set; }
+    }
+
     public class SubCategoryView
     {
         public string SubCategoryName { get; set; }
 
         public string CategoryId { get; set; }
+
+        public string UnitId { get; set; }
     }
 
     public class ProductInfoView
@@ -35,6 +42,8 @@ namespace ModernInfoTechInventory.ViewModels.Inventory
         public string ProductId { get; set; }
 
         public int Quantity { get; set; }
+
+        public double? Price { get; set; }
 
         public override int GetHashCode()
         {

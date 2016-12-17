@@ -9,7 +9,7 @@ namespace Data.Infrastructure
 {
     public abstract class RepositoryBase<T> where T : class
     {
-        private DataServiceContext dataContext;
+        private ModernInfoTechInventoryContext context;
         private readonly IDbSet<T> dbSet;
 
         protected IDbFactory DbFactory
@@ -18,32 +18,32 @@ namespace Data.Infrastructure
             private set;
         }
 
-        protected DataServiceContext DbContext
+        protected ModernInfoTechInventoryContext Context
         {
             get
             { 
-                return dataContext ?? (dataContext = DbFactory.Init());
+                return context ?? (context = DbFactory.Init());
             }
         }
 
         protected RepositoryBase(IDbFactory dbFactory)
         {
             DbFactory = dbFactory;
-            dbSet = DbContext.Set<T>();
+            dbSet = Context.Set<T>();
         }
 
         public virtual T Add(T entity)
         {
             dbSet.Add(entity);
-            dataContext.Commit();
+            context.Commit();
             return entity;
         }
 
         public virtual T Update(T entity)
         {
             dbSet.Attach(entity);
-            dataContext.Entry(entity).State = EntityState.Modified;
-            dataContext.Commit();
+            context.Entry(entity).State = EntityState.Modified;
+            context.Commit();
             return entity;
         }
 
@@ -53,7 +53,7 @@ namespace Data.Infrastructure
             if (entity != null)
             {
                 dbSet.Remove(entity);
-                dataContext.Commit();
+                context.Commit();
                 return true;
             }
             else
@@ -68,7 +68,7 @@ namespace Data.Infrastructure
             foreach (T obj in objects)
             {
                 dbSet.Remove(obj);
-                dataContext.Commit();
+                context.Commit();
                 return true;
             }
             return false;

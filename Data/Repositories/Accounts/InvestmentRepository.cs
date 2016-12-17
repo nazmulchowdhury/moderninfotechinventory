@@ -12,7 +12,7 @@ namespace Data.Repositories.Vat
 
         public override InvestmentEntity GetById(string investmentId)
         {
-            return DbContext.Investment.Find(investmentId);
+            return Context.Investment.Find(investmentId);
         }
     }
 }

@@ -41,6 +41,7 @@ namespace Service.Inventory
             {
                 storedItem.SubCategoryName = subCategoryEntity.SubCategoryName;
                 storedItem.CategoryId = subCategoryEntity.CategoryId;
+                storedItem.UnitId = subCategoryEntity.UnitId;
 
                 subCategoryRepository.Update(storedItem);
 

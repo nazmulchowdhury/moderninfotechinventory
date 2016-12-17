@@ -11,8 +11,10 @@ C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechIn
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\Data.pdb
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\EntityFramework.dll
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\Model.dll
+C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\Model.pdb
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\EntityFramework.xml
+C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\obj\Debug\Data.dll
 C:\Users\Nazmul Chowdhury\documents\visual studio 2013\Projects\ModernInfoTechInventory\Data\obj\Debug\Data.pdb

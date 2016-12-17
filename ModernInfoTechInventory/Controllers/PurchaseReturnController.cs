@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Collections.Generic;
-using AutoMapper;
-using Service.Purchase;
+using System.Linq;
 using Model.Purchase;
 using Model.Inventory;
-using ModernInfoTechInventory.ViewModels;
+using System.Net.Http;
+using System.Web.Http;
+using Service.Purchase;
+using System.Collections.Generic;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.Purchase;
@@ -52,26 +50,28 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostPurchaseReturn(PurchaseReturnView purchaseReturnView)
         {
-            var purchaseReturnEntityMapper = new MapperConfiguration(
-                cfg => cfg.CreateMap<PurchaseReturnView, PurchaseReturnEntity>()
-                    .ConstructUsing((PurchaseReturnView prv) =>
-                    {
-                        var pre = new PurchaseReturnEntity();
-                        pre.PurchaseReturnId = Guid.NewGuid().ToString();
+            var productReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
 
-                        foreach (ProductReturnQuantityView prqv in prv.PurchaseReturnedProducts)
-                        {
-                            pre.ProductReturnQuantities.Add(new ProductReturnQuantityEntity
-                            {
-                                ProductReturnQuantityId = Guid.NewGuid().ToString(),
-                                ProductQuantityId = prqv.ProductQuantityId,
-                                ReturnQuantity = prqv.ReturnQuantity
-                            });
-                        }
-                        return pre;
-                    }));
+            foreach (ProductReturnQuantityView prqv in purchaseReturnView.PurchaseReturnedProducts)
+            {
+                var productReturnQuantity = new ProductReturnQuantityEntity
+                {
+                    ProductReturnQuantityId = Guid.NewGuid().ToString(),
+                    ProductQuantityId = prqv.ProductQuantityId,
+                    ReturnQuantity = prqv.ReturnQuantity
+                };
+                productReturnQuantities.Add(productReturnQuantity);
+            }
 
-            var purchaseReturnEntity = purchaseReturnEntityMapper.CreateMapper().Map<PurchaseReturnView, PurchaseReturnEntity>(purchaseReturnView);
+            var purchaseReturnEntity = new PurchaseReturnEntity
+            {
+                PurchaseReturnId = Guid.NewGuid().ToString(),
+                RefInvoiceId = purchaseReturnView.RefInvoiceId,
+                ReturnDate = purchaseReturnView.ReturnDate,
+                Penalty = purchaseReturnView.Penalty,
+                PaidAmount = purchaseReturnView.PaidAmount,
+                ProductReturnQuantities = productReturnQuantities
+            };
             var insertedEntity = purchaseReturnServices.CreatePurchaseReturn(purchaseReturnEntity);
             return GetPurchaseReturn(insertedEntity.PurchaseReturnId);
         }

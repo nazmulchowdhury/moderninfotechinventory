@@ -34,10 +34,8 @@ namespace Service.InvoiceInfo
 
             if (storedItem != null)
             {
-                storedItem.BillEntryId = invoiceInfoEntity.BillEntryId;
-                storedItem.PurchaseEntryId = invoiceInfoEntity.PurchaseEntryId;
-                storedItem.SaleReturnId = invoiceInfoEntity.SaleReturnId;
-                storedItem.PurchaseReturnId = invoiceInfoEntity.PurchaseReturnId;
+                storedItem.EntryId = invoiceInfoEntity.EntryId;
+                storedItem.EntryType = invoiceInfoEntity.EntryType;
                 storedItem.Status = invoiceInfoEntity.Status;
 
                 invoiceInfoRepository.Update(storedItem);
@@ -49,7 +47,7 @@ namespace Service.InvoiceInfo
                 return false;
             }
         }
-        
+
 
         public bool DeleteInvoice(string invoiceInfoId)
         {

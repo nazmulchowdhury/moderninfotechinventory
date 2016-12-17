@@ -4,11 +4,11 @@ namespace Data.Infrastructure
 {
     public class DbFactory : IDbFactory
     {
-        private DataServiceContext dbContext;
+        private ModernInfoTechInventoryContext context;
 
-        public DataServiceContext Init()
+        public ModernInfoTechInventoryContext Init()
         {
-            return dbContext ?? (dbContext = new DataServiceContext());
+            return context ?? (context = new ModernInfoTechInventoryContext());
         }
     }
 }

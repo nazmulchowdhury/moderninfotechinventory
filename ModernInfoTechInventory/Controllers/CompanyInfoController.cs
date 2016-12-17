@@ -1,15 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System.Net;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using AutoMapper;
-using Microsoft.AspNet.Identity;
-using Service.CompanyInfo;
 using Model.CompanyInfo;
-using ModernInfoTechInventory.ViewModels.CompanyInfo;
+using Service.CompanyInfo;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.CompanyInfo;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -65,10 +63,8 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutCompany(string id, CompanyInfoView companyInfoView)
+        public HttpResponseMessage PutCompany(string id, CompanyInfoEntity companyInfoEntity)
         {
-            var companyInfoEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<CompanyInfoView, CompanyInfoEntity>());
-            var companyInfoEntity = companyInfoEntityMapper.CreateMapper().Map<CompanyInfoView, CompanyInfoEntity>(companyInfoView);
             return Request.CreateResponse(HttpStatusCode.OK, companyInfoServices.UpdateCompany(id, companyInfoEntity));
         }
 

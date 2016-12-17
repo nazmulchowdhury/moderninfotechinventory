@@ -12,23 +12,23 @@ namespace Data.Repositories.Inventory
 
         public override DamageStockEntryEntity GetById(string damageStockEntryId)
         {
-            return DbContext.DamageStockEntry.Include("ProductQuantity").FirstOrDefault(dmgstk => dmgstk.DamageStockEntryId == damageStockEntryId);
+            return Context.DamageStockEntry.Include("ProductQuantity").FirstOrDefault(dmgstk => dmgstk.DamageStockEntryId == damageStockEntryId);
         }
 
         public override bool Delete(string damageStockEntryId)
         {
-            var damageStockEntryEntity = DbContext.DamageStockEntry.Find(damageStockEntryId);
+            var damageStockEntryEntity = Context.DamageStockEntry.Find(damageStockEntryId);
 
             if (damageStockEntryEntity != null)
             {
-                var productQuantityEntity = DbContext.ProductQuantity.FirstOrDefault(proqty => proqty.ProductQuantityId == damageStockEntryEntity.ProductQuantityId);
+                var productQuantityEntity = Context.ProductQuantity.FirstOrDefault(proqty => proqty.ProductQuantityId == damageStockEntryEntity.ProductQuantityId);
                 if (productQuantityEntity != null)
                 {
-                    DbContext.ProductQuantity.Remove(productQuantityEntity);
+                    Context.ProductQuantity.Remove(productQuantityEntity);
                 }
 
-                DbContext.DamageStockEntry.Remove(damageStockEntryEntity);
-                DbContext.Commit();
+                Context.DamageStockEntry.Remove(damageStockEntryEntity);
+                Context.Commit();
                 return true;
             }
             else

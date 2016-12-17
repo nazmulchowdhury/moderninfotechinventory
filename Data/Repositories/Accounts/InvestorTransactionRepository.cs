@@ -12,7 +12,7 @@ namespace Data.Repositories.Account
 
         public override InvestorTransactionEntity GetById(string investorTransactionId)
         {
-            return DbContext.InvestorTransaction.Include("Investor").FirstOrDefault(invstran => invstran.InvestorTransactionId == investorTransactionId);
+            return Context.InvestorTransaction.Include("Investor").FirstOrDefault(invstran => invstran.InvestorTransactionId == investorTransactionId);
         }
     }
 }

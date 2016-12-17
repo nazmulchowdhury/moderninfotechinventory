@@ -12,7 +12,7 @@ namespace Data.Repositories.Inventory
 
         public override SubCategoryEntity GetById(string subCategoryId)
         {
-            return DbContext.SubCategory.Include("Category").FirstOrDefault(subcat => subcat.SubCategoryId == subCategoryId);
+            return Context.SubCategory.Include("Category").Include("Unit").FirstOrDefault(subcat => subcat.SubCategoryId == subCategoryId);
         }
     }
 }

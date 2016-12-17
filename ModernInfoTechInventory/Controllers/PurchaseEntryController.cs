@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Purchase;
+using Model.Inventory;
 using System.Net.Http;
 using System.Web.Http;
-using System.Collections.Generic;
-using AutoMapper;
-using Model.Inventory;
-using Model.Purchase;
 using Service.Purchase;
-using ModernInfoTechInventory.ViewModels;
+using System.Collections.Generic;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.Purchase;
@@ -52,26 +50,30 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostPurchaseEntry(PurchaseEntryView purchaseEntryView)
         {
-            var purchaseEntryEntityMapper = new MapperConfiguration(
-                cfg => cfg.CreateMap<PurchaseEntryView, PurchaseEntryEntity>()
-                    .ConstructUsing((PurchaseEntryView pev) =>
-                    {
-                        var pe = new PurchaseEntryEntity();
-                        pe.PurchaseEntryId = Guid.NewGuid().ToString();
+            var productQuantities = new HashSet<ProductQuantityEntity>();
 
-                        foreach (ProductQuantityView product in pev.PurchasedProducts)
-                        {
-                            pe.ProductQuantities.Add(new ProductQuantityEntity
-                            {
-                                ProductQuantityId = Guid.NewGuid().ToString(),
-                                ProductId = product.ProductId,
-                                Quantity = product.Quantity
-                            });
-                        }
-                        return pe;
-                    }));
+            foreach (ProductQuantityView pqv in purchaseEntryView.PurchasedProducts)
+            {
+                var productQuantity = new ProductQuantityEntity
+                {
+                    ProductQuantityId = Guid.NewGuid().ToString(),
+                    ProductId = pqv.ProductId,
+                    Quantity = pqv.Quantity,
+                    Price = pqv.Price
+                };
+                productQuantities.Add(productQuantity);
+            }
 
-            var purchaseEntryEntity = purchaseEntryEntityMapper.CreateMapper().Map<PurchaseEntryView, PurchaseEntryEntity>(purchaseEntryView);
+            var purchaseEntryEntity = new PurchaseEntryEntity
+            {
+                PurchaseEntryId = Guid.NewGuid().ToString(),
+                SupplierId = purchaseEntryView.SupplierId,
+                ReceiveDate = purchaseEntryView.ReceiveDate,
+                ReceiveNumber = purchaseEntryView.ReceiveNumber,
+                PaidAmount = purchaseEntryView.PaidAmount,
+                ProductQuantities = productQuantities
+            };
+
             var insertedEntity = purchaseEntryServices.CreatePurchaseEntry(purchaseEntryEntity);
             return GetPurchaseEntry(insertedEntity.PurchaseEntryId);
         }

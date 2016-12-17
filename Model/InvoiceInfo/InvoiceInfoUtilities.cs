@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using Model.Sale;
-using Model.Purchase;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Model.Utilities;
 
 namespace Model.InvoiceInfo
 {
@@ -12,29 +13,19 @@ namespace Model.InvoiceInfo
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string InvoiceInfoId { get; set; }
 
-        public string BillEntryId { get; set; }
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Entry Id")]
+        public string EntryId { get; set; }
 
-        public string PurchaseEntryId { get; set; }
-
-        public string SaleReturnId { get; set; }
-
-        public string PurchaseReturnId { get; set; }
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Entry Type")]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Option EntryType { get; set; }
 
         [Required]
         [Display(Name = "Invoice Status")]
         public bool Status { get; set; }
-
-        // navigation properties
-        [ForeignKey("BillEntryId")]
-        public virtual BillEntryEntity BillEntry { get; set; }
-
-        [ForeignKey("PurchaseEntryId")]
-        public virtual PurchaseEntryEntity PurchaseEntry { get; set; }
-
-        [ForeignKey("SaleReturnId")]
-        public virtual SaleReturnEntity SaleReturn { get; set; }
-
-        [ForeignKey("PurchaseReturnId")]
-        public virtual PurchaseReturnEntity PurchaseReturn { get; set; }
     }
 }

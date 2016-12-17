@@ -12,21 +12,21 @@ namespace Data.Repositories.Inventory
 
         public override bool Delete(string stockAdjustmentId)
         {
-            var stockAdjustmentEntity = DbContext.StockAdjustment.Find(stockAdjustmentId);
+            var stockAdjustmentEntity = Context.StockAdjustment.Find(stockAdjustmentId);
 
             if (stockAdjustmentEntity != null)
             {
-                DbContext.Entry(stockAdjustmentEntity).Collection("ProductQuantities").Load();
+                Context.Entry(stockAdjustmentEntity).Collection("ProductQuantities").Load();
                 var productQuantities = stockAdjustmentEntity.ProductQuantities.ToList();
 
                 foreach (ProductQuantityEntity productQuantity in productQuantities)
                 {
                     stockAdjustmentEntity.ProductQuantities.Remove(productQuantity);
-                    DbContext.ProductQuantity.Remove(productQuantity);
+                    Context.ProductQuantity.Remove(productQuantity);
                 }
 
-                DbContext.StockAdjustment.Remove(stockAdjustmentEntity);
-                DbContext.Commit();
+                Context.StockAdjustment.Remove(stockAdjustmentEntity);
+                Context.Commit();
                 return true;
             }
             else

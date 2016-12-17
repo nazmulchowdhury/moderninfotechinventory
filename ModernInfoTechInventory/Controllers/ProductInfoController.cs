@@ -6,7 +6,6 @@ using System.Web.Http;
 using Service.Inventory;
 using Model.Inventory;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers

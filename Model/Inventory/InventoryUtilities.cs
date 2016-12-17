@@ -1,8 +1,8 @@
 ﻿using System;
 using Model.Sale;
 using Model.Purchase;
-using Model.DeliveryOrder;
 using Model.Requisition;
+using Model.DeliveryOrder;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,6 +22,19 @@ namespace Model.Inventory
         public string CategoryName { get; set; }
     }
 
+    [Table("Unit")]
+    public class UnitEntity
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string UnitId { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Unit Name")]
+        public string UnitName { get; set; }
+    }
+
     [Table("SubCategory")]
     public class SubCategoryEntity
     {
@@ -37,9 +50,14 @@ namespace Model.Inventory
         [Required]
         public string CategoryId { get; set; }
 
+        [Required]
+        public string UnitId { get; set; }
+
         // navigation properties
         [ForeignKey("CategoryId")]
         public virtual CategoryEntity Category { get; set; }
+        [ForeignKey("UnitId")]
+        public virtual UnitEntity Unit { get; set; }
     }
 
     [Table("Product")]
@@ -80,7 +98,7 @@ namespace Model.Inventory
     }
 
     [Table("ProductQuantity")]
-    public class ProductQuantityEntity : IEquatable<ProductQuantityEntity>
+    public partial class ProductQuantityEntity : IEquatable<ProductQuantityEntity>
     {
         public ProductQuantityEntity()
         {
@@ -101,6 +119,9 @@ namespace Model.Inventory
         [Required]
         [Display(Name = "Quantity")]
         public int Quantity { get; set; }
+
+        [Display(Name = "Price")]
+        public double? Price { get; set; }
 
         // navigation properties
         [ForeignKey("ProductId")]

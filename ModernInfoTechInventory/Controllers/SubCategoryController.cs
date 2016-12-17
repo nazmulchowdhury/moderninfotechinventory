@@ -62,7 +62,8 @@ namespace ModernInfoTechInventory.Controllers
             {
                 SubCategoryId = Guid.NewGuid().ToString(),
                 SubCategoryName = subCategoryView.SubCategoryName,
-                CategoryId = subCategoryView.CategoryId
+                CategoryId = subCategoryView.CategoryId,
+                UnitId = subCategoryView.UnitId
             };
             var insertedEntity = subCategoryServices.CreateSubCategory(subCategoryEntity);
             return GetSubCategory(insertedEntity.SubCategoryId);

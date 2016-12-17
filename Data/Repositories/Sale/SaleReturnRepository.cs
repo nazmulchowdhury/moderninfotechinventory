@@ -3,6 +3,7 @@ using Data.Helper;
 using Model.Sale;
 using Model.InvoiceInfo;
 using Model.Inventory;
+using Model.Utilities;
 using System.Linq;
 using System;
 
@@ -16,40 +17,41 @@ namespace Data.Repositories.Sale
 
         public override SaleReturnEntity Add(SaleReturnEntity saleReturnEntity)
         {
-            var insertedEntity = DbContext.SaleReturn.Add(saleReturnEntity);
-            DbContext.InvoiceInfo.Add(
+            var insertedEntity = Context.SaleReturn.Add(saleReturnEntity);
+            Context.InvoiceInfo.Add(
                 new InvoiceInfoEntity
                 {
                     InvoiceInfoId = Guid.NewGuid().ToString(),
-                    SaleReturnId = insertedEntity.SaleReturnId,
+                    EntryId = insertedEntity.SaleReturnId,
+                    EntryType = Option.SALE_RETURN,
                     Status = true
                 });
-            DbContext.Commit();
+            Context.Commit();
             return insertedEntity;
         }
 
         public override bool Delete(string saleReturnId)
         {
-            var saleReturnEntity = DbContext.SaleReturn.Find(saleReturnId);
+            var saleReturnEntity = Context.SaleReturn.Find(saleReturnId);
 
             if (saleReturnEntity != null)
             {
-                var invoiceInfoEntity = DbContext.InvoiceInfo.FirstOrDefault(invinf => invinf.SaleReturnId == saleReturnId);
+                var invoiceInfoEntity = Context.InvoiceInfo.FirstOrDefault(invinf => invinf.EntryId == saleReturnId);
                 if (invoiceInfoEntity != null)
                 {
-                    DbContext.InvoiceInfo.Remove(invoiceInfoEntity);
+                    Context.InvoiceInfo.Remove(invoiceInfoEntity);
                 }
 
-                DbContext.Entry(saleReturnEntity).Collection("ProductReturnQuantities").Load();
+                Context.Entry(saleReturnEntity).Collection("ProductReturnQuantities").Load();
                 var productReturnQuantities = saleReturnEntity.ProductReturnQuantities.ToList();
                 foreach (ProductReturnQuantityEntity productReturnQuantity in productReturnQuantities)
                 {
                     saleReturnEntity.ProductReturnQuantities.Remove(productReturnQuantity);
-                    DbContext.ProductReturnQuantity.Remove(productReturnQuantity);
+                    Context.ProductReturnQuantity.Remove(productReturnQuantity);
                 }
 
-                DbContext.SaleReturn.Remove(saleReturnEntity);
-                DbContext.Commit();
+                Context.SaleReturn.Remove(saleReturnEntity);
+                Context.Commit();
                 return true;
             }
             else

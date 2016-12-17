@@ -12,7 +12,7 @@ namespace Data.Repositories.CompanyInfo
 
         public override CompanyInfoEntity GetById(string companyId)
         {
-            return DbContext.CompanyInfo.Include("Location").Include("User").FirstOrDefault(cmp => cmp.CompanyId == companyId);
+            return Context.CompanyInfo.Include("Location").Include("User").FirstOrDefault(cmp => cmp.CompanyId == companyId);
         }
     }
 }

@@ -12,6 +12,7 @@ using Data.Repositories.Account;
 using Data.Repositories.Purchase;
 using Data.Repositories.Requisition;
 using Data.Repositories.DeliveryOrder;
+using Data.Repositories.Utilities;
 using Service.CompanyInfo;
 using Service.Vat;
 using Service.Location;
@@ -23,6 +24,7 @@ using Service.Sale;
 using Service.Purchase;
 using Service.Requisition;
 using Service.DeliveryOrder;
+using Service.Utilities;
 using ModernInfoTechInventory.Resolver;
 using Microsoft.Practices.Unity;
 
@@ -89,6 +91,10 @@ namespace ModernInfoTechInventory
             container.RegisterType<IRequisitionServices, RequisitionServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IDeliveryOrderRepository, DeliveryOrderRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IDeliveryOrderServices, DeliveryOrderServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUnitRepository, UnitRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<IUnitServices, UnitServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICurrentStockRepository, CurrentStockRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ICurrentStockServices, CurrentStockServices>(new HierarchicalLifetimeManager());
 
             config.DependencyResolver = new UnityResolver(container);
         }

@@ -13,7 +13,7 @@ namespace Data.Repositories.Inventory
 
         public override ProductReturnQuantityEntity GetById(string productReturnQuantityId)
         {
-            return DbContext.ProductReturnQuantity.Include("ProductQuantity").FirstOrDefault(prortnqty => prortnqty.ProductReturnQuantityId == productReturnQuantityId);
+            return Context.ProductReturnQuantity.Include("ProductQuantity").FirstOrDefault(prortnqty => prortnqty.ProductReturnQuantityId == productReturnQuantityId);
         }
     }
 }

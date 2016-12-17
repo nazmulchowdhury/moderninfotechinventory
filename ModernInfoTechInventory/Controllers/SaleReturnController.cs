@@ -1,18 +1,16 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using AutoMapper;
-using Service.Sale;
+using System.Linq;
 using Model.Sale;
 using Model.Inventory;
-using ModernInfoTechInventory.ViewModels;
+using System.Net.Http;
+using System.Web.Http;
+using Service.Sale;
+using System.Collections.Generic;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.Sale;
 using ModernInfoTechInventory.ViewModels.Inventory;
-using System;
-using System.Collections.Generic;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -52,26 +50,28 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostSaleReturn(SaleReturnView saleReturnView)
         {
-            var saleReturnEntityMapper = new MapperConfiguration(
-                cfg => cfg.CreateMap<SaleReturnView, SaleReturnEntity>()
-                    .ConstructUsing((SaleReturnView srv) =>
-                    {
-                        var sre = new SaleReturnEntity();
-                        sre.SaleReturnId = Guid.NewGuid().ToString();
 
-                        foreach (ProductReturnQuantityView prqv in srv.SaleReturnedProducts)
-                        {
-                            sre.ProductReturnQuantities.Add(new ProductReturnQuantityEntity
-                            {
-                                ProductReturnQuantityId = Guid.NewGuid().ToString(),
-                                ProductQuantityId = prqv.ProductQuantityId,
-                                ReturnQuantity = prqv.ReturnQuantity
-                            });
-                        }
-                        return sre;
-                    }));
+            var productReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
 
-            var saleReturnEntity = saleReturnEntityMapper.CreateMapper().Map<SaleReturnView, SaleReturnEntity>(saleReturnView);
+            foreach (ProductReturnQuantityView prqv in saleReturnView.SaleReturnedProducts)
+            {
+                var productReturnQuantity = new ProductReturnQuantityEntity
+                {
+                    ProductReturnQuantityId = Guid.NewGuid().ToString(),
+                    ProductQuantityId = prqv.ProductQuantityId,
+                    ReturnQuantity = prqv.ReturnQuantity
+                };
+                productReturnQuantities.Add(productReturnQuantity);
+            }
+
+            var saleReturnEntity = new SaleReturnEntity
+            {
+                SaleReturnId = Guid.NewGuid().ToString(),
+                RefInvoiceId = saleReturnView.RefInvoiceId,
+                Penalty = saleReturnView.Penalty,
+                PaidAmount = saleReturnView.PaidAmount,
+                ProductReturnQuantities = productReturnQuantities
+            };
             var insertedEntity = saleReturnServices.CreateSaleReturn(saleReturnEntity);
             return GetSaleReturn(insertedEntity.SaleReturnId);
         }

@@ -54,12 +54,14 @@ namespace ModernInfoTechInventory.Controllers
 
             foreach (ProductQuantityView pqv in billEntryView.SaledProducts)
             {
-                productQuantities.Add(new ProductQuantityEntity
+                var productQuantity = new ProductQuantityEntity
                 {
                     ProductQuantityId = Guid.NewGuid().ToString(),
                     ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity
-                });
+                    Quantity = pqv.Quantity,
+                    Price = pqv.Price
+                };
+                productQuantities.Add(productQuantity);
             }
 
             var billEntryEntity = new BillEntryEntity
