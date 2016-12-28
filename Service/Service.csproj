@@ -45,10 +45,12 @@
     <Compile Include="Inventory\IUnitServices.cs" />
     <Compile Include="Inventory\ProductReturnQuantityServices.cs" />
     <Compile Include="Inventory\UnitServices.cs" />
+    <Compile Include="Tenant\ITenantServices.cs" />
+    <Compile Include="Tenant\TenantServices.cs" />
     <Compile Include="Utilities\CurrentStockServices.cs" />
     <Compile Include="Utilities\ICurrentStockServices.cs" />
-    <Compile Include="Vat\IVatServices.cs" />
-    <Compile Include="Vat\VatServices.cs" />
+    <Compile Include="Accounts\IVatServices.cs" />
+    <Compile Include="Accounts\VatServices.cs" />
     <Compile Include="Accounts\IInvestorServices.cs" />
     <Compile Include="Accounts\IInvestorTransactionServices.cs" />
     <Compile Include="Accounts\InvestorServices.cs" />

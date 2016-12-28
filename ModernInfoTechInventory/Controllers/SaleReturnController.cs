@@ -1,16 +1,14 @@
 ﻿using System;
+using Model.Sale;
 using System.Net;
 using System.Linq;
-using Model.Sale;
+using Service.Sale;
 using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Sale;
-using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Sale;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -48,30 +46,19 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostSaleReturn(SaleReturnView saleReturnView)
+        public HttpResponseMessage PostSaleReturn(SaleReturnEntity saleReturnEntity)
         {
-
-            var productReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
-
-            foreach (ProductReturnQuantityView prqv in saleReturnView.SaleReturnedProducts)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            saleReturnEntity.SaleReturnId = Guid.NewGuid().ToString();
+            saleReturnEntity.TenantId = tenantEntity.TenantId;
+            saleReturnEntity.TenantInfo = tenantEntity;
+            saleReturnEntity.SaleReturnedProducts = saleReturnEntity.SaleReturnedProducts.Select(productReturnQuantity =>
             {
-                var productReturnQuantity = new ProductReturnQuantityEntity
-                {
-                    ProductReturnQuantityId = Guid.NewGuid().ToString(),
-                    ProductQuantityId = prqv.ProductQuantityId,
-                    ReturnQuantity = prqv.ReturnQuantity
-                };
-                productReturnQuantities.Add(productReturnQuantity);
-            }
+                productReturnQuantity.ProductReturnQuantityId = Guid.NewGuid().ToString();
+                productReturnQuantity.TenantId = tenantEntity.TenantId;
+                return productReturnQuantity;
+            }).ToList();
 
-            var saleReturnEntity = new SaleReturnEntity
-            {
-                SaleReturnId = Guid.NewGuid().ToString(),
-                RefInvoiceId = saleReturnView.RefInvoiceId,
-                Penalty = saleReturnView.Penalty,
-                PaidAmount = saleReturnView.PaidAmount,
-                ProductReturnQuantities = productReturnQuantities
-            };
             var insertedEntity = saleReturnServices.CreateSaleReturn(saleReturnEntity);
             return GetSaleReturn(insertedEntity.SaleReturnId);
         }
@@ -79,6 +66,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutSaleReturn(string id, SaleReturnEntity saleReturnEntity)
         {
+            saleReturnEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, saleReturnServices.UpdateSaleReturn(id, saleReturnEntity));
         }
 

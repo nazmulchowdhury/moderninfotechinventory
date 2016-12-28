@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.DeliveryOrder;
+﻿using Model.DeliveryOrder;
+using System.Collections.Generic;
 
 namespace Service.DeliveryOrder
 {

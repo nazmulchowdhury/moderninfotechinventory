@@ -1,14 +1,13 @@
 ﻿using System;
-using AutoMapper;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Accounts;
-using ModernInfoTechInventory.ViewModels.Accounts;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,25 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostInvestor(InvestorView investorView)
+        public HttpResponseMessage PostInvestor(InvestorEntity investorEntity)
         {
-            var investorEntity = new InvestorEntity
-            {
-                InvestorId = Guid.NewGuid().ToString(),
-                InvestorName = investorView.InvestorName,
-                LocationId = investorView.LocationId,
-                PhoneNumber = investorView.PhoneNumber,
-                Balance = investorView.Balance
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            investorEntity.InvestorId = Guid.NewGuid().ToString();
+            investorEntity.TenantId = tenantEntity.TenantId;
+            investorEntity.TenantInfo = tenantEntity;
             var insertedEntity = investorServices.CreateInvestor(investorEntity);
             return GetInvestor(insertedEntity.InvestorId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutInvestor(string id, InvestorView investorView)
+        public HttpResponseMessage PutInvestor(string id, InvestorEntity investorEntity)
         {
-            var investorEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<InvestorView, InvestorEntity>());
-            var investorEntity = investorEntityMapper.CreateMapper().Map<InvestorView, InvestorEntity>(investorView);
+            investorEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, investorServices.UpdateInvestor(id, investorEntity));
         }
 

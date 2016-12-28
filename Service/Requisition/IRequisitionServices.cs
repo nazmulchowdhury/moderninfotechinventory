@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Requisition;
+﻿using Model.Requisition;
+using System.Collections.Generic;
 
 namespace Service.Requisition
 {

@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Requisition;
+﻿using Model.Requisition;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Requisition
 {

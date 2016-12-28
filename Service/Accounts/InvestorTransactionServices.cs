@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Data.Repositories.Account;
-using Model.Accounts;
+﻿using Model.Accounts;
+using Data.Repositories.Accounts;
+using System.Collections.Generic;
 
-namespace Service.Vat
+namespace Service.Accounts
 {
     public class InvestorTransactionServices : IInvestorTransactionServices
     {
@@ -38,6 +38,7 @@ namespace Service.Vat
                 storedItem.Amount = investorTransactionEntity.Amount;
                 storedItem.Description = investorTransactionEntity.Description;
                 storedItem.TransactionType = investorTransactionEntity.TransactionType;
+                storedItem.TenantInfo.UserId = investorTransactionEntity.TenantInfo.UserId;
 
                 investorTransactionRepository.Update(storedItem);
 

@@ -1,10 +1,10 @@
-﻿using Model.Vat;
-using Model.Sale;
+﻿using Model.Sale;
 using Model.Customer;
 using Model.Accounts;
 using Model.Location;
 using Model.Supplier;
 using Model.Purchase;
+using Model.BaseModel;
 using Model.Inventory;
 using Model.Utilities;
 using Model.CompanyInfo;
@@ -21,6 +21,7 @@ namespace Data.Helper
             : base("name=ModernInfoTechInventoryContext")
         { }
 
+        public DbSet<TenantEntity> Tenant { get; set; }
         public DbSet<CompanyInfoEntity> CompanyInfo { get; set; }
         public DbSet<InvestmentEntity> Investment { get; set; }
         public DbSet<LocationEntity> Location { get; set; }
@@ -60,7 +61,7 @@ namespace Data.Helper
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BillEntryEntity>()
-                .HasMany(bill => bill.ProductQuantities)
+                .HasMany(bill => bill.SaledProducts)
                 .WithMany(proqty => proqty.BillEntries)
                 .Map(bp =>
                     bp.MapLeftKey("BillEntryId")
@@ -68,7 +69,7 @@ namespace Data.Helper
                     .ToTable("BillEntryProductQuantity"));
 
             modelBuilder.Entity<PurchaseEntryEntity>()
-                .HasMany(purchase => purchase.ProductQuantities)
+                .HasMany(purchase => purchase.PurchasedProducts)
                 .WithMany(proqty => proqty.PurchaseEntries)
                 .Map(pp =>
                     pp.MapLeftKey("PurchaseEntryId")
@@ -76,7 +77,7 @@ namespace Data.Helper
                     .ToTable("PurchaseEntryProductQuantity"));
 
             modelBuilder.Entity<SaleReturnEntity>()
-                .HasMany(salereturn => salereturn.ProductReturnQuantities)
+                .HasMany(salereturn => salereturn.SaleReturnedProducts)
                 .WithMany(prortnqty => prortnqty.SaleReturns)
                 .Map(sp =>
                     sp.MapLeftKey("SaleReturnId")
@@ -84,7 +85,7 @@ namespace Data.Helper
                     .ToTable("SaleReturnQuantity"));
 
             modelBuilder.Entity<PurchaseReturnEntity>()
-                .HasMany(purchasereturn => purchasereturn.ProductReturnQuantities)
+                .HasMany(purchasereturn => purchasereturn.PurchaseReturnedProducts)
                 .WithMany(prortnqty => prortnqty.PurchaseReturns)
                 .Map(prp =>
                     prp.MapLeftKey("PurchaseReturnId")

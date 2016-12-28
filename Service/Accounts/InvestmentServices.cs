@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Data.Repositories.Vat;
-using Model.Accounts;
+﻿using Model.Accounts;
+using Data.Repositories.Accounts;
+using System.Collections.Generic;
 
-namespace Service.Vat
+namespace Service.Accounts
 {
     public class InvestmentServices : IInvestmentServices
     {

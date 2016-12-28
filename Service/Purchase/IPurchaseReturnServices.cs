@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Purchase;
+﻿using Model.Purchase;
+using System.Collections.Generic;
 
 namespace Service.Purchase
 {

@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Model.Inventory;
 using Model.Requisition;
+using Model.BaseModel;
 using System.Collections.Generic;
 using System;
 
@@ -36,7 +37,13 @@ namespace Model.DeliveryOrder
         [Display(Name = "Delivery Order Description")]
         public string Description { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("RequisitionId")]
         public virtual RequisitionEntity Requisition { get; set; }
 

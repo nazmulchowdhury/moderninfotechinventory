@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Service.Tenant;
 using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
+using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -16,10 +18,12 @@ namespace ModernInfoTechInventory.Controllers
     public class CategoryController : ApiController
     {
         private readonly ICategoryServices categoryServices;
+        private readonly ITenantServices tenantServices;
 
-        public CategoryController(ICategoryServices categoryServices)
+        public CategoryController(ICategoryServices categoryServices, ITenantServices tenantServices)
         {
             this.categoryServices = categoryServices;
+            this.tenantServices = tenantServices;
         }
 
         [Route("")]
@@ -45,13 +49,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostCategory(CategoryView categoryView)
+        public HttpResponseMessage PostCategory(CategoryEntity categoryEntity)
         {
-            var categoryEntity = new CategoryEntity
-            {
-                CategoryId = Guid.NewGuid().ToString(),
-                CategoryName = categoryView.CategoryName
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            categoryEntity.CategoryId = Guid.NewGuid().ToString();
+            categoryEntity.TenantId = tenantEntity.TenantId;
+            categoryEntity.TenantInfo = tenantEntity;
             var insertedEntity = categoryServices.CreateCategory(categoryEntity);
             return GetCategory(insertedEntity.CategoryId);
         }
@@ -59,6 +62,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutCategory(string id, CategoryEntity categoryEntity)
         {
+            categoryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, categoryServices.UpdateCategory(id, categoryEntity));
         }
 
@@ -73,6 +80,37 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Category is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        public HttpResponseMessage DeleteDeactivateCategory(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var categoryEntity = categoryServices.GetCategory(id);
+                if (categoryEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(categoryEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(categoryEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Category is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Category has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Category is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

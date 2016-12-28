@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Inventory;
 using Model.Inventory;
+using Model.BaseModel;
+using Service.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -55,18 +56,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostProduct(ProductInfoView productInfoView)
+        public HttpResponseMessage PostProduct(ProductInfoEntity productInfoEntity)
         {
-            var productInfoEntity = new ProductInfoEntity
-            {
-                ProductId = Guid.NewGuid().ToString(),
-                ProductName = productInfoView.ProductName,
-                Barcode = productInfoView.Barcode,
-                CostPrice = productInfoView.CostPrice,
-                SalePrice = productInfoView.SalePrice,
-                ReorderLevel = productInfoView.ReorderLevel,
-                SubCategoryId = productInfoView.SubCategoryId
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            productInfoEntity.ProductId = Guid.NewGuid().ToString();
+            productInfoEntity.TenantId = tenantEntity.TenantId;
+            productInfoEntity.TenantInfo = tenantEntity;
             var insertedEntity = productInfoServices.CreateProduct(productInfoEntity);
             return GetProduct(insertedEntity.ProductId);
         }
@@ -74,6 +69,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutProduct(string id, ProductInfoEntity productInfoEntity)
         {
+            productInfoEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, productInfoServices.UpdateProduct(id, productInfoEntity));
         }
 

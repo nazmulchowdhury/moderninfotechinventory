@@ -1,8 +1,8 @@
-﻿using Data.Infrastructure;
-using Data.Helper;
-using Model.DeliveryOrder;
-using Model.Inventory;
+﻿using Data.Helper;
 using System.Linq;
+using Model.Inventory;
+using Model.DeliveryOrder;
+using Data.Infrastructure;
 
 namespace Data.Repositories.DeliveryOrder
 {
@@ -14,7 +14,7 @@ namespace Data.Repositories.DeliveryOrder
 
         public override DeliveryOrderEntity GetById(string deliveryOrderId)
         {
-            return Context.DeliveryOrder.Include("Requisition").FirstOrDefault(deliveryOrder => deliveryOrder.DeliveryOrderId == deliveryOrderId);
+            return Context.DeliveryOrder.Include("Requisition").Include("TenantInfo").FirstOrDefault(deliveryOrder => deliveryOrder.DeliveryOrderId == deliveryOrderId);
         }
 
         public override bool Delete(string deliveryOrderId)
@@ -30,6 +30,12 @@ namespace Data.Repositories.DeliveryOrder
                 {
                     deliveryOrderEntity.ProductQuantities.Remove(productQuantity);
                     Context.ProductQuantity.Remove(productQuantity);
+                }
+
+                var tenantEntity = Context.Tenant.Find(deliveryOrderEntity.TenantId);
+                if (tenantEntity != null)
+                {
+                    Context.Tenant.Remove(tenantEntity);
                 }
 
                 Context.DeliveryOrder.Remove(deliveryOrderEntity);

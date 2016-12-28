@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -37,6 +37,7 @@ namespace Service.Inventory
                 storedItem.ProductQuantityId = inventoryEntity.ProductQuantityId;
                 storedItem.ReceiveDate = inventoryEntity.ReceiveDate;
                 storedItem.ReceiveNumber = inventoryEntity.ReceiveNumber;
+                storedItem.TenantInfo.UserId = inventoryEntity.TenantInfo.UserId;
 
                 inventoryRepository.Update(storedItem);
 

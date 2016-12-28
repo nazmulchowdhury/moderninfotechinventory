@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Purchase;
+﻿using Model.Purchase;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Purchase
 {

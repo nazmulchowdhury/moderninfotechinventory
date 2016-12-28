@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Location;
+using System.Collections.Generic;
 using Data.Repositories.Location;
-using Model.Location;
 
 namespace Service.Location
 {
@@ -27,7 +27,7 @@ namespace Service.Location
         {
             return locationRepository.Add(locationEntity);
         }
-        
+
         public bool UpdateLocation(string locationId, LocationEntity locationEntity)
         {
             var storedItem = locationRepository.GetById(locationId);
@@ -35,6 +35,7 @@ namespace Service.Location
             if (storedItem != null)
             {
                 storedItem.LocationName = locationEntity.LocationName;
+                storedItem.TenantInfo.UserId = locationEntity.TenantInfo.UserId;
 
                 locationRepository.Update(storedItem);
 

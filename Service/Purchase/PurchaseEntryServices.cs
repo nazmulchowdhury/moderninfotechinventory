@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Purchase;
+using System.Collections.Generic;
 using Data.Repositories.Purchase;
-using Model.Purchase;
 
 namespace Service.Purchase
 {
@@ -38,6 +38,7 @@ namespace Service.Purchase
                 storedItem.ReceiveDate = purchaseEntryEntity.ReceiveDate;
                 storedItem.ReceiveNumber = purchaseEntryEntity.ReceiveNumber;
                 storedItem.PaidAmount = purchaseEntryEntity.PaidAmount;
+                storedItem.TenantInfo.UserId = purchaseEntryEntity.TenantInfo.UserId;
 
                 purchaseEntryRepository.Update(storedItem);
 

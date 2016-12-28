@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Customer;
+﻿using Model.Customer;
+using System.Collections.Generic;
 
 namespace Service.Customer
 {

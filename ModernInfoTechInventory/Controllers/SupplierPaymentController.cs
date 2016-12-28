@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Supplier;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Supplier;
-using AutoMapper;
-using Model.Supplier;
-using ModernInfoTechInventory.ViewModels.Supplier;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,28 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostSupplierPayment(SupplierPaymentView supplierPaymentView)
+        public HttpResponseMessage PostSupplierPayment(SupplierPaymentEntity supplierPaymentEntity)
         {
-            var supplierPaymentEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<SupplierPaymentView, SupplierPaymentEntity>()
-                    .ConstructUsing((SupplierPaymentView spv) =>
-                    {
-                        var spe = new SupplierPaymentEntity();
-                        spe.SupplierPaymentId = Guid.NewGuid().ToString();
-                        return spe;
-                    }));
-
-            var supplierPaymentEntity = supplierPaymentEntityMapper.CreateMapper().Map<SupplierPaymentView, SupplierPaymentEntity>(supplierPaymentView);
-
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            supplierPaymentEntity.SupplierPaymentId = Guid.NewGuid().ToString();
+            supplierPaymentEntity.TenantId = tenantEntity.TenantId;
+            supplierPaymentEntity.TenantInfo = tenantEntity;
             var insertedEntity = supplierPaymentServices.CreateSupplierPayment(supplierPaymentEntity);
             return GetSupplierPayment(insertedEntity.SupplierPaymentId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutSupplierPayment(string id, SupplierPaymentView supplierPaymentView)
+        public HttpResponseMessage PutSupplierPayment(string id, SupplierPaymentEntity supplierPaymentEntity)
         {
-            var supplierPaymentEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<SupplierPaymentView, SupplierPaymentEntity>());
-            var supplierPaymentEntity = supplierPaymentEntityMapper.CreateMapper().Map<SupplierPaymentView, SupplierPaymentEntity>(supplierPaymentView);
-
+            supplierPaymentEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, supplierPaymentServices.UpdateSupplierPayment(id, supplierPaymentEntity));
         }
 

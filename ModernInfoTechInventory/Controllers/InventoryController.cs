@@ -1,12 +1,13 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
+using System.Linq;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
-using Model.Inventory;
-using ModernInfoTechInventory.ViewModels;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,6 +47,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostInventory(InventoryEntity inventoryEntity)
         {
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            inventoryEntity.InventoryId = Guid.NewGuid().ToString();
+            inventoryEntity.TenantId = inventoryEntity.TenantId;
+            inventoryEntity.TenantInfo = tenantEntity;
             var insertedEntity = inventoryServices.CreateInventory(inventoryEntity);
             return GetInventory(insertedEntity.InventoryId);
         }
@@ -53,6 +58,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutInventory(string id, InventoryEntity inventoryEntity)
         {
+            inventoryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, inventoryServices.UpdateInventory(id, inventoryEntity));
         }
 

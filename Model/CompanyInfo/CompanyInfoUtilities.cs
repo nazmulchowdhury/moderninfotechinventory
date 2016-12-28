@@ -1,15 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using Model.User;
 using Model.Location;
+using Model.BaseModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.CompanyInfo
 {
-
     [Table("CompanyInfo")]
     public class CompanyInfoEntity
     {
         [Key]
-        [ForeignKey("User")]
+        [ForeignKey("LoggedUser")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string CompanyId { get; set; }
 
@@ -40,23 +41,16 @@ namespace Model.CompanyInfo
         [Display(Name = "Note")]
         public string Note { get; set; }
 
-        [Display(Name = "Company Status")]
-        public bool Status { get; set; }
+        [Required]
+        public string TenantId { get; set; }
 
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("LocationId")]
         public virtual LocationEntity Location { get; set; }
-        
-        public virtual User User { get; set; }
-    }
 
-    [Table("AspNetUsers")]
-    public class User 
-    {
-        [Key]
-        public string Id { get; set; }
-        public string PasswordHash { get; set; }
-        public string SecurityStamp { get; set; }
-        public string UserName { get; set; }
+        public virtual UserEntity LoggedUser { get; set; }
     }
 }

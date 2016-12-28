@@ -1,12 +1,13 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Location;
 using Model.Location;
-using ModernInfoTechInventory.ViewModels;
+using Model.BaseModel;
+using Service.Location;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,6 +47,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostLocation(LocationEntity locationEntity)
         {
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            locationEntity.TenantId = tenantEntity.TenantId;
+            locationEntity.TenantInfo = tenantEntity;
+            locationEntity.LocationId = Guid.NewGuid().ToString();
             var insertedEntity = locationServices.CreateLocation(locationEntity);
             return GetLocation(insertedEntity.LocationId);
         }

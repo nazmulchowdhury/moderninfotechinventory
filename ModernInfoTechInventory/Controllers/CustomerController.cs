@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Customer;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using AutoMapper;
 using Service.Customer;
-using Model.Customer;
-using ModernInfoTechInventory.ViewModels.Customer;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,27 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostCustomer(CustomerView customerView)
+        public HttpResponseMessage PostCustomer(CustomerEntity customerEntity)
         {
-            var customerEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<CustomerView, CustomerEntity>()
-                    .ConstructUsing((CustomerView cv) =>
-                    {
-                        var ce = new CustomerEntity();
-                        ce.CustomerId = Guid.NewGuid().ToString();
-                        return ce;
-                    }));
-
-            var customerEntity = customerEntityMapper.CreateMapper().Map<CustomerView, CustomerEntity>(customerView);
-
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            customerEntity.CustomerId = Guid.NewGuid().ToString();
+            customerEntity.TenantId = tenantEntity.TenantId;
+            customerEntity.TenantInfo = tenantEntity;
             var insertedEntity = customerServices.CreateCustomer(customerEntity);
             return GetCustomer(insertedEntity.CustomerId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutCustomer(string id, CustomerView customerView)
+        public HttpResponseMessage PutCustomer(string id, CustomerEntity customerEntity)
         {
-            var customerEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<CustomerView, CustomerEntity>());
-            var customerEntity = customerEntityMapper.CreateMapper().Map<CustomerView, CustomerEntity>(customerView);
+            customerEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, customerServices.UpdateCustomer(id, customerEntity));
         }
 

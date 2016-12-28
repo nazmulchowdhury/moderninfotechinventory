@@ -1,32 +1,33 @@
 ﻿using System.Web.Http;
 using Data.Infrastructure;
-using Data.Repositories.CompanyInfo;
-using Data.Repositories.Vat;
+using Data.Repositories.Sale;
+using Data.Repositories.Tenant;
+using Data.Repositories.Purchase;
+using Data.Repositories.Accounts;
 using Data.Repositories.Location;
 using Data.Repositories.Supplier;
 using Data.Repositories.Customer;
-using Data.Repositories.InvoiceInfo;
-using Data.Repositories.Inventory;
-using Data.Repositories.Sale;
-using Data.Repositories.Account;
-using Data.Repositories.Purchase;
-using Data.Repositories.Requisition;
-using Data.Repositories.DeliveryOrder;
 using Data.Repositories.Utilities;
-using Service.CompanyInfo;
-using Service.Vat;
+using Data.Repositories.Inventory;
+using Data.Repositories.CompanyInfo;
+using Data.Repositories.Requisition;
+using Data.Repositories.InvoiceInfo;
+using Data.Repositories.DeliveryOrder;
+using Service.Sale;
+using Service.Tenant;
+using Service.Purchase;
+using Service.Accounts;
 using Service.Location;
 using Service.Supplier;
 using Service.Customer;
-using Service.InvoiceInfo;
 using Service.Inventory;
-using Service.Sale;
-using Service.Purchase;
-using Service.Requisition;
-using Service.DeliveryOrder;
 using Service.Utilities;
-using ModernInfoTechInventory.Resolver;
+using Service.Requisition;
+using Service.InvoiceInfo;
+using Service.CompanyInfo;
+using Service.DeliveryOrder;
 using Microsoft.Practices.Unity;
+using ModernInfoTechInventory.Resolver;
 
 namespace ModernInfoTechInventory
 {
@@ -95,6 +96,8 @@ namespace ModernInfoTechInventory
             container.RegisterType<IUnitServices, UnitServices>(new HierarchicalLifetimeManager());
             container.RegisterType<ICurrentStockRepository, CurrentStockRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<ICurrentStockServices, CurrentStockServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ITenantRepository, TenantRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ITenantServices, TenantServices>(new HierarchicalLifetimeManager());
 
             config.DependencyResolver = new UnityResolver(container);
         }

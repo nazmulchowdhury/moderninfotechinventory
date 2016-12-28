@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Sale;
+﻿using Model.Sale;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Sale
 {

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Supplier;
+using System.Collections.Generic;
 using Data.Repositories.Supplier;
-using Model.Supplier;
 
 namespace Service.Supplier
 {
@@ -38,6 +38,7 @@ namespace Service.Supplier
                 storedItem.PaidAmount = suppliePaymentEntity.PaidAmount;
                 storedItem.Description = suppliePaymentEntity.Description;
                 storedItem.SupplierId = suppliePaymentEntity.SupplierId;
+                storedItem.TenantInfo.UserId = suppliePaymentEntity.TenantInfo.UserId;
 
                 supplierPaymentRepository.Update(storedItem);
 

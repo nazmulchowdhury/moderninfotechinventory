@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Linq.Expressions;
 using Data.Helper;
+using System.Data.Entity;
+using System.Linq.Expressions;
+using System.Collections.Generic;
 
 namespace Data.Infrastructure
 {

@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.InvoiceInfo;
+﻿using Model.InvoiceInfo;
+using Data.Infrastructure;
 
 namespace Data.Repositories.InvoiceInfo
 {

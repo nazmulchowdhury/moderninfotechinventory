@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using Model.BaseModel;
 using Model.CompanyInfo;
 using Service.CompanyInfo;
 using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.CompanyInfo;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -45,19 +44,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostCompany(CompanyInfoView companyInfoView)
+        public HttpResponseMessage PostCompany(CompanyInfoEntity companyInfoEntity)
         {
-            var companyInfoEntity = new CompanyInfoEntity
-            {
-                CompanyId = RequestContext.Principal.Identity.GetUserId(),
-                CompanyName = companyInfoView.CompanyName,
-                ShortName = companyInfoView.ShortName,
-                PhoneNumber = companyInfoView.PhoneNumber,
-                LocationId = companyInfoView.LocationId,
-                Description = companyInfoView.Description,
-                Note = companyInfoView.Note,
-                Status = companyInfoView.Status
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            companyInfoEntity.CompanyId = RequestContext.Principal.Identity.GetUserId();
+            companyInfoEntity.TenantId = tenantEntity.TenantId;
+            companyInfoEntity.TenantInfo = tenantEntity;
             var insertedEntity = companyInfoServices.CreateCompany(companyInfoEntity);
             return GetCompany(insertedEntity.CompanyId);
         }
@@ -65,6 +57,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutCompany(string id, CompanyInfoEntity companyInfoEntity)
         {
+            companyInfoEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, companyInfoServices.UpdateCompany(id, companyInfoEntity));
         }
 

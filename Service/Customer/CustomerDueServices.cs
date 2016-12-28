@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Customer;
+using System.Collections.Generic;
 using Data.Repositories.Customer;
-using Model.Customer;
 
 namespace Service.Customer
 {
@@ -36,6 +36,7 @@ namespace Service.Customer
             {
                 storedItem.ReceiveAmount = customerDueEntity.ReceiveAmount;
                 storedItem.CustomerId = customerDueEntity.CustomerId;
+                storedItem.TenantInfo.UserId = customerDueEntity.TenantInfo.UserId;
 
                 customerDueRepository.Update(storedItem);
 

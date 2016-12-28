@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Model.Inventory;
 using Service.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -56,15 +56,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostSubCategory(SubCategoryView subCategoryView)
+        public HttpResponseMessage PostSubCategory(SubCategoryEntity subCategoryEntity)
         {
-            var subCategoryEntity = new SubCategoryEntity
-            {
-                SubCategoryId = Guid.NewGuid().ToString(),
-                SubCategoryName = subCategoryView.SubCategoryName,
-                CategoryId = subCategoryView.CategoryId,
-                UnitId = subCategoryView.UnitId
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            subCategoryEntity.SubCategoryId = Guid.NewGuid().ToString();
+            subCategoryEntity.TenantId = tenantEntity.TenantId;
+            subCategoryEntity.TenantInfo = tenantEntity;
             var insertedEntity = subCategoryServices.CreateSubCategory(subCategoryEntity);
             return GetSubCategory(insertedEntity.SubCategoryId);
         }
@@ -72,6 +69,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutSubCategory(string id, SubCategoryEntity subCategoryEntity)
         {
+            subCategoryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, subCategoryServices.UpdateSubCategory(id, subCategoryEntity));
         }
 

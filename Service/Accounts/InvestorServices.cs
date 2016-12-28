@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Data.Repositories.Account;
-using Model.Accounts;
+﻿using Model.Accounts;
+using Data.Repositories.Accounts;
+using System.Collections.Generic;
 
-namespace Service.Vat
+namespace Service.Accounts
 {
     public class InvestorServices : IInvestorServices
     {
@@ -38,6 +38,7 @@ namespace Service.Vat
                 storedItem.LocationId = investorEntity.LocationId;
                 storedItem.PhoneNumber = investorEntity.PhoneNumber;
                 storedItem.Balance = investorEntity.Balance;
+                storedItem.TenantInfo.UserId = investorEntity.TenantInfo.UserId;
 
                 investorRepository.Update(storedItem);
 

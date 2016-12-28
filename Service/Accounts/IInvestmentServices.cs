@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using Model.Accounts;
+﻿using Model.Accounts;
+using System.Collections.Generic;
 
-namespace Service.Vat
+namespace Service.Accounts
 {
     public interface IInvestmentServices
     {

@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Accounts;
-using ModernInfoTechInventory.ViewModels.Accounts;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -45,13 +45,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostCash(CashView cashView)
+        public HttpResponseMessage PostCash(CashEntity cashEntity)
         {
-            var cashEntity = new CashEntity
-            {
-                CashId = Guid.NewGuid().ToString(),
-                Amount = cashView.Amount
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            cashEntity.CashId = Guid.NewGuid().ToString();
+            cashEntity.TenantId = tenantEntity.TenantId;
+            cashEntity.TenantInfo = tenantEntity;
             var insertedEntity = cashServices.CreateCash(cashEntity);
             return GetCash(insertedEntity.CashId);
         }

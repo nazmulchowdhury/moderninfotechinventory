@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -35,6 +35,7 @@ namespace Service.Inventory
             if (storedItem != null)
             {
                 storedItem.UnitName = unitEntity.UnitName;
+                storedItem.TenantInfo.UserId = unitEntity.TenantInfo.UserId;
 
                 unitRepository.Update(storedItem);
 

@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Inventory;
+﻿using Model.Inventory;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Inventory
 {

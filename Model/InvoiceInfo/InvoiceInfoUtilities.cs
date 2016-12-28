@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Model.Utilities;
+using Model.BaseModel;
 
 namespace Model.InvoiceInfo
 {
@@ -25,7 +26,10 @@ namespace Model.InvoiceInfo
         public Option EntryType { get; set; }
 
         [Required]
-        [Display(Name = "Invoice Status")]
-        public bool Status { get; set; }
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 }

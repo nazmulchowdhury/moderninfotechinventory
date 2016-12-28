@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Accounts;
-using ModernInfoTechInventory.ViewModels.Accounts;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -45,16 +45,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostExpense(ExpenseView expenseView)
+        public HttpResponseMessage PostExpense(ExpenseEntity expenseEntity)
         {
-            var expenseEntity = new ExpenseEntity
-            {
-                ExpenseId = Guid.NewGuid().ToString(),
-                ExpenseDate = expenseView.ExpenseDate,
-                Purpose = expenseView.Purpose,
-                Amount = expenseView.Amount,
-                ExpensedBy = expenseView.ExpensedBy
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            expenseEntity.ExpenseId = Guid.NewGuid().ToString();
+            expenseEntity.TenantId = tenantEntity.TenantId;
+            expenseEntity.TenantInfo = tenantEntity;
             var insertedEntity = expenseServices.CreateExpense(expenseEntity);
             return GetExpense(insertedEntity.ExpenseId);
         }

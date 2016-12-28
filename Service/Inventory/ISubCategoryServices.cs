@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Inventory;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 
 namespace Service.Inventory
 {

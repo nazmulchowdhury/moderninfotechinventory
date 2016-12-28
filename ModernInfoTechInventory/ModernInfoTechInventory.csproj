@@ -230,6 +230,7 @@
     <Compile Include="Controllers\SubCategoryController.cs" />
     <Compile Include="Controllers\SupplierController.cs" />
     <Compile Include="Controllers\SupplierPaymentController.cs" />
+    <Compile Include="Controllers\TenantController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\VatController.cs" />
     <Compile Include="ErrorHelper\ApiBusinessException.cs" />
@@ -241,6 +242,7 @@
     </Compile>
     <Compile Include="Helpers\JSONHelper.cs" />
     <Compile Include="Helpers\NLogger.cs" />
+    <Compile Include="Helpers\ObjectCopier.cs" />
     <Compile Include="Helpers\ServiceStatus.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />

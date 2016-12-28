@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.DeliveryOrder;
+using System.Collections.Generic;
 using Data.Repositories.DeliveryOrder;
-using Model.DeliveryOrder;
 
 namespace Service.DeliveryOrder
 {
@@ -43,6 +43,7 @@ namespace Service.DeliveryOrder
                 storedItem.DeliveryOrderDate = deliveryOrderEntity.DeliveryOrderDate;
                 storedItem.IsReceived = deliveryOrderEntity.IsReceived;
                 storedItem.Description = deliveryOrderEntity.Description;
+                storedItem.TenantInfo.UserId = deliveryOrderEntity.TenantInfo.UserId;
 
                 deliveryOrderRepository.Update(storedItem);
 

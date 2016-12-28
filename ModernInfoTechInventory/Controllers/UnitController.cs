@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
 using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -45,20 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostUnit(UnitView unitView)
+        public HttpResponseMessage PostUnit(UnitEntity unitEntity)
         {
-            var insertedEntity = unitServices.CreateUnit(
-                new UnitEntity
-                {
-                    UnitId = Guid.NewGuid().ToString(),
-                    UnitName = unitView.UnitName
-                });
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            unitEntity.UnitId = Guid.NewGuid().ToString();
+            unitEntity.TenantId = tenantEntity.TenantId;
+            unitEntity.TenantInfo = tenantEntity;
+            var insertedEntity = unitServices.CreateUnit(unitEntity);
             return GetUnit(insertedEntity.UnitId);
         }
 
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutUnit(string id, UnitEntity unitEntity)
         {
+            unitEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, unitServices.UpdateUnit(id, unitEntity));
         }
 

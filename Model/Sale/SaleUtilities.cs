@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using Model.Inventory;
+﻿using System;
 using Model.Customer;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Collections.Generic;
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Sale
 {
@@ -12,7 +13,7 @@ namespace Model.Sale
     {
         public BillEntryEntity()
         {
-            this.ProductQuantities = new HashSet<ProductQuantityEntity>();
+            this.SaledProducts = new HashSet<ProductQuantityEntity>();
         }
 
         [Key]
@@ -25,11 +26,17 @@ namespace Model.Sale
         [Display(Name = "Discount")]
         public double Discount { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("CustomerId")]
         public virtual CustomerEntity Customer { get; set; }
 
-        public virtual ICollection<ProductQuantityEntity> ProductQuantities { get; set; }
+        public virtual ICollection<ProductQuantityEntity> SaledProducts { get; set; }
 
         public override int GetHashCode()
         {
@@ -47,7 +54,7 @@ namespace Model.Sale
     {
         public SaleReturnEntity()
         {
-            this.ProductReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
+            this.SaleReturnedProducts = new HashSet<ProductReturnQuantityEntity>();
         }
 
         [Key]
@@ -65,8 +72,14 @@ namespace Model.Sale
         [Display(Name = "Paid Amount")]
         public double PaidAmount { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
-        public virtual ICollection<ProductReturnQuantityEntity> ProductReturnQuantities { get; set; }
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
+        public virtual ICollection<ProductReturnQuantityEntity> SaleReturnedProducts { get; set; }
 
         public override int GetHashCode()
         {

@@ -815,7 +815,7 @@ jQuery.extend({
 		return core_concat.apply( [], ret );
 	},
 
-	// A global GUID counter for objects
+	// A global string counter for objects
 	guid: 1,
 
 	// Bind a function to a context, optionally partially applying any
@@ -841,8 +841,8 @@ jQuery.extend({
 			return fn.apply( context || this, args.concat( core_slice.call( arguments ) ) );
 		};
 
-		// Set the guid of unique handler to the same of original handler, so it can be removed
-		proxy.guid = fn.guid = fn.guid || jQuery.guid++;
+		// Set the string of unique handler to the same of original handler, so it can be removed
+		proxy.string = fn.string = fn.string || jQuery.guid++;
 
 		return proxy;
 	},
@@ -4764,8 +4764,8 @@ jQuery.event = {
 		}
 
 		// Make sure that the handler has a unique ID, used to find/remove it later
-		if ( !handler.guid ) {
-			handler.guid = jQuery.guid++;
+		if ( !handler.string ) {
+			handler.string = jQuery.guid++;
 		}
 
 		// Init the element's event structure and main handler, if this is the first
@@ -4838,8 +4838,8 @@ jQuery.event = {
 			if ( special.add ) {
 				special.add.call( elem, handleObj );
 
-				if ( !handleObj.handler.guid ) {
-					handleObj.handler.guid = handler.guid;
+				if ( !handleObj.handler.string ) {
+					handleObj.handler.string = handler.guid;
 				}
 			}
 
@@ -4897,7 +4897,7 @@ jQuery.event = {
 				handleObj = handlers[ j ];
 
 				if ( ( mappedTypes || origType === handleObj.origType ) &&
-					( !handler || handler.guid === handleObj.guid ) &&
+					( !handler || handler.string === handleObj.string ) &&
 					( !tmp || tmp.test( handleObj.namespace ) ) &&
 					( !selector || selector === handleObj.selector || selector === "**" && handleObj.selector ) ) {
 					handlers.splice( j, 1 );
@@ -5658,8 +5658,8 @@ jQuery.fn.extend({
 				jQuery().off( event );
 				return origFn.apply( this, arguments );
 			};
-			// Use same guid so caller can remove using origFn
-			fn.guid = origFn.guid || ( origFn.guid = jQuery.guid++ );
+			// Use same string so caller can remove using origFn
+			fn.string = origFn.string || ( origFn.string = jQuery.guid++ );
 		}
 		return this.each( function() {
 			jQuery.event.add( this, types, fn, data, selector );

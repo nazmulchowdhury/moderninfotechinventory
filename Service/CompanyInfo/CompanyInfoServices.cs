@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.CompanyInfo;
+using System.Collections.Generic;
 using Data.Repositories.CompanyInfo;
-using Model.CompanyInfo;
 
 namespace Service.CompanyInfo
 {
@@ -40,7 +40,7 @@ namespace Service.CompanyInfo
                 storedItem.LocationId = companyInfoEntity.LocationId;
                 storedItem.Description = companyInfoEntity.Description;
                 storedItem.Note = companyInfoEntity.Note;
-                storedItem.Status = companyInfoEntity.Status;
+                storedItem.TenantInfo.UserId = companyInfoEntity.TenantInfo.UserId;
 
                 companyInfoRepository.Update(storedItem);
 

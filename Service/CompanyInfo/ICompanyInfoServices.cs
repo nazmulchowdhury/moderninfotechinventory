@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.CompanyInfo;
+﻿using Model.CompanyInfo;
+using System.Collections.Generic;
 
 namespace Service.CompanyInfo
 {

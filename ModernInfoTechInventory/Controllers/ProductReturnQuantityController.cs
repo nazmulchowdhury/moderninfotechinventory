@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
-using Model.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -45,14 +45,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostProductReturnQuantity(ProductReturnQuantityView productReturnQuantityView)
+        public HttpResponseMessage PostProductReturnQuantity(ProductReturnQuantityEntity productReturnQuantityEntity)
         {
-            var productReturnQuantityEntity = new ProductReturnQuantityEntity
-            {
-                ProductReturnQuantityId = Guid.NewGuid().ToString(),
-                ProductQuantityId = productReturnQuantityView.ProductQuantityId,
-                ReturnQuantity = productReturnQuantityView.ReturnQuantity
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            productReturnQuantityEntity.ProductReturnQuantityId = Guid.NewGuid().ToString();
+            productReturnQuantityEntity.TenantId = tenantEntity.TenantId;
+            productReturnQuantityEntity.TenantInfo = tenantEntity;
             var insertedEntity = productReturnQuantityServices.CreateProductReturnQuantity(productReturnQuantityEntity);
             return GetProductReturnQuantity(insertedEntity.ProductReturnQuantityId);
         }
@@ -60,6 +58,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutProductReturnQuantity(string id, ProductReturnQuantityEntity productReturnQuantityEntity)
         {
+            productReturnQuantityEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, productReturnQuantityServices.UpdateProductReturnQuantity(id, productReturnQuantityEntity));
         }
 

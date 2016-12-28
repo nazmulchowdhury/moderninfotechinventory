@@ -1,17 +1,16 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using Model.Inventory;
+using Model.BaseModel;
+using Model.Requisition;
 using Service.Requisition;
 using Service.DeliveryOrder;
-using Model.Requisition;
-using Model.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.Requisition;
-using ModernInfoTechInventory.ViewModels.Inventory;
-using System;
-using System.Collections.Generic;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -51,26 +50,19 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostRequisition(RequisitionRequestView requisitionRequestView)
+        public HttpResponseMessage PostRequisition(RequisitionEntity requisitionEntity)
         {
-            var productQuantities = new HashSet<ProductQuantityEntity>();
-            foreach (ProductQuantityView pqv in requisitionRequestView.RequisiteProducts)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            requisitionEntity.RequisitionId = Guid.NewGuid().ToString();
+            requisitionEntity.IsApproved = false;
+            requisitionEntity.TenantId = tenantEntity.TenantId;
+            requisitionEntity.TenantInfo = tenantEntity;
+            requisitionEntity.ProductQuantities = requisitionEntity.ProductQuantities.Select(productQuantity =>
             {
-                productQuantities.Add(new ProductQuantityEntity
-                {
-                    ProductQuantityId = Guid.NewGuid().ToString(),
-                    ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity
-                });
-            }
-
-            var requisitionEntity = new RequisitionEntity
-            {
-                RequisitionId = Guid.NewGuid().ToString(),
-                RequisitionDate = requisitionRequestView.RequisitionDate,
-                Description = requisitionRequestView.Description,
-                ProductQuantities = productQuantities
-            };
+                productQuantity.ProductQuantityId = Guid.NewGuid().ToString();
+                productQuantity.TenantId = tenantEntity.TenantId;
+                return productQuantity;
+            }).ToList();
 
             var insertedEntity = requisitionServices.CreateRequisition(requisitionEntity);
             return GetRequisition(insertedEntity.RequisitionId);
@@ -81,6 +73,10 @@ namespace ModernInfoTechInventory.Controllers
         {
             var requisitionEntity = requisitionServices.GetRequisition(id);
             requisitionEntity.IsApproved = requisitionApprovalView.IsApproved;
+            requisitionEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, requisitionServices.UpdateRequisition(id, requisitionEntity));
         }
 

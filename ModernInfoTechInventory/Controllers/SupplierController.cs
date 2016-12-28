@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Supplier;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Supplier;
-using AutoMapper;
-using Model.Supplier;
-using ModernInfoTechInventory.ViewModels.Supplier;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,28 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostSupplier(SupplierView supplierView)
+        public HttpResponseMessage PostSupplier(SupplierEntity supplierEntity)
         {
-            var supplierEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<SupplierView, SupplierEntity>()
-                    .ConstructUsing((SupplierView sv) =>
-                    {
-                        var se = new SupplierEntity();
-                        se.SupplierId = Guid.NewGuid().ToString();
-                        return se;
-                    }));
-
-            var supplierEntity = supplierEntityMapper.CreateMapper().Map<SupplierView, SupplierEntity>(supplierView);
-
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            supplierEntity.SupplierId = Guid.NewGuid().ToString();
+            supplierEntity.TenantId = tenantEntity.TenantId;
+            supplierEntity.TenantInfo = tenantEntity;
             var insertedEntity = supplierServices.CreateSupplier(supplierEntity);
             return GetSupplier(insertedEntity.SupplierId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutSupplier(string id, SupplierView supplierView)
+        public HttpResponseMessage PutSupplier(string id, SupplierEntity supplierEntity)
         {
-            var supplierEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<SupplierView, SupplierEntity>());
-            var supplierEntity = supplierEntityMapper.CreateMapper().Map<SupplierView, SupplierEntity>(supplierView);
-
+            supplierEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, supplierServices.UpdateSupplier(id, supplierEntity));
         }
 

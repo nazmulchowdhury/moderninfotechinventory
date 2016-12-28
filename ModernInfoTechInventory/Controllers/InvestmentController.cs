@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Accounts;
-using ModernInfoTechInventory.ViewModels.Accounts;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -33,13 +34,12 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostInvestment(InvestmentView investmentView)
+        public HttpResponseMessage PostInvestment(InvestmentEntity investmentEntity)
         {
-            var investmentEntity = new InvestmentEntity
-            {
-                InvestmentId = Guid.NewGuid().ToString(),
-                Amount = investmentView.Amount
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            investmentEntity.InvestmentId = Guid.NewGuid().ToString();
+            investmentEntity.TenantId = tenantEntity.TenantId;
+            investmentEntity.TenantInfo = tenantEntity;
             var insertedEntity = investmentServices.CreateInvestment(investmentEntity);
             return Request.CreateResponse(HttpStatusCode.OK, investmentServices.InvestmentAmount(insertedEntity.InvestmentId));
         }

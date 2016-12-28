@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using Model.BaseModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,5 +16,12 @@ namespace Model.Location
         [DataType(DataType.Text)]
         [Display(Name = "Location Name")]
         public string LocationName { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 }

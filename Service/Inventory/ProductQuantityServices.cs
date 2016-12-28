@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -37,6 +37,7 @@ namespace Service.Inventory
                 storedItem.ProductId = productQuantityEntity.ProductId;
                 storedItem.Quantity = productQuantityEntity.Quantity;
                 storedItem.Price = productQuantityEntity.Price;
+                storedItem.TenantInfo.UserId = productQuantityEntity.TenantInfo.UserId;
 
                 productQuantityRepository.Update(storedItem);
 

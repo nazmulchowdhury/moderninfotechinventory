@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Inventory;
 using Model.Inventory;
-using ModernInfoTechInventory.ViewModels.Inventory;
+using Model.BaseModel;
+using Service.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
+using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -49,11 +50,13 @@ namespace ModernInfoTechInventory.Controllers
         [Route("")]
         public HttpResponseMessage PostDamageStockEntry(DamageStockEntryView damageStockEntryView)
         {
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
             var productQuantityEntity = new ProductQuantityEntity
             {
                 ProductQuantityId = Guid.NewGuid().ToString(),
                 ProductId = damageStockEntryView.ProductId,
-                Quantity = damageStockEntryView.Quantity
+                Quantity = damageStockEntryView.Quantity,
+                TenantId = tenantEntity.TenantId
             };
 
             var damageStockEntryEntity = new DamageStockEntryEntity
@@ -61,7 +64,9 @@ namespace ModernInfoTechInventory.Controllers
                 DamageStockEntryId = Guid.NewGuid().ToString(),
                 Remark = damageStockEntryView.Remark,
                 ProductQuantity = productQuantityEntity,
-                ProductQuantityId = productQuantityEntity.ProductQuantityId
+                ProductQuantityId = productQuantityEntity.ProductQuantityId,
+                TenantId = tenantEntity.TenantId,
+                TenantInfo = tenantEntity
             };
             var insertedEntity = damageStockEntryServices.CreateDamageStockEntry(damageStockEntryEntity);
             return GetDamageStockEntry(insertedEntity.DamageStockEntryId);
@@ -75,6 +80,10 @@ namespace ModernInfoTechInventory.Controllers
             productQuantityEntity.ProductId = damageStockEntryView.ProductId;
             productQuantityEntity.Quantity = damageStockEntryView.Quantity;
             damageStockEntryEntity.Remark = damageStockEntryView.Remark;
+            damageStockEntryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
 
             productQuantityServices.UpdateProductQuantity(damageStockEntryEntity.ProductQuantityId, productQuantityEntity);
             return Request.CreateResponse(HttpStatusCode.OK, damageStockEntryServices.UpdateDamageStockEntry(id, damageStockEntryEntity));

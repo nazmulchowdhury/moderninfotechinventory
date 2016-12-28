@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Model.Supplier;
 using Model.Inventory;
+using Model.BaseModel;
 using System;
 using System.Collections.Generic;
 
@@ -12,7 +13,7 @@ namespace Model.Purchase
     {
         public PurchaseEntryEntity()
         {
-            this.ProductQuantities = new HashSet<ProductQuantityEntity>();
+            this.PurchasedProducts = new HashSet<ProductQuantityEntity>();
         }
 
         [Key]
@@ -36,11 +37,17 @@ namespace Model.Purchase
         [Display(Name = "Paid Amount")]
         public double PaidAmount { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("SupplierId")]
         public virtual SupplierEntity Supplier { get; set; }
 
-        public virtual ICollection<ProductQuantityEntity> ProductQuantities { get; set; }
+        public virtual ICollection<ProductQuantityEntity> PurchasedProducts { get; set; }
 
         public override int GetHashCode()
         {
@@ -58,7 +65,7 @@ namespace Model.Purchase
     {
         public PurchaseReturnEntity()
         {
-            this.ProductReturnQuantities = new HashSet<ProductReturnQuantityEntity>();
+            this.PurchaseReturnedProducts = new HashSet<ProductReturnQuantityEntity>();
         }
 
         [Key]
@@ -82,8 +89,14 @@ namespace Model.Purchase
         [Display(Name = "Paid Amount")]
         public double PaidAmount { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
-        public virtual ICollection<ProductReturnQuantityEntity> ProductReturnQuantities { get; set; }
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
+        public virtual ICollection<ProductReturnQuantityEntity> PurchaseReturnedProducts { get; set; }
 
         public override int GetHashCode()
         {

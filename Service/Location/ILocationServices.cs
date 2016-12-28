@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Location;
+﻿using Model.Location;
+using System.Collections.Generic;
 
 namespace Service.Location
 {

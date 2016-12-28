@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Vat;
-using AutoMapper;
-using ModernInfoTechInventory.ViewModels.Vat;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,24 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostVat(VatView vatView)
+        public HttpResponseMessage PostVat(VatEntity vatEntity)
         {
-            var vatEntity = new VatEntity
-            {
-                VatId = Guid.NewGuid().ToString(),
-                VatAmount = vatView.VatAmount,
-                LocationId = vatView.LocationId,
-                VatRegistrationNumber = vatView.VatRegistrationNumber
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            vatEntity.VatId = Guid.NewGuid().ToString();
+            vatEntity.TenantId = tenantEntity.TenantId;
+            vatEntity.TenantInfo = tenantEntity;
             var insertedEntity = vatServices.CreateVat(vatEntity);
             return GetVat(insertedEntity.VatId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutVat(string id, VatView vatView)
+        public HttpResponseMessage PutVat(string id, VatEntity vatEntity)
         {
-            var vatEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<VatView, VatEntity>());
-            var vatEntity = vatEntityMapper.CreateMapper().Map<VatView, VatEntity>(vatView);
+            vatEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, vatServices.UpdateVat(id, vatEntity));
         }
 

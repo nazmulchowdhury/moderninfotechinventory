@@ -1,8 +1,8 @@
-﻿using Data.Infrastructure;
-using Data.Helper;
-using Model.Requisition;
-using Model.Inventory;
+﻿using Data.Helper;
 using System.Linq;
+using Model.Inventory;
+using Model.Requisition;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Requisition
 {
@@ -11,6 +11,11 @@ namespace Data.Repositories.Requisition
         public RequisitionRepository(IDbFactory dbFactory)
             : base(dbFactory)
         { }
+
+        public override RequisitionEntity GetById(string requisitionId)
+        {
+            return Context.Requisition.Include("TenantInfo").FirstOrDefault(rqn => rqn.RequisitionId == requisitionId);
+        }
 
         public override bool Delete(string requisitionId)
         {
@@ -25,6 +30,12 @@ namespace Data.Repositories.Requisition
                 {
                     requisitionEntity.ProductQuantities.Remove(productQuantity);
                     Context.ProductQuantity.Remove(productQuantity);
+                }
+
+                var tenantEntity = Context.Tenant.Find(requisitionEntity.TenantId);
+                if (tenantEntity != null)
+                {
+                    Context.Tenant.Remove(tenantEntity);
                 }
 
                 Context.Requisition.Remove(requisitionEntity);

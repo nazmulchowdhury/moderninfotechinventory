@@ -1,7 +1,7 @@
-﻿using Data.Infrastructure;
-using Data.Helper;
-using Model.Inventory;
+﻿using Data.Helper;
 using System.Linq;
+using Model.Inventory;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Inventory
 {
@@ -13,7 +13,27 @@ namespace Data.Repositories.Inventory
 
         public override ProductReturnQuantityEntity GetById(string productReturnQuantityId)
         {
-            return Context.ProductReturnQuantity.Include("ProductQuantity").FirstOrDefault(prortnqty => prortnqty.ProductReturnQuantityId == productReturnQuantityId);
+            return Context.ProductReturnQuantity.Include("ProductQuantity").Include("TenantInfo").FirstOrDefault(prortnqty => prortnqty.ProductReturnQuantityId == productReturnQuantityId);
+        }
+
+        public override bool Delete(string productReturnQuantityId)
+        {
+            var productReturnQuantityEntity = Context.ProductReturnQuantity.Find(productReturnQuantityId);
+            if (productReturnQuantityEntity != null)
+            {
+                var tenantEntity = Context.Tenant.Find(productReturnQuantityEntity.TenantId);
+                if (tenantEntity != null)
+                {
+                    Context.Tenant.Remove(tenantEntity);
+                }
+                Context.ProductReturnQuantity.Remove(productReturnQuantityEntity);
+                Context.Commit();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

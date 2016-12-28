@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.InvoiceInfo;
+﻿using Model.InvoiceInfo;
+using System.Collections.Generic;
 
 namespace Service.InvoiceInfo
 {

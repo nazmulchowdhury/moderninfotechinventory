@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.CompanyInfo;
+﻿using Model.CompanyInfo;
+using Data.Infrastructure;
 
 namespace Data.Repositories.CompanyInfo
 {

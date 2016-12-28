@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Customer;
+﻿using Model.Customer;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Customer
 {

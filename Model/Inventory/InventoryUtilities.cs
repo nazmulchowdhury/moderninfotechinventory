@@ -1,6 +1,7 @@
 ﻿using System;
 using Model.Sale;
 using Model.Purchase;
+using Model.BaseModel;
 using Model.Requisition;
 using Model.DeliveryOrder;
 using System.Collections.Generic;
@@ -20,6 +21,13 @@ namespace Model.Inventory
         [DataType(DataType.Text)]
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 
     [Table("Unit")]
@@ -33,6 +41,13 @@ namespace Model.Inventory
         [DataType(DataType.Text)]
         [Display(Name = "Unit Name")]
         public string UnitName { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 
     [Table("SubCategory")]
@@ -53,7 +68,13 @@ namespace Model.Inventory
         [Required]
         public string UnitId { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("CategoryId")]
         public virtual CategoryEntity Category { get; set; }
         [ForeignKey("UnitId")]
@@ -92,13 +113,19 @@ namespace Model.Inventory
         [Required]
         public string SubCategoryId { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("SubCategoryId")]
         public virtual SubCategoryEntity SubCategory { get; set; }
     }
 
     [Table("ProductQuantity")]
-    public partial class ProductQuantityEntity : IEquatable<ProductQuantityEntity>
+    public class ProductQuantityEntity : IEquatable<ProductQuantityEntity>
     {
         public ProductQuantityEntity()
         {
@@ -123,7 +150,13 @@ namespace Model.Inventory
         [Display(Name = "Price")]
         public double? Price { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("ProductId")]
         public virtual ProductInfoEntity Product { get; set; }
 
@@ -168,7 +201,13 @@ namespace Model.Inventory
         [Required]
         public string ProductQuantityId { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
 
@@ -202,7 +241,13 @@ namespace Model.Inventory
         [Display(Name = "Remark")]
         public string Remark { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
     }
@@ -230,7 +275,13 @@ namespace Model.Inventory
         [Display(Name = "Receive Number")]
         public string ReceiveNumber { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         public virtual ICollection<ProductQuantityEntity> ProductQuantities { get; set; }
 
         public override int GetHashCode()
@@ -265,7 +316,13 @@ namespace Model.Inventory
         [Display(Name = "Receive Number")]
         public string ReceiveNumber { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("ProductQuantityId")]
         public virtual ProductQuantityEntity ProductQuantity { get; set; }
     }

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Supplier;
+using System.Collections.Generic;
 using Data.Repositories.Supplier;
-using Model.Supplier;
 
 namespace Service.Supplier
 {
@@ -37,6 +37,7 @@ namespace Service.Supplier
                 storedItem.SupplierName = supplierEntity.SupplierName;
                 storedItem.LocationId = supplierEntity.LocationId;
                 storedItem.PhoneNumber = supplierEntity.PhoneNumber;
+                storedItem.TenantInfo.UserId = supplierEntity.TenantInfo.UserId;
 
                 supplierRepository.Update(storedItem);
 

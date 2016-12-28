@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -45,6 +45,7 @@ namespace Service.Inventory
                 storedItem.SalePrice = productInfoEntity.SalePrice;
                 storedItem.ReorderLevel = productInfoEntity.ReorderLevel;
                 storedItem.SubCategoryId = productInfoEntity.SubCategoryId;
+                storedItem.TenantInfo.UserId = productInfoEntity.TenantInfo.UserId;
 
                 productInfoRepository.Update(storedItem);
 

@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.InvoiceInfo;
+using System.Collections.Generic;
 using Data.Repositories.InvoiceInfo;
-using Model.InvoiceInfo;
 
 namespace Service.InvoiceInfo
 {
@@ -36,7 +36,7 @@ namespace Service.InvoiceInfo
             {
                 storedItem.EntryId = invoiceInfoEntity.EntryId;
                 storedItem.EntryType = invoiceInfoEntity.EntryType;
-                storedItem.Status = invoiceInfoEntity.Status;
+                storedItem.TenantInfo.UserId = invoiceInfoEntity.TenantInfo.UserId;
 
                 invoiceInfoRepository.Update(storedItem);
 

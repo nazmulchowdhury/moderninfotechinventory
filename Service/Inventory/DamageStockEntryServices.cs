@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -36,6 +36,8 @@ namespace Service.Inventory
             {
                 storedItem.ProductQuantityId = damageStockEntryEntity.ProductQuantityId;
                 storedItem.Remark = damageStockEntryEntity.Remark;
+                storedItem.TenantInfo.UserId = damageStockEntryEntity.TenantInfo.UserId;
+
                 damageStockEntryRepository.Update(storedItem);
 
                 return true;

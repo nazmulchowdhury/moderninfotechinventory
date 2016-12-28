@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Sale;
+﻿using Model.Sale;
+using System.Collections.Generic;
 
 namespace Service.Sale
 {

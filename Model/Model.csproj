@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BaseModel\TenantEntity.cs" />
     <Compile Include="CompanyInfo\CompanyInfoUtilities.cs" />
     <Compile Include="Customer\CustomerUtilities.cs" />
     <Compile Include="DeliveryOrder\DeliveryOrderUtilities.cs" />
@@ -42,8 +43,8 @@
     <Compile Include="Requisition\RequisitionUtilities.cs" />
     <Compile Include="Sale\SaleUtilities.cs" />
     <Compile Include="Supplier\SupplierUtilities.cs" />
+    <Compile Include="User\UserUtilities.cs" />
     <Compile Include="Utilities\CurrentStockUtilities.cs" />
-    <Compile Include="Vat\VatUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">

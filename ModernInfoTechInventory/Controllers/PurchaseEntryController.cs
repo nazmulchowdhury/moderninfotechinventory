@@ -3,14 +3,12 @@ using System.Net;
 using System.Linq;
 using Model.Purchase;
 using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Purchase;
-using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Purchase;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -48,31 +46,18 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostPurchaseEntry(PurchaseEntryView purchaseEntryView)
+        public HttpResponseMessage PostPurchaseEntry(PurchaseEntryEntity purchaseEntryEntity)
         {
-            var productQuantities = new HashSet<ProductQuantityEntity>();
-
-            foreach (ProductQuantityView pqv in purchaseEntryView.PurchasedProducts)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            purchaseEntryEntity.PurchaseEntryId = Guid.NewGuid().ToString();
+            purchaseEntryEntity.TenantId = tenantEntity.TenantId;
+            purchaseEntryEntity.TenantInfo = tenantEntity;
+            purchaseEntryEntity.PurchasedProducts = purchaseEntryEntity.PurchasedProducts.Select(purchasedProduct =>
             {
-                var productQuantity = new ProductQuantityEntity
-                {
-                    ProductQuantityId = Guid.NewGuid().ToString(),
-                    ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity,
-                    Price = pqv.Price
-                };
-                productQuantities.Add(productQuantity);
-            }
-
-            var purchaseEntryEntity = new PurchaseEntryEntity
-            {
-                PurchaseEntryId = Guid.NewGuid().ToString(),
-                SupplierId = purchaseEntryView.SupplierId,
-                ReceiveDate = purchaseEntryView.ReceiveDate,
-                ReceiveNumber = purchaseEntryView.ReceiveNumber,
-                PaidAmount = purchaseEntryView.PaidAmount,
-                ProductQuantities = productQuantities
-            };
+                purchasedProduct.ProductQuantityId = Guid.NewGuid().ToString();
+                purchasedProduct.TenantId = tenantEntity.TenantId;
+                return purchasedProduct;
+            }).ToList();
 
             var insertedEntity = purchaseEntryServices.CreatePurchaseEntry(purchaseEntryEntity);
             return GetPurchaseEntry(insertedEntity.PurchaseEntryId);
@@ -81,6 +66,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutPurchaseEntry(string id, PurchaseEntryEntity purchaseEntryEntity)
         {
+            purchaseEntryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, purchaseEntryServices.UpdatePurchaseEntry(id, purchaseEntryEntity));
         }
 

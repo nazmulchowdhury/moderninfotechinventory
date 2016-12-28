@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Location;
+﻿using Model.Location;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Location
 {

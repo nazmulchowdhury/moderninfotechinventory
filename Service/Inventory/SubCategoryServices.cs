@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Inventory;
+using System.Collections.Generic;
 using Data.Repositories.Inventory;
-using Model.Inventory;
 
 namespace Service.Inventory
 {
@@ -42,6 +42,7 @@ namespace Service.Inventory
                 storedItem.SubCategoryName = subCategoryEntity.SubCategoryName;
                 storedItem.CategoryId = subCategoryEntity.CategoryId;
                 storedItem.UnitId = subCategoryEntity.UnitId;
+                storedItem.TenantInfo.UserId = subCategoryEntity.TenantInfo.UserId;
 
                 subCategoryRepository.Update(storedItem);
 

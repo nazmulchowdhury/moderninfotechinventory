@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Supplier;
+﻿using Model.Supplier;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Supplier
 {

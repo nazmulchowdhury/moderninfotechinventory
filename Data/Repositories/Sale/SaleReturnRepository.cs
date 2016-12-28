@@ -1,11 +1,11 @@
-﻿using Data.Infrastructure;
-using Data.Helper;
+﻿using System;
 using Model.Sale;
-using Model.InvoiceInfo;
-using Model.Inventory;
-using Model.Utilities;
 using System.Linq;
-using System;
+using Data.Helper;
+using Model.Utilities;
+using Model.Inventory;
+using Model.InvoiceInfo;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Sale
 {
@@ -15,17 +15,21 @@ namespace Data.Repositories.Sale
             : base(dbFactory)
         { }
 
+        public override SaleReturnEntity GetById(string saleReturnId)
+        {
+            return Context.SaleReturn.Include("TenantInfo").FirstOrDefault(salrtn => salrtn.SaleReturnId == saleReturnId);
+        }
+
         public override SaleReturnEntity Add(SaleReturnEntity saleReturnEntity)
         {
             var insertedEntity = Context.SaleReturn.Add(saleReturnEntity);
-            Context.InvoiceInfo.Add(
-                new InvoiceInfoEntity
-                {
-                    InvoiceInfoId = Guid.NewGuid().ToString(),
-                    EntryId = insertedEntity.SaleReturnId,
-                    EntryType = Option.SALE_RETURN,
-                    Status = true
-                });
+            Context.InvoiceInfo.Add(new InvoiceInfoEntity
+            {
+                InvoiceInfoId = Guid.NewGuid().ToString(),
+                EntryId = insertedEntity.SaleReturnId,
+                EntryType = Option.SALE_RETURN,
+                TenantId = saleReturnEntity.TenantId
+            });
             Context.Commit();
             return insertedEntity;
         }
@@ -42,12 +46,18 @@ namespace Data.Repositories.Sale
                     Context.InvoiceInfo.Remove(invoiceInfoEntity);
                 }
 
-                Context.Entry(saleReturnEntity).Collection("ProductReturnQuantities").Load();
-                var productReturnQuantities = saleReturnEntity.ProductReturnQuantities.ToList();
+                Context.Entry(saleReturnEntity).Collection("SaleReturnedProducts").Load();
+                var productReturnQuantities = saleReturnEntity.SaleReturnedProducts.ToList();
                 foreach (ProductReturnQuantityEntity productReturnQuantity in productReturnQuantities)
                 {
-                    saleReturnEntity.ProductReturnQuantities.Remove(productReturnQuantity);
+                    saleReturnEntity.SaleReturnedProducts.Remove(productReturnQuantity);
                     Context.ProductReturnQuantity.Remove(productReturnQuantity);
+                }
+
+                var tenantEntity = Context.Tenant.Find(saleReturnEntity.TenantId);
+                if (tenantEntity != null)
+                {
+                    Context.Tenant.Remove(tenantEntity);
                 }
 
                 Context.SaleReturn.Remove(saleReturnEntity);

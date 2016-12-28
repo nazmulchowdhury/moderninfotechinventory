@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
 using Model.Location;
-using System;
+using Model.BaseModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Accounts
 {
@@ -15,6 +16,13 @@ namespace Model.Accounts
         [Required]
         [Display(Name = "Investment Amount")]
         public double Amount { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 
     [Table("Cash")]
@@ -27,6 +35,43 @@ namespace Model.Accounts
         [Required]
         [Display(Name = "Cash Amount")]
         public double Amount { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+    }
+
+    [Table("Vat")]
+    public class VatEntity
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string VatId { get; set; }
+
+        [Required]
+        [Display(Name = "Vat Amount")]
+        public double VatAmount { get; set; }
+
+        [Required]
+        public string LocationId { get; set; }
+
+        [Required]
+        [DataType(DataType.Text)]
+        [Display(Name = "Vat Registration Number")]
+        public string VatRegistrationNumber { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
+        [ForeignKey("LocationId")]
+        public virtual LocationEntity Location { get; set; }
     }
 
     [Table("Expense")]
@@ -55,6 +100,13 @@ namespace Model.Accounts
         [DataType(DataType.Text)]
         [Display(Name = "Expensed By")]
         public string ExpensedBy { get; set; }
+
+        [Required]
+        public string TenantId { get; set; }
+
+        // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
     }
 
     [Table("Investor")]
@@ -81,7 +133,13 @@ namespace Model.Accounts
         [Display(Name = "Investor Balance")]
         public double Balance { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("LocationId")]
         public virtual LocationEntity Location { get; set; }
     }
@@ -115,7 +173,13 @@ namespace Model.Accounts
         [Required]
         public string InvestorId { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("InvestorId")]
         public virtual InvestorEntity Investor { get; set; }
     }

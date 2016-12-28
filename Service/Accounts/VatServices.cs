@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using Data.Repositories.Vat;
-using Model.Vat;
+﻿using Model.Accounts;
+using Data.Repositories.Accounts;
+using System.Collections.Generic;
 
-namespace Service.Vat
+namespace Service.Accounts
 {
     public class VatServices : IVatServices
     {
@@ -37,6 +37,7 @@ namespace Service.Vat
                 storedItem.VatAmount = vatEntity.VatAmount;
                 storedItem.LocationId = vatEntity.LocationId;
                 storedItem.VatRegistrationNumber = vatEntity.VatRegistrationNumber;
+                storedItem.TenantInfo.UserId = vatEntity.TenantInfo.UserId;
 
                 vatRepository.Update(storedItem);
 

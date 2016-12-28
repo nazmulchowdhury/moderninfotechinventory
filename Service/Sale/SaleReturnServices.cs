@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Sale;
 using Data.Repositories.Sale;
-using Model.Sale;
+using System.Collections.Generic;
 
 namespace Service.Sale
 {
@@ -37,6 +37,7 @@ namespace Service.Sale
                 storedItem.RefInvoiceId = saleReturnEntity.RefInvoiceId;
                 storedItem.Penalty = saleReturnEntity.Penalty;
                 storedItem.PaidAmount = saleReturnEntity.PaidAmount;
+                storedItem.TenantInfo.UserId = saleReturnEntity.TenantInfo.UserId;
 
                 saleReturnRepository.Update(storedItem);
 

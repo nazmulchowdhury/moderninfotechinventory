@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Model.Inventory;
 using Service.Inventory;
-using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,27 +45,19 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostStockAdjustment(StockAdjustmentView stockAdjustmentView)
+        public HttpResponseMessage PostStockAdjustment(StockAdjustmentEntity stockAdjustmentEntity)
         {
-            var productQuantities = new HashSet<ProductQuantityEntity>();
-            foreach (ProductQuantityView pqv in stockAdjustmentView.ProductQuantities)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            stockAdjustmentEntity.StockAdjustmentId = Guid.NewGuid().ToString();
+            stockAdjustmentEntity.ProductQuantities = stockAdjustmentEntity.ProductQuantities.Select(productQuantity =>
             {
-                productQuantities.Add(new ProductQuantityEntity
-                {
-                    ProductQuantityId = Guid.NewGuid().ToString(),
-                    ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity
-                });
-            }
-
-            var stockAdjustmentEntity = new StockAdjustmentEntity
-            {
-                StockAdjustmentId = Guid.NewGuid().ToString(),
-                ReceiveDate = stockAdjustmentView.ReceiveDate,
-                ReceiveNumber = stockAdjustmentView.ReceiveNumber,
-                ProductQuantities = productQuantities
-            };
-
+                productQuantity.ProductQuantityId = Guid.NewGuid().ToString();
+                productQuantity.TenantId = tenantEntity.TenantId;
+                return productQuantity;
+            }).ToList();
+            stockAdjustmentEntity.TenantId = tenantEntity.TenantId;
+            stockAdjustmentEntity.TenantInfo = tenantEntity;
+            
             var insertedEntity = stockAdjustmentServices.CreateStockAdjustment(stockAdjustmentEntity);
             return GetStockAdjustment(insertedEntity.StockAdjustmentId);
         }
@@ -74,6 +65,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutStockAdjustment(string id, StockAdjustmentEntity stockAdjustmentEntity)
         {
+            stockAdjustmentEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, stockAdjustmentServices.UpdateStockAdjustment(id, stockAdjustmentEntity));
         }
 

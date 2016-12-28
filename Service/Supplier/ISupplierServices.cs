@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Model.Supplier;
+﻿using Model.Supplier;
+using System.Collections.Generic;
 
 namespace Service.Supplier
 {

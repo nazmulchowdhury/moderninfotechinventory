@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
 using Model.Inventory;
+using Model.BaseModel;
 using System.Collections.Generic;
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Requisition
 {
@@ -32,7 +33,13 @@ namespace Model.Requisition
         [Display(Name = "Requisition Description")]
         public string Description { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         public virtual ICollection<ProductQuantityEntity> ProductQuantities { get; set; }
 
         public override int GetHashCode()

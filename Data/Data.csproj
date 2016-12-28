@@ -48,10 +48,12 @@
     <Compile Include="Repositories\Inventory\IUnitRepository.cs" />
     <Compile Include="Repositories\Inventory\ProductReturnQuantityRepository.cs" />
     <Compile Include="Repositories\Inventory\UnitRepository.cs" />
+    <Compile Include="Repositories\Tenant\ITenantRepository.cs" />
+    <Compile Include="Repositories\Tenant\TenantRepository.cs" />
     <Compile Include="Repositories\Utilities\CurrentStockRepository.cs" />
     <Compile Include="Repositories\Utilities\ICurrentStockRepository.cs" />
-    <Compile Include="Repositories\Vat\IVatRepository.cs" />
-    <Compile Include="Repositories\Vat\VatRepository.cs" />
+    <Compile Include="Repositories\Accounts\IVatRepository.cs" />
+    <Compile Include="Repositories\Accounts\VatRepository.cs" />
     <Compile Include="Repositories\Accounts\IInvestorRepository.cs" />
     <Compile Include="Repositories\Accounts\IInvestorTransactionRepository.cs" />
     <Compile Include="Repositories\Accounts\InvestorRepository.cs" />

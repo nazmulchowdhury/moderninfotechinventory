@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Inventory;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
-using Model.Inventory;
-using ModernInfoTechInventory.ViewModels.Inventory;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -41,18 +41,17 @@ namespace ModernInfoTechInventory.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.OK, productQuantityEntity);
             }
-            throw new ApiDataException(1001, "No Product Quantity found for this " + id, HttpStatusCode.NotFound);
+            throw new ApiDataException(1001, "No Product Quantity found for this id: " + id, HttpStatusCode.NotFound);
         }
 
         [Route("")]
-        public HttpResponseMessage PostProductQuantity(ProductQuantityView productQuantityView)
+        public HttpResponseMessage PostProductQuantity(ProductQuantityEntity productQuantityEntity)
         {
-            var productQuantityEntity = new ProductQuantityEntity
-            {
-                ProductQuantityId = Guid.NewGuid().ToString(),
-                ProductId = productQuantityView.ProductId,
-                Quantity = productQuantityView.Quantity
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            productQuantityEntity.ProductQuantityId = Guid.NewGuid().ToString();
+            productQuantityEntity.Price = null;
+            productQuantityEntity.TenantId = tenantEntity.TenantId;
+            productQuantityEntity.TenantInfo = tenantEntity;
             var insertedEntity = productQuantityServices.CreateProductQuantity(productQuantityEntity);
             return GetProductQuantity(insertedEntity.ProductQuantityId);
         }
@@ -60,6 +59,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutProductQuantity(string id, ProductQuantityEntity productQuantityEntity)
         {
+            productQuantityEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, productQuantityServices.UpdateProductQuantity(id, productQuantityEntity));
         }
 

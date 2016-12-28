@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Requisition;
+using System.Collections.Generic;
 using Data.Repositories.Requisition;
-using Model.Requisition;
 
 namespace Service.Requisition
 {
@@ -37,6 +37,7 @@ namespace Service.Requisition
                 storedItem.RequisitionDate = requisitionEntity.RequisitionDate;
                 storedItem.IsApproved = requisitionEntity.IsApproved;
                 storedItem.Description = requisitionEntity.Description;
+                storedItem.TenantInfo.UserId = requisitionEntity.TenantInfo.UserId;
 
                 requisitionRepository.Update(storedItem);
 

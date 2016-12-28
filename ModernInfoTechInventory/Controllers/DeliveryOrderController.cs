@@ -1,16 +1,15 @@
-﻿using System.Linq;
+﻿using System;
 using System.Net;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Service.DeliveryOrder;
-using Model.DeliveryOrder;
 using Model.Inventory;
+using Model.BaseModel;
+using Model.DeliveryOrder;
+using Service.DeliveryOrder;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 using ModernInfoTechInventory.ViewModels.DeliveryOrder;
-using ModernInfoTechInventory.ViewModels.Inventory;
-using System;
-using System.Collections.Generic;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -48,27 +47,19 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostDeliveryOrder(DeliveryOrderView deliveryOrderView)
+        public HttpResponseMessage PostDeliveryOrder(DeliveryOrderEntity deliveryOrderEntity)
         {
-            var productQuantities = new HashSet<ProductQuantityEntity>();
-            foreach (ProductQuantityView pqv in deliveryOrderView.DeliveredProducts)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            deliveryOrderEntity.DeliveryOrderId = Guid.NewGuid().ToString();
+            deliveryOrderEntity.IsReceived = false;
+            deliveryOrderEntity.TenantId = tenantEntity.TenantId;
+            deliveryOrderEntity.TenantInfo = tenantEntity;
+            deliveryOrderEntity.ProductQuantities = deliveryOrderEntity.ProductQuantities.Select(productQuantity =>
             {
-                productQuantities.Add(new ProductQuantityEntity
-                {
-                    ProductQuantityId = Guid.NewGuid().ToString(),
-                    ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity
-                });
-            }
-
-            var deliveryOrderEntity = new DeliveryOrderEntity
-            {
-                DeliveryOrderId = Guid.NewGuid().ToString(),
-                RequisitionId = deliveryOrderView.RequisitionId,
-                DeliveryOrderDate = deliveryOrderView.DeliveryOrderDate,
-                Description = deliveryOrderView.Description,
-                ProductQuantities = productQuantities
-            };
+                productQuantity.ProductQuantityId = Guid.NewGuid().ToString();
+                productQuantity.TenantId = tenantEntity.TenantId;
+                return productQuantity;
+            }).ToList();
 
             var insertedEntity = deliveryOrderServices.CreateDeliveryOrder(deliveryOrderEntity);
             return GetDeliveryOrder(insertedEntity.DeliveryOrderId);
@@ -79,6 +70,10 @@ namespace ModernInfoTechInventory.Controllers
         {
             var deliveryOrderEntity = deliveryOrderServices.GetDeliveryOrder(id);
             deliveryOrderEntity.IsReceived = deliveryStatusView.IsReceived;
+            deliveryOrderEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, deliveryOrderServices.UpdateDeliveryOrder(id, deliveryOrderEntity));
         }
 

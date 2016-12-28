@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Model.Location;
+using Model.BaseModel;
 
 namespace Model.Supplier
 {
@@ -25,7 +26,13 @@ namespace Model.Supplier
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("LocationId")]
         public virtual LocationEntity Location { get; set; }
     }
@@ -55,7 +62,13 @@ namespace Model.Supplier
         [Required]
         public string SupplierId { get; set; }
 
+        [Required]
+        public string TenantId { get; set; }
+
         // navigation properties
+        [ForeignKey("TenantId")]
+        public virtual TenantEntity TenantInfo { get; set; }
+
         [ForeignKey("SupplierId")]
         public virtual SupplierEntity Supplier { get; set; }
     }

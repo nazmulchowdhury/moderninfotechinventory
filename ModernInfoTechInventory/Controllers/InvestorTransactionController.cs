@@ -1,14 +1,13 @@
 ﻿using System;
-using AutoMapper;
-using System.Linq;
 using System.Net;
+using System.Linq;
+using Model.Accounts;
+using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
-using Service.Vat;
-using Model.Accounts;
-using ModernInfoTechInventory.ViewModels.Accounts;
+using Service.Accounts;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -46,26 +45,23 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostInvestorTransaction(InvestorTransactionView investorTransactionView)
+        public HttpResponseMessage PostInvestorTransaction(InvestorTransactionEntity investorTransactionEntity)
         {
-            var investorTransactionEntity = new InvestorTransactionEntity
-            {
-                InvestorTransactionId = Guid.NewGuid().ToString(),
-                TransactionDate = investorTransactionView.TransactionDate,
-                Amount = investorTransactionView.Amount,
-                Description = investorTransactionView.Description,
-                TransactionType = investorTransactionView.TransactionType,
-                InvestorId = investorTransactionView.InvestorId
-            };
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            investorTransactionEntity.InvestorTransactionId = Guid.NewGuid().ToString();
+            investorTransactionEntity.TenantId = tenantEntity.TenantId;
+            investorTransactionEntity.TenantInfo = tenantEntity;
             var insertedEntity = investorTransactionServices.CreateInvestorTransaction(investorTransactionEntity);
             return GetInvestorTransaction(insertedEntity.InvestorTransactionId);
         }
 
         [Route("{id:length(36)}")]
-        public HttpResponseMessage PutInvestorTransaction(string id, InvestorTransactionView investorTransactionView)
+        public HttpResponseMessage PutInvestorTransaction(string id, InvestorTransactionEntity investorTransactionEntity)
         {
-            var investorTransactionEntityMapper = new MapperConfiguration(cfg => cfg.CreateMap<InvestorTransactionView, InvestorTransactionEntity>());
-            var investorTransactionEntity = investorTransactionEntityMapper.CreateMapper().Map<InvestorTransactionView, InvestorTransactionEntity>(investorTransactionView);
+            investorTransactionEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, investorTransactionServices.UpdateInvestorTransaction(id, investorTransactionEntity));
         }
 

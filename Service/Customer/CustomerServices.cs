@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Model.Customer;
+using System.Collections.Generic;
 using Data.Repositories.Customer;
-using Model.Customer;
 
 namespace Service.Customer
 {
@@ -38,6 +38,7 @@ namespace Service.Customer
                 storedItem.LocationId = customerEntity.LocationId;
                 storedItem.CurrentDue = customerEntity.CurrentDue;
                 storedItem.DueLimit = customerEntity.DueLimit;
+                storedItem.TenantInfo.UserId = customerEntity.TenantInfo.UserId;
 
                 customerRepository.Update(storedItem);
 

@@ -6,11 +6,9 @@ using Service.Sale;
 using System.Net.Http;
 using System.Web.Http;
 using Model.Inventory;
-using System.Collections.Generic;
+using Model.BaseModel;
+using Microsoft.AspNet.Identity;
 using ModernInfoTechInventory.ErrorHelper;
-using ModernInfoTechInventory.ActionFilters;
-using ModernInfoTechInventory.ViewModels.Sale;
-using ModernInfoTechInventory.ViewModels.Inventory;
 
 namespace ModernInfoTechInventory.Controllers
 {
@@ -48,29 +46,18 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("")]
-        public HttpResponseMessage PostBillEntry(BillEntryView billEntryView)
+        public HttpResponseMessage PostBillEntry(BillEntryEntity billEntryEntity)
         {
-            var productQuantities = new HashSet<ProductQuantityEntity>();
-
-            foreach (ProductQuantityView pqv in billEntryView.SaledProducts)
+            var tenantEntity = new TenantEntity(RequestContext.Principal.Identity.GetUserId());
+            billEntryEntity.BillEntryId = Guid.NewGuid().ToString();
+            billEntryEntity.TenantId = tenantEntity.TenantId;
+            billEntryEntity.TenantInfo = tenantEntity;
+            billEntryEntity.SaledProducts = billEntryEntity.SaledProducts.Select(SaledProduct =>
             {
-                var productQuantity = new ProductQuantityEntity
-                {
-                    ProductQuantityId = Guid.NewGuid().ToString(),
-                    ProductId = pqv.ProductId,
-                    Quantity = pqv.Quantity,
-                    Price = pqv.Price
-                };
-                productQuantities.Add(productQuantity);
-            }
-
-            var billEntryEntity = new BillEntryEntity
-            {
-                BillEntryId = Guid.NewGuid().ToString(),
-                CustomerId = billEntryView.CustomerId,
-                Discount = billEntryView.Discount,
-                ProductQuantities = productQuantities
-            };
+                SaledProduct.ProductQuantityId = Guid.NewGuid().ToString();
+                SaledProduct.TenantId = tenantEntity.TenantId;
+                return SaledProduct;
+            }).ToList();
             
             var insertedEntity = billEntryServices.CreateBillEntry(billEntryEntity);
             return GetBillEntry(insertedEntity.BillEntryId);
@@ -79,6 +66,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage PutBillEntry(string id, BillEntryEntity billEntryEntity)
         {
+            billEntryEntity.TenantInfo = new TenantEntity
+            {
+                UserId = RequestContext.Principal.Identity.GetUserId()
+            };
             return Request.CreateResponse(HttpStatusCode.OK, billEntryServices.UpdateBillEntry(id, billEntryEntity));
         }
 
