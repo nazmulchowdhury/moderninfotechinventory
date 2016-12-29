@@ -38,7 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Product Return Quantities are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetProductReturnQuantity(string id)
         {
             var productReturnQuantityEntity = productReturnQuantityServices.GetProductReturnQuantity(id);
@@ -60,7 +60,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetProductReturnQuantity(insertedEntity.ProductReturnQuantityId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutProductReturnQuantity(string id, ProductReturnQuantityEntity productReturnQuantityEntity)
         {
             productReturnQuantityEntity.TenantInfo = new TenantEntity
@@ -70,7 +70,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, productReturnQuantityServices.UpdateProductReturnQuantity(id, productReturnQuantityEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteProductReturnQuantity(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -89,7 +89,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateProductReturnQuantity(string id)
         {

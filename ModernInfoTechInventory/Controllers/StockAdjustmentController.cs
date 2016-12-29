@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Stock Adjustments are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetStockAdjustment(string id)
         {
             var stockAdjustmentEntity = stockAdjustmentServices.GetStockAdjustment(id);
@@ -66,7 +66,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetStockAdjustment(insertedEntity.StockAdjustmentId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutStockAdjustment(string id, StockAdjustmentEntity stockAdjustmentEntity)
         {
             stockAdjustmentEntity.TenantInfo = new TenantEntity
@@ -76,7 +76,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, stockAdjustmentServices.UpdateStockAdjustment(id, stockAdjustmentEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeletestockAdjustment(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -95,7 +95,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivatestockAdjustment(string id)
         {

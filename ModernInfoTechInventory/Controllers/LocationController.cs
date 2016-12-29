@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Locations are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetLocation(string id)
         {
             var locationEntity = locationServices.GetLocation(id);
@@ -59,13 +59,13 @@ namespace ModernInfoTechInventory.Controllers
             return GetLocation(insertedEntity.LocationId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutLocation(string id, LocationEntity locationEntity)
         {
             return Request.CreateResponse(HttpStatusCode.OK, locationServices.UpdateLocation(id, locationEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteLocation(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -84,7 +84,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateLocation(string id)
         {

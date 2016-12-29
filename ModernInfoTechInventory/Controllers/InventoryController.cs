@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Inventories are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetInventory(string id)
         {
             var inventoryEntity = inventoryServices.GetInventory(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetInventory(insertedEntity.InventoryId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutInventory(string id, InventoryEntity inventoryEntity)
         {
             inventoryEntity.TenantInfo = new TenantEntity
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, inventoryServices.UpdateInventory(id, inventoryEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteInventory(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -88,7 +88,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateInventory(string id)
         {

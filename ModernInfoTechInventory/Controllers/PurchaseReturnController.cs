@@ -38,7 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Purchase Returns are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetPurchaseReturn(string id)
         {
             var purchaseReturnEntity = purchaseReturnServices.GetPurchaseReturn(id);
@@ -67,7 +67,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetPurchaseReturn(insertedEntity.PurchaseReturnId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutPurchaseReturn(string id, PurchaseReturnEntity purchaseReturnEntity)
         {
             purchaseReturnEntity.TenantInfo = new TenantEntity
@@ -77,7 +77,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, purchaseReturnServices.UpdatePurchaseReturn(id, purchaseReturnEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeletePurchaseReturn(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -96,7 +96,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivatePurchaseReturn(string id)
         {

@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Invoices are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetInvoice(string id)
         {
             var invoiceInfoEntity = invoiceInfoServices.GetInvoice(id);
@@ -48,14 +48,14 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Invoice found for this " + id, HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PostInvoice(InvoiceInfoEntity invoiceInfoEntity)
         {
             var insertedEntity = invoiceInfoServices.CreateInvoice(invoiceInfoEntity);
             return GetInvoice(insertedEntity.InvoiceInfoId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteInvoiceInfo(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -74,7 +74,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateInvoice(string id)
         {

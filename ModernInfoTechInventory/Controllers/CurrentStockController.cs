@@ -20,7 +20,7 @@ namespace ModernInfoTechInventory.Controllers
             this.currentStockServices = currentStockServices;
         }
 
-        [Route("product/{option:int}/{id:length(36)}")]
+        [Route("product/{option:int}/{id:guid}")]
         public HttpResponseMessage GetAllProducts(string id, Option option)
         {
             if (option == Option.SALE_RETURN || option == Option.PURCHASE_RETURN)
@@ -43,7 +43,7 @@ namespace ModernInfoTechInventory.Controllers
             }
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetCurrentStockedProducts(string id)
         {
             var currentStock = currentStockServices.GetCurrentStock(id);

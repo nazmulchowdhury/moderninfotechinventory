@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Vats are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetVat(string id)
         {
             var vatEntity = vatServices.GetVat(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetVat(insertedEntity.VatId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutVat(string id, VatEntity vatEntity)
         {
             vatEntity.TenantInfo = new TenantEntity
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, vatServices.UpdateVat(id, vatEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteVat(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -88,7 +88,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateVat(string id)
         {

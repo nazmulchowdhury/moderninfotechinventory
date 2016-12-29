@@ -38,7 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Investor Transactions are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetInvestorTransaction(string id)
         {
             var investorTransactionEntity = investorTransactionServices.GetInvestorTransaction(id);
@@ -60,7 +60,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetInvestorTransaction(insertedEntity.InvestorTransactionId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutInvestorTransaction(string id, InvestorTransactionEntity investorTransactionEntity)
         {
             investorTransactionEntity.TenantInfo = new TenantEntity
@@ -70,7 +70,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, investorTransactionServices.UpdateInvestorTransaction(id, investorTransactionEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteInvestorTransaction(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -89,7 +89,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateInvestorTransaction(string id)
         {

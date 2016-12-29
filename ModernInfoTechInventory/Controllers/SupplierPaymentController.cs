@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Supplier Payments are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetSupplierPayment(string id)
         {
             var supplierPaymentEntity = supplierPaymentServices.GetSupplierPayment(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetSupplierPayment(insertedEntity.SupplierPaymentId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutSupplierPayment(string id, SupplierPaymentEntity supplierPaymentEntity)
         {
             supplierPaymentEntity.TenantInfo = new TenantEntity
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, supplierPaymentServices.UpdateSupplierPayment(id, supplierPaymentEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteSupplierPayment(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -88,7 +88,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateSupplierPayment(string id)
         {

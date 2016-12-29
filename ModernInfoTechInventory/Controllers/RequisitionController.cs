@@ -44,7 +44,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Requisitions are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetRequisition(string id)
         {
             var requisitionEntity = requisitionServices.GetRequisition(id);
@@ -74,7 +74,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetRequisition(insertedEntity.RequisitionId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutRequisition(string id, RequisitionApprovalView requisitionApprovalView)
         {
             var requisitionEntity = requisitionServices.GetRequisition(id);
@@ -86,7 +86,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, requisitionServices.UpdateRequisition(id, requisitionEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteRequisition(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -111,7 +111,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateRequisition(string id)
         {

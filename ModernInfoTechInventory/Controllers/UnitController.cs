@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Units are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetUnit(string id)
         {
             var unitEntity = unitServices.GetUnit(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetUnit(insertedEntity.UnitId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutUnit(string id, UnitEntity unitEntity)
         {
             unitEntity.TenantInfo = new TenantEntity
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, unitServices.UpdateUnit(id, unitEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteUnit(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -88,7 +88,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateUnit(string id)
         {

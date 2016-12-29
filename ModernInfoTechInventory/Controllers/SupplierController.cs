@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Suppliers are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetSupplier(string id)
         {
             var supplierEntity = supplierServices.GetSupplier(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetSupplier(insertedEntity.SupplierId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutSupplier(string id, SupplierEntity supplierEntity)
         {
             supplierEntity.TenantInfo = new TenantEntity
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, supplierServices.UpdateSupplier(id, supplierEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteSupplier(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -88,7 +88,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateSupplier(string id)
         {

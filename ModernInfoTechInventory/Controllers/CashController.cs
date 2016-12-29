@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Cashes are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetCash(string id)
         {
             var cashEntity = cashServices.GetCash(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetCash(insertedEntity.CashId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteCash(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -78,7 +78,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateCash(string id)
         {

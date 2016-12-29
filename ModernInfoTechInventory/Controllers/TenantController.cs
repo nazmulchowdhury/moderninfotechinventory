@@ -32,7 +32,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Tenants are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetTenant(string id)
         {
             var tenantEntity = tenantServices.GetTenant(id);
@@ -43,7 +43,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Tenant found for this " + id, HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutTenant(string id, TenantEntity tenantEntity)
         {
             tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
@@ -52,7 +52,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, tenantServices.UpdateTenant(id, tenantEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteTenant(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))

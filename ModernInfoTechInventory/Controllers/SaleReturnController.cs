@@ -38,7 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Sale Returns are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetSaleReturn(string id)
         {
             var saleReturnEntity = saleReturnServices.GetSaleReturn(id);
@@ -67,7 +67,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetSaleReturn(insertedEntity.SaleReturnId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutSaleReturn(string id, SaleReturnEntity saleReturnEntity)
         {
             saleReturnEntity.TenantInfo = new TenantEntity
@@ -77,7 +77,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, saleReturnServices.UpdateSaleReturn(id, saleReturnEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteSaleReturn(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -96,7 +96,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateSaleReturn(string id)
         {

@@ -1,11 +1,11 @@
-﻿using System;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Owin;
+using System;
 using Microsoft.Owin;
-using Microsoft.Owin.Security.Cookies;
+using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security.OAuth;
-using Owin;
+using Microsoft.Owin.Security.Cookies;
 using ModernInfoTechInventory.Providers;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 [assembly: OwinStartup(typeof(ModernInfoTechInventory.Startup))]
 namespace ModernInfoTechInventory

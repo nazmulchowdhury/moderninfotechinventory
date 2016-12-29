@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "SubCategories are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetSubCategory(string id)
         {
             var subCategoryEntity = subCategoryServices.GetSubCategory(id);
@@ -48,7 +48,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No SubCategory found for this " + id, HttpStatusCode.NotFound);
         }
 
-        [Route("bycategory/{id:length(36)}")]
+        [Route("bycategory/{id:guid}")]
         public HttpResponseMessage GetAllSubCategories(string id)
         {
             var subcategoryEntities = subCategoryServices.GetAllSubCategories(id);
@@ -70,7 +70,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetSubCategory(insertedEntity.SubCategoryId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutSubCategory(string id, SubCategoryEntity subCategoryEntity)
         {
             subCategoryEntity.TenantInfo = new TenantEntity
@@ -80,7 +80,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, subCategoryServices.UpdateSubCategory(id, subCategoryEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteSubCategory(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -99,7 +99,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateSubCategory(string id)
         {

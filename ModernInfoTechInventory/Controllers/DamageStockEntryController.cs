@@ -42,7 +42,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Damage Stock Entries are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetDamageStockEntry(string id)
         {
             var damageStockEntryEntity = damageStockEntryServices.GetDamageStockEntry(id);
@@ -78,7 +78,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetDamageStockEntry(insertedEntity.DamageStockEntryId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutDamageStockEntry(string id, DamageStockEntryView damageStockEntryView)
         {
             var damageStockEntryEntity = damageStockEntryServices.GetDamageStockEntry(id);
@@ -95,7 +95,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, damageStockEntryServices.UpdateDamageStockEntry(id, damageStockEntryEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteDamageStockEntry(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -114,7 +114,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateDamageStockEntry(string id)
         {

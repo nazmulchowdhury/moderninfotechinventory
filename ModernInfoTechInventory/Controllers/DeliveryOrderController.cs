@@ -39,7 +39,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "DeliveryOrders are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetDeliveryOrder(string id)
         {
             var deliveryOrderEntity = deliveryOrderServices.GetDeliveryOrder(id);
@@ -69,7 +69,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetDeliveryOrder(insertedEntity.DeliveryOrderId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutDeliveryOrder(string id, DeliveryStatusView deliveryStatusView)
         {
             var deliveryOrderEntity = deliveryOrderServices.GetDeliveryOrder(id);
@@ -81,7 +81,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, deliveryOrderServices.UpdateDeliveryOrder(id, deliveryOrderEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteDeliveryOrder(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -100,7 +100,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateDeliveryOrder(string id)
         {

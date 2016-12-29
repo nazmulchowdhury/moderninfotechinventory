@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Expenses are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetExpense(string id)
         {
             var expenseEntity = expenseServices.GetExpense(id);
@@ -59,7 +59,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetExpense(insertedEntity.ExpenseId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteExpense(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -78,7 +78,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateExpense(string id)
         {

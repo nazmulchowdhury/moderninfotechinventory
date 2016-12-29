@@ -38,7 +38,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Purchase Entries are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetPurchaseEntry(string id)
         {
             var purchaseEntryEntity = purchaseEntryServices.GetPurchaseEntry(id);
@@ -67,7 +67,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetPurchaseEntry(insertedEntity.PurchaseEntryId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutPurchaseEntry(string id, PurchaseEntryEntity purchaseEntryEntity)
         {
             purchaseEntryEntity.TenantInfo = new TenantEntity
@@ -77,7 +77,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, purchaseEntryServices.UpdatePurchaseEntry(id, purchaseEntryEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeletePurchaseEntry(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -96,7 +96,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivatePurchaseEntry(string id)
         {

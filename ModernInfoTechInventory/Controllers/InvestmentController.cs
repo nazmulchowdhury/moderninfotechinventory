@@ -26,7 +26,7 @@ namespace ModernInfoTechInventory.Controllers
             this.investmentServices = investmentServices;
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetInvestmentAmount(string id)
         {
             var investmentEntity = investmentServices.InvestmentAmount(id);
@@ -48,7 +48,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, investmentServices.InvestmentAmount(insertedEntity.InvestmentId));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteInvestment(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -67,7 +67,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateInvestment(string id)
         {

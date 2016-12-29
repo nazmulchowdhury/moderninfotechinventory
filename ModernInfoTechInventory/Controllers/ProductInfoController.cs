@@ -37,7 +37,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1000, "Products are not found", HttpStatusCode.NotFound);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage GetProduct(string id)
         {
             var productEntity = productInfoServices.GetProduct(id);
@@ -48,7 +48,7 @@ namespace ModernInfoTechInventory.Controllers
             throw new ApiDataException(1001, "No Product found for this " + id, HttpStatusCode.NotFound);
         }
 
-        [Route("bysubcategory/{id:length(36)}")]
+        [Route("bysubcategory/{id:guid}")]
         public HttpResponseMessage GetAllProducts(string id)
         {
             var productEntities = productInfoServices.GetAllProducts(id);
@@ -70,7 +70,7 @@ namespace ModernInfoTechInventory.Controllers
             return GetProduct(insertedEntity.ProductId);
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage PutProduct(string id, ProductInfoEntity productInfoEntity)
         {
             productInfoEntity.TenantInfo = new TenantEntity
@@ -80,7 +80,7 @@ namespace ModernInfoTechInventory.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, productInfoServices.UpdateProduct(id, productInfoEntity));
         }
 
-        [Route("{id:length(36)}")]
+        [Route("{id:guid}")]
         public HttpResponseMessage DeleteProduct(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
@@ -99,7 +99,7 @@ namespace ModernInfoTechInventory.Controllers
             };
         }
 
-        [Route("deactivate/{id:length(36)}")]
+        [Route("deactivate/{id:guid}")]
         [HttpDelete]
         public HttpResponseMessage DeactivateProduct(string id)
         {
