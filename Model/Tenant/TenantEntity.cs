@@ -3,7 +3,7 @@ using Model.User;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Model.BaseModel
+namespace Model.Tenant
 {
     [Table("Tenant")]
     [Serializable]

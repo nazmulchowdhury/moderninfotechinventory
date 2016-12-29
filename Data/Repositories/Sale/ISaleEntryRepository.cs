@@ -3,6 +3,6 @@ using Data.Infrastructure;
 
 namespace Data.Repositories.Sale
 {
-    public interface IBillEntryRepository : IRepository<BillEntryEntity>
+    public interface ISaleEntryRepository : IRepository<SaleEntryEntity>
     { }
 }

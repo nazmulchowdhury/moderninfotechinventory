@@ -2,7 +2,7 @@
 using System.Net;
 using System.Linq;
 using Service.Tenant;
-using Model.BaseModel;
+using Model.Tenant;
 using System.Net.Http;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;

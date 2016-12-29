@@ -1,6 +1,6 @@
 ﻿using System;
 using Model.Inventory;
-using Model.BaseModel;
+using Model.Tenant;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;

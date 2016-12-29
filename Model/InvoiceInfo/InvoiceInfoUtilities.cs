@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Model.Utilities;
-using Model.BaseModel;
+using Model.Tenant;
 
 namespace Model.InvoiceInfo
 {

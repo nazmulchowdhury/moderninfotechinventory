@@ -81,8 +81,8 @@
     <Compile Include="Purchase\PurchaseReturnServices.cs" />
     <Compile Include="Requisition\IRequisitionServices.cs" />
     <Compile Include="Requisition\RequisitionServices.cs" />
-    <Compile Include="Sale\BillEntryServices.cs" />
-    <Compile Include="Sale\IBillEntryServices.cs" />
+    <Compile Include="Sale\SaleEntryServices.cs" />
+    <Compile Include="Sale\ISaleEntryServices.cs" />
     <Compile Include="Sale\ISaleReturnServices.cs" />
     <Compile Include="Sale\SaleReturnServices.cs" />
     <Compile Include="Inventory\IStockAdjustmentServices.cs" />

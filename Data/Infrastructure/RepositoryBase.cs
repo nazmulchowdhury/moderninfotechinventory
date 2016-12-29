@@ -92,7 +92,6 @@ namespace Data.Infrastructure
         public T Get(Expression<Func<T, bool>> where)
         {
             return dbSet.Where(where).FirstOrDefault<T>();
-        }
-    
+        }    
     }
 }

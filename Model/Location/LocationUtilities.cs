@@ -1,4 +1,4 @@
-﻿using Model.BaseModel;
+﻿using Model.Tenant;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 

@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using System.Net.Http;
 using System.Web.Http;
 using Model.InvoiceInfo;
 using Service.InvoiceInfo;
+using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -13,10 +17,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("invoiceinfo")]
     public class InvoiceInfoController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly IInvoiceInfoServices invoiceInfoServices;
 
-        public InvoiceInfoController(IInvoiceInfoServices invoiceInfoServices)
+        public InvoiceInfoController(IInvoiceInfoServices invoiceInfoServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.invoiceInfoServices = invoiceInfoServices;
         }
 
@@ -34,10 +40,10 @@ namespace ModernInfoTechInventory.Controllers
         [Route("{id:length(36)}")]
         public HttpResponseMessage GetInvoice(string id)
         {
-            var productEntity = invoiceInfoServices.GetInvoice(id);
-            if (productEntity != null)
+            var invoiceInfoEntity = invoiceInfoServices.GetInvoice(id);
+            if (invoiceInfoEntity != null)
             {
-                return Request.CreateResponse(HttpStatusCode.OK, productEntity);
+                return Request.CreateResponse(HttpStatusCode.OK, invoiceInfoEntity);
             }
             throw new ApiDataException(1001, "No Invoice found for this " + id, HttpStatusCode.NotFound);
         }
@@ -60,6 +66,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Invoice is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateInvoice(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var invoiceInfoEntity = invoiceInfoServices.GetInvoice(id);
+                if (invoiceInfoEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(invoiceInfoEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(invoiceInfoEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Invoice is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Invoice has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Invoice is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

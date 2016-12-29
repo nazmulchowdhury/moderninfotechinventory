@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Model.Inventory;
 using Model.Requisition;
-using Model.BaseModel;
+using Model.Tenant;
 using System.Collections.Generic;
 using System;
 

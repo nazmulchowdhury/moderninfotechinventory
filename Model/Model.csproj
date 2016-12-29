@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BaseModel\TenantEntity.cs" />
+    <Compile Include="Tenant\TenantEntity.cs" />
     <Compile Include="CompanyInfo\CompanyInfoUtilities.cs" />
     <Compile Include="Customer\CustomerUtilities.cs" />
     <Compile Include="DeliveryOrder\DeliveryOrderUtilities.cs" />

@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using System.Net.Http;
 using System.Web.Http;
 using Model.Inventory;
-using Model.BaseModel;
 using Model.DeliveryOrder;
 using Service.DeliveryOrder;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ViewModels.DeliveryOrder;
 
@@ -17,10 +19,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("deliveryorder")]
     public class DeliveryOrderController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly IDeliveryOrderServices deliveryOrderServices;
 
-        public DeliveryOrderController(IDeliveryOrderServices deliveryOrderServices)
+        public DeliveryOrderController(IDeliveryOrderServices deliveryOrderServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.deliveryOrderServices = deliveryOrderServices;
         }
 
@@ -88,6 +92,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "DeliveryOrder is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateDeliveryOrder(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var deliveryOrderEntity = deliveryOrderServices.GetDeliveryOrder(id);
+                if (deliveryOrderEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(deliveryOrderEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(deliveryOrderEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "DeliveryOrder is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "DeliveryOrder has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "DeliveryOrder is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

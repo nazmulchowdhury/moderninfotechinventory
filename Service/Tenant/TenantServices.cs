@@ -1,4 +1,4 @@
-﻿using Model.BaseModel;
+﻿using Model.Tenant;
 using Data.Repositories.Tenant;
 using System.Collections.Generic;
 

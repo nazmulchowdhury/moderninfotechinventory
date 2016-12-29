@@ -1,4 +1,4 @@
-﻿using Model.BaseModel;
+﻿using Model.Tenant;
 using Data.Infrastructure;
 
 namespace Data.Repositories.Tenant

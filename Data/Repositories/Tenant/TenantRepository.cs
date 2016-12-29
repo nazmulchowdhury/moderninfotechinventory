@@ -1,6 +1,6 @@
 ﻿using Data.Helper;
 using System.Linq;
-using Model.BaseModel;
+using Model.Tenant;
 using Data.Infrastructure;
 
 namespace Data.Repositories.Tenant

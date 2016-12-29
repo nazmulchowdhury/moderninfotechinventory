@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Model.Location;
-using Model.BaseModel;
+using Model.Tenant;
 
 namespace Model.Supplier
 {

@@ -9,38 +9,38 @@ using Data.Infrastructure;
 
 namespace Data.Repositories.Sale
 {
-    public class BillEntryRepository : RepositoryBase<BillEntryEntity>, IBillEntryRepository
+    public class SaleEntryRepository : RepositoryBase<SaleEntryEntity>, ISaleEntryRepository
     {
-        public BillEntryRepository(IDbFactory dbFactory)
+        public SaleEntryRepository(IDbFactory dbFactory)
             : base(dbFactory)
         { }
 
-        public override BillEntryEntity Add(BillEntryEntity billEntryEntity)
+        public override SaleEntryEntity Add(SaleEntryEntity saleEntryEntity)
         {
-            var insertedEntity = Context.BillEntry.Add(billEntryEntity);
+            var insertedEntity = Context.SaleEntry.Add(saleEntryEntity);
             Context.InvoiceInfo.Add(new InvoiceInfoEntity
             {
                 InvoiceInfoId = Guid.NewGuid().ToString(),
-                EntryId = insertedEntity.BillEntryId,
-                EntryType = Option.BILL_ENTRY,
-                TenantId = billEntryEntity.TenantId
+                EntryId = insertedEntity.SaleEntryId,
+                EntryType = Option.SALE_ENTRY,
+                TenantId = saleEntryEntity.TenantId
             });
             Context.Commit();
             return insertedEntity;
         }
 
-        public override BillEntryEntity GetById(string billEntryId)
+        public override SaleEntryEntity GetById(string saleEntryId)
         {
-            return Context.BillEntry.Include("Customer").Include("TenantInfo").FirstOrDefault(bill => bill.BillEntryId == billEntryId);
+            return Context.SaleEntry.Include("Customer").Include("TenantInfo").FirstOrDefault(sale => sale.SaleEntryId == saleEntryId);
         }
 
-        public override bool Delete(string billEntryId)
+        public override bool Delete(string saleEntryId)
         {
-            var billEntryEntity = Context.BillEntry.Find(billEntryId);
+            var saleEntryEntity = Context.SaleEntry.Find(saleEntryId);
 
-            if (billEntryEntity != null)
+            if (saleEntryEntity != null)
             {
-                var invoiceInfoEntity = Context.InvoiceInfo.FirstOrDefault(invinf => invinf.EntryId == billEntryId);
+                var invoiceInfoEntity = Context.InvoiceInfo.FirstOrDefault(invinf => invinf.EntryId == saleEntryId);
                 if (invoiceInfoEntity != null)
                 {
                     Context.InvoiceInfo.Remove(invoiceInfoEntity);
@@ -64,22 +64,22 @@ namespace Data.Repositories.Sale
                     }
                 }
 
-                Context.Entry(billEntryEntity).Collection("SaledProducts").Load();
-                var productQuantities = billEntryEntity.SaledProducts.ToList();
+                Context.Entry(saleEntryEntity).Collection("SaledProducts").Load();
+                var productQuantities = saleEntryEntity.SaledProducts.ToList();
 
                 foreach (ProductQuantityEntity productQuantity in productQuantities)
                 {
-                    billEntryEntity.SaledProducts.Remove(productQuantity);
+                    saleEntryEntity.SaledProducts.Remove(productQuantity);
                     Context.ProductQuantity.Remove(productQuantity);
                 }
 
-                var tenantEntity = Context.Tenant.Find(billEntryEntity.TenantId);
+                var tenantEntity = Context.Tenant.Find(saleEntryEntity.TenantId);
                 if (tenantEntity != null)
                 {
                     Context.Tenant.Remove(tenantEntity);
                 }
 
-                Context.BillEntry.Remove(billEntryEntity);
+                Context.SaleEntry.Remove(saleEntryEntity);
                 Context.Commit();
                 return true;
             }

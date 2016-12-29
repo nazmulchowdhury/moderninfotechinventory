@@ -1,7 +1,7 @@
 ﻿using System;
 using Model.Sale;
+using Model.Tenant;
 using Model.Purchase;
-using Model.BaseModel;
 using Model.Requisition;
 using Model.DeliveryOrder;
 using System.Collections.Generic;
@@ -129,7 +129,7 @@ namespace Model.Inventory
     {
         public ProductQuantityEntity()
         {
-            this.BillEntries = new HashSet<BillEntryEntity>();
+            this.SaleEntries = new HashSet<SaleEntryEntity>();
             this.PurchaseEntries = new HashSet<PurchaseEntryEntity>();
             this.Stocks = new HashSet<StockAdjustmentEntity>();
             this.Requisitions = new HashSet<RequisitionEntity>();
@@ -160,7 +160,7 @@ namespace Model.Inventory
         [ForeignKey("ProductId")]
         public virtual ProductInfoEntity Product { get; set; }
 
-        public virtual ICollection<BillEntryEntity> BillEntries { get; set; }
+        public virtual ICollection<SaleEntryEntity> SaleEntries { get; set; }
 
         public virtual ICollection<PurchaseEntryEntity> PurchaseEntries { get; set; }
 

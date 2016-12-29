@@ -202,7 +202,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BillEntryController.cs" />
+    <Compile Include="Controllers\SaleEntryController.cs" />
     <Compile Include="Controllers\CashController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CompanyInfoController.cs" />

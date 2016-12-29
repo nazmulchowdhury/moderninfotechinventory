@@ -5,7 +5,7 @@ namespace Model.Utilities
 {
     public enum Option
     {
-        BILL_ENTRY = 1, SALE_RETURN, PURCHASE_ENTRY, PURCHASE_RETURN, DAMAGE_ENTRY
+        SALE_ENTRY = 1, SALE_RETURN, PURCHASE_ENTRY, PURCHASE_RETURN, DAMAGE_ENTRY
     }
 
     public class CurrentStock

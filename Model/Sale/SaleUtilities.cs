@@ -1,24 +1,24 @@
 ﻿using System;
+using Model.Tenant;
 using Model.Customer;
 using Model.Inventory;
-using Model.BaseModel;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Sale
 {
-    [Table("BillEntry")]
-    public class BillEntryEntity : IEquatable<BillEntryEntity>
+    [Table("SaleEntry")]
+    public class SaleEntryEntity : IEquatable<SaleEntryEntity>
     {
-        public BillEntryEntity()
+        public SaleEntryEntity()
         {
             this.SaledProducts = new HashSet<ProductQuantityEntity>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string BillEntryId { get; set; }
+        public string SaleEntryId { get; set; }
 
         [Required]
         public string CustomerId { get; set; }
@@ -40,12 +40,12 @@ namespace Model.Sale
 
         public override int GetHashCode()
         {
-            return BillEntryId.GetHashCode();
+            return SaleEntryId.GetHashCode();
         }
 
-        public bool Equals(BillEntryEntity other)
+        public bool Equals(SaleEntryEntity other)
         {
-            return this.BillEntryId.Equals(other.BillEntryId);
+            return this.SaleEntryId.Equals(other.SaleEntryId);
         }
     }
 

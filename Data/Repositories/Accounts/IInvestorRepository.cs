@@ -1,5 +1,5 @@
-﻿using Data.Infrastructure;
-using Model.Accounts;
+﻿using Model.Accounts;
+using Data.Infrastructure;
 
 namespace Data.Repositories.Accounts
 {

@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using System.Net.Http;
 using System.Web.Http;
 using Model.Inventory;
-using Model.BaseModel;
 using Model.Requisition;
 using Service.Requisition;
 using Service.DeliveryOrder;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 using ModernInfoTechInventory.ViewModels.Requisition;
 
@@ -18,11 +20,15 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("requisition")]
     public class RequisitionController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly IRequisitionServices requisitionServices;
         private readonly IDeliveryOrderServices deliveryOrderServices;
 
-        public RequisitionController(IRequisitionServices requisitionServices, IDeliveryOrderServices deliveryOrderServices)
+        public RequisitionController(IRequisitionServices requisitionServices,
+            IDeliveryOrderServices deliveryOrderServices,
+            ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.requisitionServices = requisitionServices;
             this.deliveryOrderServices = deliveryOrderServices;
         }
@@ -97,6 +103,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Requisition is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateRequisition(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var requisitionEntity = requisitionServices.GetRequisition(id);
+                if (requisitionEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(requisitionEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(requisitionEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Requisition is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Requisition has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Requisition is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

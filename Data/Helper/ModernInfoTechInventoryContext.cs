@@ -4,7 +4,7 @@ using Model.Accounts;
 using Model.Location;
 using Model.Supplier;
 using Model.Purchase;
-using Model.BaseModel;
+using Model.Tenant;
 using Model.Inventory;
 using Model.Utilities;
 using Model.CompanyInfo;
@@ -39,7 +39,7 @@ namespace Data.Helper
         public DbSet<SaleReturnEntity> SaleReturn { get; set; }
         public DbSet<InvoiceInfoEntity> InvoiceInfo { get; set; }
         public DbSet<InventoryEntity> Inventory { get; set; }
-        public DbSet<BillEntryEntity> BillEntry { get; set; }
+        public DbSet<SaleEntryEntity> SaleEntry { get; set; }
         public DbSet<CashEntity> Cash { get; set; }
         public DbSet<ExpenseEntity> Expense { get; set; }
         public DbSet<VatEntity> Vat { get; set; }
@@ -60,13 +60,13 @@ namespace Data.Helper
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BillEntryEntity>()
-                .HasMany(bill => bill.SaledProducts)
-                .WithMany(proqty => proqty.BillEntries)
+            modelBuilder.Entity<SaleEntryEntity>()
+                .HasMany(sale => sale.SaledProducts)
+                .WithMany(proqty => proqty.SaleEntries)
                 .Map(bp =>
-                    bp.MapLeftKey("BillEntryId")
+                    bp.MapLeftKey("SaleEntryId")
                     .MapRightKey("ProductQuantityId")
-                    .ToTable("BillEntryProductQuantity"));
+                    .ToTable("SaleEntryProductQuantity"));
 
             modelBuilder.Entity<PurchaseEntryEntity>()
                 .HasMany(purchase => purchase.PurchasedProducts)

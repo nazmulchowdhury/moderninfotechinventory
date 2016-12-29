@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
 using Service.Tenant;
 using Model.Inventory;
-using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
@@ -17,13 +17,13 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("category")]
     public class CategoryController : ApiController
     {
-        private readonly ICategoryServices categoryServices;
         private readonly ITenantServices tenantServices;
+        private readonly ICategoryServices categoryServices;
 
         public CategoryController(ICategoryServices categoryServices, ITenantServices tenantServices)
         {
-            this.categoryServices = categoryServices;
             this.tenantServices = tenantServices;
+            this.categoryServices = categoryServices;
         }
 
         [Route("")]
@@ -89,7 +89,8 @@ namespace ModernInfoTechInventory.Controllers
         }
 
         [Route("deactivate/{id:length(36)}")]
-        public HttpResponseMessage DeleteDeactivateCategory(string id)
+        [HttpDelete]
+        public HttpResponseMessage DeactivateCategory(string id)
         {
             if (!string.IsNullOrWhiteSpace(id))
             {

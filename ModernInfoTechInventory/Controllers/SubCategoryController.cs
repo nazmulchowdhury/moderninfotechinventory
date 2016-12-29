@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using Model.Inventory;
-using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -15,10 +17,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("subcategory")]
     public class SubCategoryController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly ISubCategoryServices subCategoryServices;
 
-        public SubCategoryController(ISubCategoryServices subCategoryServices)
+        public SubCategoryController(ISubCategoryServices subCategoryServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.subCategoryServices = subCategoryServices;
         }
 
@@ -87,6 +91,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "SubCategory is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateSubCategory(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var subCategoryEntity = subCategoryServices.GetSubCategory(id);
+                if (subCategoryEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(subCategoryEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(subCategoryEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "SubCategory is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "SubCategory has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "SubCategory is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

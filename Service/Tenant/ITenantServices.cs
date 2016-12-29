@@ -1,4 +1,4 @@
-﻿using Model.BaseModel;
+﻿using Model.Tenant;
 using System.Collections.Generic;
 
 namespace Service.Tenant

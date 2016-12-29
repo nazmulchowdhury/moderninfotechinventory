@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using Model.Accounts;
-using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Accounts;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -15,10 +17,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("investor")]
     public class InvestorController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly IInvestorServices investorServices;
 
-        public InvestorController(IInvestorServices investorServices)
+        public InvestorController(IInvestorServices investorServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.investorServices = investorServices;
         }
 
@@ -76,6 +80,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Investor is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateInvestor(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var investorEntity = investorServices.GetInvestor(id);
+                if (investorEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(investorEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(investorEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Investor is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Investor has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Investor has already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

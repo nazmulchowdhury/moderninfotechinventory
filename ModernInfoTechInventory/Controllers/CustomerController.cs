@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
 using Model.Customer;
-using Model.BaseModel;
+using Service.Tenant;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Customer;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -15,10 +17,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("customer")]
     public class CustomerController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly ICustomerServices customerServices;
 
-        public CustomerController(ICustomerServices customerServices)
+        public CustomerController(ICustomerServices customerServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.customerServices = customerServices;
         }
 
@@ -76,6 +80,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Customer is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateCustomer(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var customerEntity = customerServices.GetCustomer(id);
+                if (customerEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(customerEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(customerEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Customer is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Customer has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Customer is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using Model.Inventory;
-using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -15,10 +17,12 @@ namespace ModernInfoTechInventory.Controllers
     [RoutePrefix("productquantity")]
     public class ProductQuantityController : ApiController
     {
+        private readonly ITenantServices tenantServices;
         private readonly IProductQuantityServices productQuantityServices;
 
-        public ProductQuantityController(IProductQuantityServices productQuantityServices)
+        public ProductQuantityController(IProductQuantityServices productQuantityServices, ITenantServices tenantServices)
         {
+            this.tenantServices = tenantServices;
             this.productQuantityServices = productQuantityServices;
         }
 
@@ -77,6 +81,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Product Quantity is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateProductQuantity(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var productQuantityEntity = productQuantityServices.GetProductQuantity(id);
+                if (productQuantityEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(productQuantityEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(productQuantityEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Product Quantity is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Product Quantity has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Product Quantity is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

@@ -36,7 +36,7 @@ namespace Service.Utilities
                     purchaseReturnQuantity += product.ReturnQuantity;
                 }
 
-                foreach (var product in currentStockRepository.GetStockedProductQuantities(productId, Option.BILL_ENTRY))
+                foreach (var product in currentStockRepository.GetStockedProductQuantities(productId, Option.SALE_ENTRY))
                 {
                     saleQuantity += product.Quantity;
                 }

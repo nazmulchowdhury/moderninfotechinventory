@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
+using Model.Tenant;
+using Service.Tenant;
 using Model.Inventory;
-using Model.BaseModel;
 using System.Net.Http;
 using System.Web.Http;
 using Service.Inventory;
 using Microsoft.AspNet.Identity;
+using ModernInfoTechInventory.Helpers;
 using ModernInfoTechInventory.ErrorHelper;
 
 namespace ModernInfoTechInventory.Controllers
@@ -16,10 +18,12 @@ namespace ModernInfoTechInventory.Controllers
     public class UnitController : ApiController
     {
         private readonly IUnitServices unitServices;
+        private readonly ITenantServices tenantServices;
 
-        public UnitController(IUnitServices unitServices)
+        public UnitController(IUnitServices unitServices, ITenantServices tenantServices)
         {
             this.unitServices = unitServices;
+            this.tenantServices = tenantServices;
         }
 
         [Route("")]
@@ -76,6 +80,38 @@ namespace ModernInfoTechInventory.Controllers
                     return Request.CreateResponse(HttpStatusCode.OK, isSuccess);
                 }
                 throw new ApiDataException(1002, "Unit is already deleted or not exist in system.", HttpStatusCode.NoContent);
+            }
+            throw new ApiException()
+            {
+                ErrorCode = (int)HttpStatusCode.BadRequest,
+                ErrorDescription = "Bad Request"
+            };
+        }
+
+        [Route("deactivate/{id:length(36)}")]
+        [HttpDelete]
+        public HttpResponseMessage DeactivateUnit(string id)
+        {
+            if (!string.IsNullOrWhiteSpace(id))
+            {
+                var unitEntity = unitServices.GetUnit(id);
+                if (unitEntity != null)
+                {
+                    var tenantEntity = tenantServices.GetTenant(unitEntity.TenantId).Clone<TenantEntity>();
+                    tenantEntity.UserId = RequestContext.Principal.Identity.GetUserId();
+                    tenantEntity.InactivationDate = DateTime.Now;
+                    tenantEntity.Status = false;
+                    var isSuccess = tenantServices.UpdateTenant(unitEntity.TenantId, tenantEntity);
+                    if (isSuccess)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Unit is successfully deactivated");
+                    }
+                    else
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Unit has already been deactivated");
+                    }
+                }
+                throw new ApiDataException(1002, "Unit is already been deleted or not exist in system.", HttpStatusCode.NoContent);
             }
             throw new ApiException()
             {

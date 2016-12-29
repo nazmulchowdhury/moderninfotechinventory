@@ -9,8 +9,8 @@ namespace Data.Repositories.Utilities
 {
     public class CurrentStockRepository : ICurrentStockRepository
     {
-        private readonly ModernInfoTechInventoryContext context;
         private readonly IDbFactory factory;
+        private readonly ModernInfoTechInventoryContext context;
 
         public CurrentStockRepository(IDbFactory factory)
         {
@@ -25,9 +25,9 @@ namespace Data.Repositories.Utilities
 
         public ICollection<StockedProductQuantity> GetStockedProductQuantities(string productId, Option option)
         {
-            string billingQuery = @"select ProductQuantityId, p.ProductId, ProductName, Quantity from dbo.Product p
+            string salingQuery = @"select ProductQuantityId, p.ProductId, ProductName, Quantity from dbo.Product p
                                     inner join (select pq.ProductQuantityId, ProductId, Quantity from dbo.ProductQuantity pq
-                                    inner join BillEntryProductQuantity bpq on pq.ProductQuantityId = bpq.ProductQuantityId
+                                    inner join SaleEntryProductQuantity sepq on pq.ProductQuantityId = sepq.ProductQuantityId
                                     where ProductId = @p0) pj on p.ProductId = pj.ProductId";
 
             string purchasingQuery = @"select ProductQuantityId, p.ProductId, ProductName, Quantity from dbo.Product p
@@ -42,7 +42,7 @@ namespace Data.Repositories.Utilities
 
             switch (option)
             {
-                case (Option.BILL_ENTRY): return context.StockedProductQuantity.SqlQuery(billingQuery, productId).ToList();
+                case (Option.SALE_ENTRY): return context.StockedProductQuantity.SqlQuery(salingQuery, productId).ToList();
                 case (Option.PURCHASE_ENTRY): return context.StockedProductQuantity.SqlQuery(purchasingQuery, productId).ToList();
                 case (Option.DAMAGE_ENTRY): return context.StockedProductQuantity.SqlQuery(damageStockReturningQuery, productId).ToList();
                 default: return new List<StockedProductQuantity>();
@@ -54,7 +54,7 @@ namespace Data.Repositories.Utilities
             string saleReturningQuery = @"select pq.ProductQuantityId, p.ProductId, p.ProductName, prq.ReturnQuantity
                                           from SaleReturnQuantity srq 
                                           inner join ProductReturnQuantity prq on srq.ProductReturnQuantityId = prq.ProductReturnQuantityId
-                                          inner join BillEntryProductQuantity bepq on prq.ProductQuantityId = bepq.ProductQuantityId
+                                          inner join SaleEntryProductQuantity sepq on prq.ProductQuantityId = sepq.ProductQuantityId
                                           inner join ProductQuantity pq on prq.ProductQuantityId = pq.ProductQuantityId
                                           inner join Product p on pq.ProductId = p.ProductId
                                           where p.ProductId = @p0";

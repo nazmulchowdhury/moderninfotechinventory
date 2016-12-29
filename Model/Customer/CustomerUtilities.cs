@@ -1,6 +1,6 @@
 ﻿using System;
 using Model.Location;
-using Model.BaseModel;
+using Model.Tenant;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

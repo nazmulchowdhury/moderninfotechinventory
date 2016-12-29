@@ -86,8 +86,8 @@ namespace ModernInfoTechInventory
             container.RegisterType<IPurchaseEntryServices, PurchaseEntryServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IPurchaseReturnRepository, PurchaseReturnRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IPurchaseReturnServices, PurchaseReturnServices>(new HierarchicalLifetimeManager());
-            container.RegisterType<IBillEntryRepository, BillEntryRepository>(new HierarchicalLifetimeManager());
-            container.RegisterType<IBillEntryServices, BillEntryServices>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleEntryRepository, SaleEntryRepository>(new HierarchicalLifetimeManager());
+            container.RegisterType<ISaleEntryServices, SaleEntryServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IRequisitionRepository, RequisitionRepository>(new HierarchicalLifetimeManager());
             container.RegisterType<IRequisitionServices, RequisitionServices>(new HierarchicalLifetimeManager());
             container.RegisterType<IDeliveryOrderRepository, DeliveryOrderRepository>(new HierarchicalLifetimeManager());
